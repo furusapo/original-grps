@@ -952,6 +952,79 @@
 }
 </style>
 
+
+<style id="grps-name-story-values-v1">
+@media (min-width: 601px) {
+  #name-story {
+    width: 73% !important;
+    display: grid;
+    grid-template-columns: minmax(0, 58%) minmax(0, 35%);
+    column-gap: 7%;
+    align-items: center;
+  }
+  #name-story > :not(.grps-story-values) {
+    grid-column: 1;
+  }
+  #name-story .grps-story-values {
+    grid-column: 2;
+    grid-row: 1 / span 6;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15cqw;
+    align-self: center;
+    padding-left: 1cqw;
+  }
+  #name-story .grps-story-value {
+    display: flex;
+    align-items: center;
+    gap: 1cqw;
+    min-height: 4.6cqw;
+    padding: .4cqw 1.3cqw .4cqw .5cqw;
+    background: rgba(255,255,255,.94);
+    border-radius: 100px;
+    box-shadow: 0 6px 22px rgba(15,70,105,.13);
+    color: #102d54;
+    font-size: 1.35cqw;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  #name-story .grps-story-value img {
+    width: 3.6cqw;
+    height: 3.6cqw;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 600px) {
+  #name-story .grps-story-values {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  #name-story .grps-story-value {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(100%, 290px);
+    padding: 7px 16px 7px 7px;
+    background: rgba(255,255,255,.95);
+    border-radius: 100px;
+    box-shadow: 0 5px 16px rgba(15,70,105,.12);
+    color: #102d54;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  #name-story .grps-story-value img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -1029,9 +1102,21 @@
     一つひとつの現場に向き合いながら、成果へ導く姿勢を、
     この名前に込めています。
   </p>
-  <p class="grps-small-space grps-tags">
-    想いをつなぐ　現場を育てる　価値を届ける
-  </p>
+  
+<div class="grps-story-values" aria-label="グローパスの3つの想い">
+  <div class="grps-story-value">
+    <img src="./grps_images/name-story-connect.png" alt="">
+    <span>想いをつなぐ</span>
+  </div>
+  <div class="grps-story-value">
+    <img src="./grps_images/name-story-grow.png" alt="">
+    <span>現場を育てる</span>
+  </div>
+  <div class="grps-story-value">
+    <img src="./grps_images/name-story-deliver.png" alt="">
+    <span>価値を届ける</span>
+  </div>
+</div>
 </section>
 </div>
 
