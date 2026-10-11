@@ -507,6 +507,33 @@
 </style>
 
 
+
+<style id="grps-header-background-merge">
+@media screen and (min-width: 601px) {
+
+  /* TOPページのヘッダーを透明にする */
+  #grps-independent-header {
+    background: transparent !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* 背景画像をヘッダーの裏まで表示 */
+  .page {
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+
+  .page > .background-image {
+    top: -80px !important;
+    height: calc(100% + 80px) !important;
+    object-fit: contain !important;
+    object-position: top center;
+  }
+
+}
+</style>
+
 </head>
 <body>
 
