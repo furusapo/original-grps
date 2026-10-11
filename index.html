@@ -403,58 +403,109 @@
 
 
 
-<style id="grps-mobile-font-adjustment">
-@media screen and (max-width:600px) {
 
-  /* 背景画像を表示し、その上に文字を重ねる */
-  .grps-text-layer {
+<style id="grps-mobile-font-adjustment">
+@media screen and (max-width: 600px) {
+
+  /* 背景画像をページ全体の背面に配置 */
+  .page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .page > .background-image {
     position: absolute !important;
-    inset: 0 !important;
+    top: 0;
+    left: 0;
     width: 100% !important;
     height: 100% !important;
-    padding: 0 !important;
-    z-index: 2;
+    object-fit: fill;
+    opacity: 1 !important;
+    z-index: 0;
     pointer-events: none;
   }
 
-  .grps-text-layer .grps-section {
-    position: absolute !important;
-    margin: 0 !important;
+  /* テキストを背景画像の上に配置 */
+  .grps-text-layer {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 45px 0 65px !important;
+    z-index: 2;
     pointer-events: auto;
   }
 
-  /* スマホ版の文字サイズ */
+  /* 絶対配置を解除して文字の重なりを防ぐ */
+  .grps-text-layer > .grps-section {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 84% !important;
+    max-width: none !important;
+    margin: 0 auto 65px !important;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
   .grps-section h1 {
     font-size: 30px !important;
-    line-height: 1.4 !important;
+    line-height: 1.45 !important;
+    overflow-wrap: normal;
   }
 
   .grps-section h2 {
     font-size: 24px !important;
-    line-height: 1.45 !important;
+    line-height: 1.5 !important;
   }
 
   .grps-section h3 {
     font-size: 20px !important;
+    line-height: 1.5 !important;
   }
 
   .grps-section p,
   .grps-section .grps-lead {
     font-size: 15px !important;
-    line-height: 1.8 !important;
+    line-height: 1.85 !important;
   }
 
   .grps-eyebrow {
     font-size: 12px !important;
+    line-height: 1.5;
+  }
+
+  .grps-section .grps-space {
+    margin-top: 22px !important;
+  }
+
+  .grps-section .grps-small-space {
+    margin-top: 12px !important;
+  }
+
+  .grps-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px !important;
   }
 
   .grps-buttons a,
   .grps-contact-link {
     font-size: 14px !important;
+    padding: 12px 18px;
+    line-height: 1.5;
   }
 
+  .grps-section:last-child {
+    margin-bottom: 0 !important;
+  }
 }
 </style>
+
 
 </head>
 <body>
@@ -462,7 +513,7 @@
 <header id="grps-independent-header">
   <div class="grps-header-inner">
     <a id="grps-header-logo"
-   href="./preview.html#top"
+   href="./index.html#top"
    aria-label="グローパス トップページ">
   <img src="./grps_images/glowpas-logo-horizontal.png"
        alt="グローパス">
