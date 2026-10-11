@@ -538,6 +538,38 @@
 </style>
 
 
+
+<style id="grps-full-width-background">
+@media screen and (min-width: 601px) {
+
+  /* ページ全体を画面幅いっぱいに */
+  .page {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden;
+  }
+
+  /* 背景画像は縦横比を維持して横幅いっぱいに */
+  .page > .background-image {
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: top center;
+  }
+
+  /* ヘッダーも画面幅いっぱいに */
+  #grps-independent-header {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+}
+</style>
+
 </head>
 <body>
 
