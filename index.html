@@ -1090,22 +1090,30 @@
 </style>
 
 
+<style id="grps-story-values-down">
+@media screen and (min-width: 601px) {
+  #name-story .grps-story-values {
+    transform: translateY(60px);
+  }
+}
+</style>
+
+
 <style id="grps-unified-section-typography">
-/* ABOUTの文字設計をSERVICE & WORKS以下にも適用 */
 @media screen and (min-width: 601px) {
 
-  /* 英語のセクション見出し */
+  /* 英語見出し */
   #about > .grps-eyebrow,
   #service > .grps-eyebrow,
   #works > .grps-eyebrow,
-  .grps-text-layer > .grps-section:not([id]) > .grps-eyebrow {
+  #service + .grps-section > .grps-eyebrow {
     font-size: 1.55cqw;
     line-height: 1.5;
     font-weight: 700;
     letter-spacing: .14em;
   }
 
-  /* 日本語の大見出し */
+  /* 大見出し */
   #about > h2,
   #service > h2 {
     font-size: 3.1cqw;
@@ -1113,9 +1121,9 @@
     font-weight: 800;
   }
 
-  /* サービス内容・実績の小見出し */
-  #works > h3,
-  .grps-text-layer > .grps-section:not([id]) > h3 {
+  /* サービス内容・実績の見出し */
+  #service + .grps-section > h3,
+  #works > h3 {
     font-size: 2.5cqw;
     line-height: 1.5;
     font-weight: 800;
@@ -1124,8 +1132,8 @@
   /* 本文 */
   #about > p,
   #service > p,
-  #works > p,
-  .grps-text-layer > .grps-section:not([id]) > p {
+  #service + .grps-section > p,
+  #works > p {
     font-size: 1.65cqw;
     line-height: 1.7;
     font-weight: 400;
@@ -1133,25 +1141,11 @@
 
   /* 青い強調文 */
   #about > p.grps-tags,
-  #works > p.grps-tags,
-  .grps-text-layer > .grps-section:not([id]) > p.grps-tags {
+  #service + .grps-section > p.grps-tags,
+  #works > p.grps-tags {
     font-size: 1.65cqw;
     line-height: 1.7;
     font-weight: 700;
-  }
-
-  /* ABOUTとSERVICE & WORKSの見出し間隔 */
-  #service {
-    transform: translateY(390px) !important;
-  }
-}
-</style>
-
-
-<style id="grps-story-values-down">
-@media screen and (min-width: 601px) {
-  #name-story .grps-story-values {
-    transform: translateY(60px);
   }
 }
 </style>
