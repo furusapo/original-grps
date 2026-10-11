@@ -689,6 +689,80 @@
 }
 
 </style>
+
+<style id="grps-automatic-story-layout">
+/*
+  TOPとNAME STORYを通常の縦方向レイアウトにする。
+  NAME STORYの開始位置をパーセントで指定しない。
+*/
+@media screen and (min-width: 601px) {
+  .grps-hero-story-stack {
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    width: 91%;
+  }
+
+  .grps-hero-story-stack > #top,
+  .grps-hero-story-stack > #name-story {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .grps-hero-story-stack > #top {
+    width: 72.5% !important;
+  }
+
+  .grps-hero-story-stack > #name-story {
+    width: 47.3% !important;
+    margin-top: 1.6cqw;
+  }
+
+  #name-story h2 {
+    font-size: 2.1cqw;
+    line-height: 1.4;
+    white-space: normal;
+  }
+
+  #name-story p {
+    font-size: 1.08cqw;
+    line-height: 1.75;
+    overflow-wrap: break-word;
+  }
+
+  #name-story .grps-eyebrow {
+    font-size: 1.3cqw;
+  }
+}
+
+/* スマホでは既存と同じ縦並びを維持 */
+@media screen and (max-width: 600px) {
+  .grps-hero-story-stack {
+    display: contents;
+  }
+
+  .grps-hero-story-stack > .grps-section {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 84% !important;
+    max-width: none !important;
+    margin: 0 auto 65px !important;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  #name-story h2 {
+    white-space: normal;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -727,6 +801,7 @@
 <!-- GRPS-TEXT-START -->
 <div class="grps-text-layer">
 
+<div class="grps-hero-story-stack">
 <section id="top" class="grps-section"
   style="top:5%;left:9%;width:66%;">
   <p class="grps-lead">
@@ -769,6 +844,7 @@
     想いをつなぐ　現場を育てる　価値を届ける
   </p>
 </section>
+</div>
 
 <section id="about" class="grps-section"
   style="top:40%;left:9%;width:82%;">
