@@ -508,31 +508,35 @@
 
 
 
+
 <style id="grps-header-background-merge">
 @media screen and (min-width: 601px) {
 
-  /* TOPページのヘッダーを透明にする */
+  /* ヘッダーを背景画像の上に重ねる */
   #grps-independent-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
     background: transparent !important;
-    position: relative;
-    z-index: 10;
+    z-index: 100 !important;
   }
 
-  /* 背景画像をヘッダーの裏まで表示 */
+  /* 背景画像をページの最上部から表示 */
   .page {
-    margin-top: -80px;
-    padding-top: 80px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   .page > .background-image {
-    top: -80px !important;
-    height: calc(100% + 80px) !important;
+    top: 0 !important;
+    height: auto !important;
     object-fit: contain !important;
-    object-position: top center;
   }
 
 }
 </style>
+
 
 </head>
 <body>
