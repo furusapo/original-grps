@@ -4,7 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>グローパス | トップページ</title>
-<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- GRPS-TEXT-CSS-START -->
+
+<!-- GRPS-TEXT-CSS-END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="grps-main-styles">
+
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
@@ -148,9 +202,9 @@
       scroll-behavior: auto !important;
     }
   }
-</style>
 
-<style id="hamburger-image-css">
+
+
 .menu-button {
   padding: 0 !important;
   border: 0 !important;
@@ -164,16 +218,9 @@
   object-fit: contain;
   pointer-events: none;
 }
-</style>
 
 
 
-
-
-
-
-
-<style id="grps-logo-size-fix">
 #grps-independent-header {
   position: relative;
   width: 100%;
@@ -239,12 +286,9 @@
     height: 40px !important;
   }
 }
-</style>
 
 
 
-<!-- GRPS-TEXT-CSS-START -->
-<style id="grps-text-css">
 .page {
   container-type: inline-size;
 }
@@ -335,12 +379,9 @@
   outline: 3px solid #ffba30;
   outline-offset: 3px;
 }
-</style>
-<!-- GRPS-TEXT-CSS-END -->
 
 
 
-<style id="grps-compact-side-menu">
 @media (max-width: 600px) {
   .side-menu {
     width: 65vw !important;
@@ -375,11 +416,9 @@
     font-size: 9px !important;
   }
 }
-</style>
 
 
 
-<style id="grps-horizontal-logo-css">
 #grps-independent-header #grps-header-logo {
   width: 220px !important;
   height: 56px !important;
@@ -397,14 +436,9 @@
     height: 46px !important;
   }
 }
-</style>
 
 
 
-
-
-
-<style id="grps-mobile-font-adjustment">
 @media screen and (max-width: 600px) {
 
   /* 背景画像をページ全体の背面に配置 */
@@ -504,12 +538,9 @@
     margin-bottom: 0 !important;
   }
 }
-</style>
 
 
 
-
-<style id="grps-header-background-merge">
 @media screen and (min-width: 601px) {
 
   /* ヘッダーを背景画像の上に重ねる */
@@ -535,11 +566,9 @@
   }
 
 }
-</style>
 
 
 
-<style id="grps-full-width-background">
 @media screen and (min-width: 601px) {
 
   /* ページ全体を画面幅いっぱいに */
@@ -568,10 +597,9 @@
   }
 
 }
-</style>
 
 
-<style id="grps-hero-color-style">
+
 /* 文字色のみ変更。フォント・サイズ・配置は変更しない */
 #top .grps-lead {
   color: #008b9b;
@@ -586,10 +614,9 @@
   -webkit-text-fill-color: transparent;
   color: #0878ca;
 }
-</style>
 
 
-<style id="grps-top-description-refinement">
+
 /* TOPの説明文だけ調整 */
 #top > p.grps-small-space {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
@@ -603,24 +630,33 @@
     margin-top: 32px !important;
   }
 }
-</style>
 
 
-<style id="grps-name-story-layout">
-/* NAME STORY：PCのみ文字サイズと行間を調整 */
+/* ==========================================
+   NAME STORY / Desktop layout
+   ========================================== */
 @media screen and (min-width: 601px) {
+  #name-story {
+    top: 26% !important;
+    left: 9% !important;
+    width: 43% !important;
+  }
+
   #name-story .grps-eyebrow {
-    font-size: 1.35cqw;
+    font-size: 1.3cqw;
+    line-height: 1.4;
   }
 
   #name-story h2 {
-    font-size: 2.35cqw;
-    line-height: 1.35;
+    font-size: 2.1cqw;
+    line-height: 1.4;
+    margin-top: 1.1cqw;
+    white-space: nowrap;
   }
 
   #name-story p {
-    font-size: 1.2cqw;
-    line-height: 1.65;
+    font-size: 1.08cqw;
+    line-height: 1.75;
     overflow-wrap: anywhere;
   }
 
@@ -629,11 +665,30 @@
   }
 
   #name-story .grps-small-space {
-    margin-top: 1cqw;
+    margin-top: 1.1cqw;
+  }
+
+  #name-story .grps-tags {
+    font-size: 1.08cqw;
+    white-space: normal;
   }
 }
-</style>
 
+/* NAME STORY / Mobile: 既存の縦並びを維持 */
+@media screen and (max-width: 600px) {
+  #name-story {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 84% !important;
+  }
+
+  #name-story h2 {
+    white-space: normal;
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -694,7 +749,7 @@
 </section>
 
 <section id="name-story" class="grps-section"
-  style="top:24%;left:9%;width:44%;">
+  style="top:26%;left:9%;width:43%;">
   <div class="grps-eyebrow">NAME STORY</div>
   <h2 class="grps-small-space">
     グローパスという名前に込めた想い
