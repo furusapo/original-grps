@@ -1036,6 +1036,53 @@
 }
 </style>
 
+
+<style id="grps-header-alignment">
+/* ロゴとメニューボタンを同じ基準で配置 */
+#grps-independent-header {
+  height: 80px !important;
+}
+
+#grps-independent-header .grps-header-inner {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  padding: 0 5% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+#grps-independent-header #grps-header-logo,
+#grps-independent-header .menu-button {
+  position: static !important;
+  margin: 0 !important;
+  transform: none !important;
+  flex-shrink: 0 !important;
+}
+
+#grps-independent-header .menu-button {
+  width: 48px !important;
+  height: 48px !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+  #grps-independent-header {
+    height: 64px !important;
+  }
+
+  #grps-independent-header .grps-header-inner {
+    padding: 0 4% !important;
+  }
+
+  #grps-independent-header .menu-button {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
