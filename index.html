@@ -1203,6 +1203,62 @@
   }
 }
 </style>
+
+<style id="grps-about-features-style">
+@media (min-width: 601px) {
+  #about .grps-about-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    margin-top: 1.4cqw;
+    width: 100%;
+  }
+  #about .grps-about-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7cqw;
+    min-width: 0;
+    padding: 0 .8cqw;
+    color: #102d54;
+    font-size: 1.3cqw;
+    font-weight: 700;
+    line-height: 1.5;
+    border-right: 1px solid #8ec9d5;
+  }
+  #about .grps-about-feature:last-child {
+    border-right: none;
+  }
+  #about .grps-about-feature img {
+    width: 3.8cqw;
+    height: 3.8cqw;
+    object-fit: contain;
+    flex: none;
+  }
+}
+@media (max-width: 600px) {
+  #about .grps-about-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+  }
+  #about .grps-about-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #102d54;
+  }
+  #about .grps-about-feature img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -1311,10 +1367,22 @@
     グローパスは、主催者の意図を丁寧に整理し、
     現場に合わせた進行・体制・技術を組み立てます。
   </p>
-  <p class="grps-small-space grps-tags">
-    企画と運営をつなぐ　現場判断に強い<br>
-    配信・音響・映像まで一括対応
-  </p>
+  
+  <div class="grps-about-features" aria-label="グローパスの強み">
+    <div class="grps-about-feature">
+      <img src="grps_images/about-planning.png" alt="">
+      <span>企画と運営をつなぐ</span>
+    </div>
+    <div class="grps-about-feature">
+      <img src="grps_images/about-decision.png" alt="">
+      <span>現場判断に強い</span>
+    </div>
+    <div class="grps-about-feature">
+      <img src="grps_images/about-media.png" alt="">
+      <span>配信・音響・映像まで<br>一括対応</span>
+    </div>
+  </div>
+
 </section>
 
 <section id="service" class="grps-section"
