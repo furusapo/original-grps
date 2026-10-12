@@ -1181,12 +1181,6 @@
   text-align: center;
   color: #20242c;
 }
-.grps-footer-tagline {
-  margin: 0 0 22px;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: .03em;
-}
 .grps-footer-logo {
   display: inline-flex;
   justify-content: center;
@@ -1196,11 +1190,6 @@
   pointer-events: auto;
 }
 .grps-footer-logo img { display: block; width: 100%; height: auto; }
-.grps-footer-copyright {
-  margin: 22px 0 0;
-  font-size: 11px;
-  line-height: 1.5;
-}
 /* Requested placement adjustments (desktop). */
 @media (min-width: 601px) {
   #contact.grps-contact-area { transform: translateY(70px); }
@@ -1343,28 +1332,9 @@
   #contact .grps-contact-card p { font-size: 12px !important; line-height: 1.65 !important; }
   #contact .grps-contact-action { font-size: 13px !important; min-height: 48px; padding: 10px 12px; white-space: normal; }
   .grps-site-footer { padding: 30px 16px 25px; }
-  .grps-footer-tagline { font-size: 10px; }
   .grps-footer-logo { width: 112px; }
-  .grps-footer-copyright { font-size: 10px; }
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 <header id="grps-independent-header">
@@ -1477,7 +1447,7 @@
     イベントの企画から当日の運営、映像・音響・配信まで、<br class="grps-detail-break"/>
     トータルでサポートします。
   </p>
-<a class="grps-detail-arrow" href="#" aria-label="サービス内容の詳細（リンク先は後日設定）" title="リンク先は後日設定" onclick="return false;">→</a>
+<a aria-label="サービス内容の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定">→</a>
 </section>
 <section class="grps-section" id="works" style="top:74%;left:10%;width:40%;">
 <div class="grps-eyebrow grps-numbered-eyebrow"><span class="grps-section-number">02</span><span class="grps-number-divider">/</span><span class="grps-number-label">WORKS</span></div>
@@ -1487,7 +1457,7 @@
     これまでに支援してきたイベントの一例をご紹介します。<br class="grps-detail-break"/>
     豊富な実績が私たちの強みです。
   </p>
-<a class="grps-detail-arrow" href="#" aria-label="実績の詳細（リンク先は後日設定）" title="リンク先は後日設定" onclick="return false;">→</a>
+<a aria-label="実績の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定">→</a>
 </section>
 <section class="grps-section grps-contact-area" id="contact" style="top:84%;left:9%;width:82%;text-align:center;">
 <div class="grps-contact-heading">
@@ -1535,12 +1505,12 @@
 </div>
 <!-- GRPS-TEXT-END -->
 </main>
-<footer class="grps-site-footer" aria-label="サイトフッター">
-  <p class="grps-footer-tagline">官公庁・企業イベント運営のプロフェッショナル</p>
-  <a href="#top" class="grps-footer-logo" aria-label="ページの先頭に戻る">
-    <img src="./grps_images/glowpas-logo-vertical.png" alt="グローパス"/>
-  </a>
-  <p class="grps-footer-copyright">© 株式会社グローパス. All Rights Reserved.</p>
+<footer aria-label="サイトフッター" class="grps-site-footer">
+
+<a aria-label="ページの先頭に戻る" class="grps-footer-logo" href="#top">
+<img alt="グローパス" src="./grps_images/glowpas-logo-vertical.png"/>
+</a>
+
 </footer>
 <div class="menu-overlay" id="menuOverlay"></div>
 <aside aria-hidden="true" aria-label="サイトメニュー" class="side-menu" id="sideMenu" inert="">
