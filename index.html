@@ -1354,6 +1354,40 @@
 
 }
 </style>
+
+<style id="grps-service-tag-pills">
+.grps-service-detail > p.grps-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8cqw;
+  margin-top: 0.7cqw;
+}
+.grps-service-detail > p.grps-tags > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28cqw 1.35cqw;
+  border-radius: 999px;
+  background: #e3f3fc;
+  color: #087aa9;
+  font-size: 1.25cqw;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .grps-service-detail > p.grps-tags {
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .grps-service-detail > p.grps-tags > span {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -1495,7 +1529,7 @@
   style="top:60%;left:54%;width:37%;">
   <div class="grps-eyebrow">01 / SERVICE</div>
   <h3>サービス内容</h3>
-  <p class="grps-tags">企画　運営　テクニカル</p>
+  <p class="grps-tags"><span>企画</span><span>運営</span><span>テクニカル</span></p>
   <p class="grps-small-space">
     イベントの企画から当日の運営、映像・音響・配信まで、
     トータルでサポートします。
