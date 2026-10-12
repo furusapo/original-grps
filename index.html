@@ -1127,15 +1127,14 @@
   box-shadow: inset 0 0 0 1px rgba(55,178,213,.14);
 }
 #works > .grps-numbered-eyebrow {
-  padding-left: .35em;
-  margin-left: -.35em;
+  padding-left: .4em;
+  margin-left: 0;
   overflow: visible;
 }
 #works .grps-section-number {
   display: inline-block;
-  padding-left: .12em;
-  padding-right: .12em;
-  margin-left: -.12em;
+  padding: .12em .16em .12em .12em;
+  margin-left: 0;
   overflow: visible;
 }
 #contact .grps-contact-card {
@@ -1192,11 +1191,32 @@
 .grps-footer-logo img { display: block; width: 100%; height: auto; }
 /* Requested placement adjustments (desktop). */
 @media (min-width: 601px) {
-  #contact.grps-contact-area { transform: translateY(70px); }
+  #contact.grps-contact-area {
+    top: 88.5% !important;
+    transform: none;
+  }
   #works > .grps-detail-arrow { right: 50px; }
-}
-/* Desktop: reduce excessive ABOUT title-to-body whitespace without changing section position */
-@media (min-width: 601px) {
+  /* Keep both contact actions inside the illustrated page area. */
+  /* Move heading 25px higher in normal flow; preserve card position below. */
+  #contact .grps-contact-heading { position: relative; top: calc(-1.25cqw - 50px); }
+  #contact .grps-contact-heading h2 { margin-top: .6cqw; }
+  #contact .grps-contact-heading p { margin-top: .8cqw; line-height: 1.6; }
+  #contact .grps-contact-grid { margin-top: 1.3cqw; gap: 1.4cqw; }
+  #contact .grps-contact-card { padding: 1.2cqw 1.7cqw; gap: .8cqw; }
+  #contact .grps-contact-icon { width: 5.3cqw; height: 5.3cqw; }
+  #contact .grps-contact-card h3 { margin-bottom: .35cqw; font-size: 1.55cqw; }
+  #contact .grps-contact-card p { font-size: .9cqw; line-height: 1.5; }
+  /* Align each action with its card text, rather than the card centre. */
+  #contact .grps-contact-action {
+    width: min(22cqw, calc(100% - 7.1cqw));
+    max-width: 390px;
+    margin-left: 7.1cqw;
+    align-self: flex-start;
+    min-height: 3.3cqw;
+    padding: .65cqw 1cqw;
+    font-size: 1.1cqw;
+  }
+  /* ABOUT text spacing and detail copy fit */
   #about > p { top: -3.5cqw !important; }
   #about .grps-about-features { top: 10.5cqw !important; }
   .grps-service-detail > p.grps-small-space,
@@ -1312,7 +1332,7 @@
     font-size: 13px !important; padding: 5px 13px; line-height: 1.5;
   }
   .grps-numbered-eyebrow { gap: 7px; }
-  #works > .grps-numbered-eyebrow { padding-left: .35em; }
+  #works > .grps-numbered-eyebrow { padding-left: .4em; }
   .grps-detail-arrow {
     position: relative !important; right: auto !important; bottom: auto !important;
     width: 46px; height: 46px; margin: 18px 0 0 auto;
@@ -1330,7 +1350,7 @@
   #contact .grps-contact-icon { width: 64px; height: 64px; }
   #contact .grps-contact-card h3 { font-size: 17px !important; margin-bottom: 7px; }
   #contact .grps-contact-card p { font-size: 12px !important; line-height: 1.65 !important; }
-  #contact .grps-contact-action { font-size: 13px !important; min-height: 48px; padding: 10px 12px; white-space: normal; }
+  #contact .grps-contact-action { width: 100%; max-width: none; margin-left: 0; align-self: stretch; font-size: 13px !important; min-height: 48px; padding: 10px 12px; white-space: normal; }
   .grps-site-footer { padding: 30px 16px 25px; }
   .grps-footer-logo { width: 112px; }
 }
@@ -1517,13 +1537,13 @@
 <button aria-label="メニューを閉じる" class="menu-close" id="menuClose" type="button">×</button>
 <p class="menu-label">MENU / メニュー</p>
 <nav class="menu-links">
-<a href="#top"><small>HOME</small>トップページ</a>
-<a href="#name-story"><small>NAME STORY</small>社名に込めた想い</a>
-<a href="#about"><small>ABOUT</small>私たちについて</a>
-<a href="#service"><small>SERVICE</small>サービス内容</a>
-<a href="#works"><small>WORKS</small>実績</a>
-<a href="./recruit/index.html"><small>RECRUIT</small>採用情報</a>
-<a href="#contact"><small>CONTACT</small>お問い合わせ</a>
+<a href="./service/index.html"><small>SERVICE</small>サービス内容</a>
+<a href="./results/index.html"><small>WORKS</small>実績</a>
+<a href="./recruit/index.html"><small>RECRUIT</small>リクルート</a>
+<a href="./privacy/index.html"><small>PRIVACY</small>個人情報</a>
+<a href="./company/index.html"><small>COMPANY</small>会社概要</a>
+<a href="./company/index.html#access"><small>ACCESS</small>アクセス</a>
+<a href="./contact/index.html"><small>CONTACT</small>お問い合わせ</a>
 </nav>
 <p class="menu-footer">Event for a Better Tomorrow.</p>
 </aside>
