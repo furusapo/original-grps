@@ -1,63 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>グローパス | トップページ</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- GRPS-TEXT-CSS-START -->
-
 <!-- GRPS-TEXT-CSS-END -->
+<style id="grps-site-styles">/* grps-main-styles */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="grps-main-styles">
 
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -688,92 +639,19 @@
   }
 }
 
-</style>
-
-<style id="grps-automatic-story-layout">
-/*
-  TOPとNAME STORYを通常の縦方向レイアウトにする。
-  NAME STORYの開始位置をパーセントで指定しない。
-*/
-@media screen and (min-width: 601px) {
-  .grps-hero-story-stack {
-    position: absolute;
-    top: 5%;
-    left: 9%;
-    width: 91%;
-  }
-
-  .grps-hero-story-stack > #top,
-  .grps-hero-story-stack > #name-story {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .grps-hero-story-stack > #top {
-    width: 72.5% !important;
-  }
-
-  .grps-hero-story-stack > #name-story {
-    width: 47.3% !important;
-    margin-top: 7.2cqw;
-  }
-
-  #name-story h2 {
-    font-size: 2.1cqw;
-    line-height: 1.4;
-    white-space: normal;
-  }
-
-  #name-story p {
-    font-size: 1.08cqw;
-    line-height: 1.75;
-    overflow-wrap: break-word;
-  }
-
-  #name-story .grps-eyebrow {
-    font-size: 1.3cqw;
-  }
-}
-
-/* スマホでは既存と同じ縦並びを維持 */
-@media screen and (max-width: 600px) {
-  .grps-hero-story-stack {
-    display: contents;
-  }
-
-  .grps-hero-story-stack > .grps-section {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    width: 84% !important;
-    max-width: none !important;
-    margin: 0 auto 65px !important;
-    text-align: left;
-    overflow-wrap: anywhere;
-  }
-
-  #name-story h2 {
-    white-space: normal;
-  }
-}
-</style>
 
 
-<style id="grps-button-spacing">
+/* grps-button-spacing */
+
 @media screen and (min-width: 601px) {
   #top .grps-buttons {
     margin-top: 7.2cqw !important;
   }
 }
-</style>
 
 
-<style id="grps-contact-cards-css">
+/* grps-contact-cards-css */
+
 /* CONTACT専用：新サイトのオリジナル実装 */
 
 #contact.grps-contact-area {
@@ -941,112 +819,19 @@
     text-align: center;
   }
 }
-</style>
 
 
-<style id="grps-top-left-adjustment">
+/* grps-top-left-adjustment */
+
 @media screen and (min-width: 601px) {
   .grps-hero-story-stack > #top {
     transform: translateX(-45px);
   }
 }
-</style>
 
 
-<style id="grps-name-story-values-v1">
-@media (min-width: 601px) {
-  #name-story {
-    width: 93% !important;
-    display: grid;
-    grid-template-columns: minmax(0, 50%) minmax(0, 32%);
-    column-gap: 18%;
-    align-items: center;
-  }
-  #name-story > :not(.grps-story-values) {
-    grid-column: 1;
-  }
-  #name-story .grps-story-values {
-    grid-column: 2;
-    grid-row: 1 / span 6;
-    display: flex;
-    flex-direction: column;
-    gap: 1.15cqw;
-    align-self: center;
-    padding-left: 1cqw;
-  }
-  #name-story .grps-story-value {
-    display: flex;
-    align-items: center;
-    gap: 1cqw;
-    min-height: 4.6cqw;
-    padding: .4cqw 1.3cqw .4cqw .5cqw;
-    background: rgba(255,255,255,.94);
-    border-radius: 100px;
-    box-shadow: 0 6px 22px rgba(15,70,105,.13);
-    color: #102d54;
-    font-size: 1.35cqw;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  #name-story .grps-story-value img {
-    width: 3.6cqw;
-    height: 3.6cqw;
-    object-fit: contain;
-    flex-shrink: 0;
-    border-radius: 50%;
-  }
+/* grps-header-alignment */
 
-  /* 緑枠：タイトルを白い余白の下側へ */
-  #name-story > h2 {
-    position: relative;
-    top: 1.3cqw;
-  }
-
-  /* 青枠：本文を少し大きく、下へ */
-  #name-story > p {
-    position: relative;
-    top: 1.6cqw;
-    font-size: 1.18cqw;
-    line-height: 1.85;
-  }
-
-}
-@media (max-width: 600px) {
-  #name-story .grps-story-values {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 24px;
-  }
-  #name-story .grps-story-value {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: min(100%, 290px);
-    padding: 7px 16px 7px 7px;
-    background: rgba(255,255,255,.95);
-    border-radius: 100px;
-    box-shadow: 0 5px 16px rgba(15,70,105,.12);
-    color: #102d54;
-    font-size: 15px;
-    font-weight: 700;
-  }
-  #name-story .grps-story-value img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    border-radius: 50%;
-  }
-}
-</style>
-
-
-
-
-
-
-
-<style id="grps-header-alignment">
 /* ロゴとメニューボタンを同じ基準で配置 */
 #grps-independent-header {
   height: 80px !important;
@@ -1090,32 +875,31 @@
     height: 40px !important;
   }
 }
-</style>
 
 
-<style id="grps-section-spacing-v2">
+/* grps-section-spacing-v2 */
+
 @media screen and (min-width: 601px) {
   #about {
-    transform: translateY(360px) !important;
+    transform: translateY(410px) !important;
   }
 
   #service {
-    transform: translateY(300px) !important;
+    transform: translateY(350px) !important;
+  }
+
+  .grps-service-detail {
+    transform: translateY(50px);
+  }
+
+  #works {
+    transform: translateY(120px);
   }
 }
-</style>
 
 
-<style id="grps-story-values-down">
-@media screen and (min-width: 601px) {
-  #name-story .grps-story-values {
-    transform: translateY(60px);
-  }
-}
-</style>
+/* grps-unified-section-typography */
 
-
-<style id="grps-unified-section-typography">
 @media screen and (min-width: 601px) {
 
   /* 英語見出し */
@@ -1164,9 +948,10 @@
     font-weight: 700;
   }
 }
-</style>
 
-<style id="grps-name-about-heading-match">
+
+/* grps-name-about-heading-match */
+
 /* Desktop: ABOUT headings match NAME STORY heading sizes */
 @media screen and (min-width: 601px) {
   #about > .grps-eyebrow {
@@ -1178,9 +963,10 @@
     line-height: 1.4;
   }
 }
-</style>
 
-<style id="grps-final-heading-unification">
+
+/* grps-final-heading-unification */
+
 /* NAME STORY / ABOUT を基準に、各セクションの見出しを統一 */
 @media screen and (min-width: 601px) {
   #about > .grps-eyebrow,
@@ -1218,15 +1004,10 @@
     font-weight: 700;
   }
 }
-</style>
 
 
+/* grps-about-layout-fix */
 
-
-
-
-
-<style id="grps-about-layout-fix">
 @media screen and (min-width: 601px) {
 
   #about .grps-about-features {
@@ -1285,10 +1066,10 @@
     width: 37% !important;
   }
 }
-</style>
 
 
-<style id="grps-about-text-up-fix">
+/* grps-about-text-up-fix */
+
 @media screen and (min-width: 601px) {
 
   /* ABOUTと大見出しだけ上へ */
@@ -1318,9 +1099,10 @@
   }
 
 }
-</style>
 
-<style id="grps-about-label-nowrap-fix">
+
+/* grps-about-label-nowrap-fix */
+
 @media screen and (min-width: 601px) {
 
   /* 3項目を写真より左の領域に収める */
@@ -1368,9 +1150,10 @@
   }
 
 }
-</style>
 
-<style id="grps-service-tag-pills">
+
+/* grps-service-tag-pills */
+
 .grps-service-detail > p.grps-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1401,9 +1184,10 @@
     font-size: 14px;
   }
 }
-</style>
 
-<style id="grps-works-tag-pills">
+
+/* grps-works-tag-pills */
+
 #works > p.grps-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1437,325 +1221,326 @@
     font-size: 14px;
   }
 }
-</style>
 
-<style id="grps-name-story-final-layout">
+
+
+/* TOP + NAME STORY: shared positioning */
 @media (min-width: 601px) {
-
-  /* NAME STORY全体 */
-  #name-story {
-    display: block !important;
-    width: 82% !important;
-    position: absolute !important;
+  .grps-hero-story-stack {
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    width: 91%;
   }
-
-  /* 左側の見出し・本文 */
+  .grps-hero-story-stack > #top,
+  .grps-hero-story-stack > #name-story {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  .grps-hero-story-stack > #top { width: 72.5% !important; }
+  .grps-hero-story-stack > #name-story {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 7.2cqw;
+    overflow: visible;
+  }
   #name-story > .grps-eyebrow,
   #name-story > h2,
   #name-story > p {
-    display: block !important;
-    position: relative !important;
-    left: 0 !important;
-    top: auto !important;
-    transform: none !important;
-    width: 65% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-    grid-column: auto !important;
-    grid-row: auto !important;
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translateY(170px);
+    width: 54%;
+    max-width: none;
+    grid-column: auto;
+    grid-row: auto;
   }
-
-  #name-story > h2 {
-    margin-top: 1cqw !important;
-    line-height: 1.4 !important;
-  }
-
-  #name-story > p {
-    font-size: 1.18cqw !important;
-    line-height: 1.8 !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-  }
-
-  /* アイコンは右の植物写真の上へ */
+  #name-story .grps-eyebrow { font-size: 1.3cqw; }
+  #name-story h2 { font-size: 2.1cqw; line-height: 1.4; white-space: normal; }
+  #name-story p { font-size: 1.18cqw; line-height: 1.75; overflow-wrap: break-word; }
   #name-story .grps-story-values {
-    position: absolute !important;
-    left: 72% !important;
-    top: 5cqw !important;
-    width: max-content !important;
-    max-width: none !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.15cqw !important;
-    z-index: 5 !important;
+    position: absolute;
+    top: 4.5cqw;
+    left: 66%;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15cqw;
+    z-index: 5;
+    transform: translate(-270px, 140px);
   }
-
   #name-story .grps-story-value {
-    display: flex !important;
-    align-items: center !important;
-    width: max-content !important;
+    display: flex;
+    align-items: center;
+    gap: 1cqw;
+    min-height: 4.6cqw;
+    width: max-content;
+    padding: .4cqw 1.3cqw .4cqw .5cqw;
+    background: rgba(255,255,255,.94);
+    border-radius: 100px;
+    box-shadow: 0 6px 22px rgba(15,70,105,.13);
+    color: #102d54;
+    font-size: 1.35cqw;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  #name-story .grps-story-value img {
+    width: 3.6cqw;
+    height: 3.6cqw;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .grps-hero-story-stack { display: contents; }
+  .grps-hero-story-stack > .grps-section {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 84% !important;
     max-width: none !important;
-    min-height: 4.6cqw !important;
-    white-space: nowrap !important;
+    margin: 0 auto 65px !important;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+  #name-story h2 { white-space: normal; }
+  #name-story .grps-story-values {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  #name-story .grps-story-value {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(100%, 290px);
+    padding: 7px 16px 7px 7px;
+    background: rgba(255,255,255,.95);
+    border-radius: 100px;
+    box-shadow: 0 5px 16px rgba(15,70,105,.12);
+    color: #102d54;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  #name-story .grps-story-value img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
   }
 }
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
-
 <header id="grps-independent-header">
-  <div class="grps-header-inner">
-    <a id="grps-header-logo"
-   href="./index.html#top"
-   aria-label="グローパス トップページ">
-  <img src="./grps_images/glowpas-logo-horizontal.png"
-       alt="グローパス">
+<div class="grps-header-inner">
+<a aria-label="グローパス トップページ" href="./index.html#top" id="grps-header-logo">
+<img alt="グローパス" src="./grps_images/glowpas-logo-horizontal.png"/>
 </a>
-    <button
-      class="menu-button"
-      id="menuOpen"
-      type="button"
-      aria-label="メニューを開く"
-      aria-controls="sideMenu"
-      aria-expanded="false"
-    >
-<img class="hamburger-icon" src="./grps_images/hamburger-menu.png" alt="">
+<button aria-controls="sideMenu" aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuOpen" type="button">
+<img alt="" class="hamburger-icon" src="./grps_images/hamburger-menu.png"/>
 </button>
-  </div>
+</div>
 </header>
-
-
-
-
-  <main class="page">
-    <img
-      class="background-image"
-      src="./grps_images/original_top.png"
-      alt="グローパス トップページ"
-    >
-    
-
+<main class="page">
+<img alt="グローパス トップページ" class="background-image" src="./grps_images/original_top.png"/>
 <!-- GRPS-TEXT-START -->
 <div class="grps-text-layer">
-
 <div class="grps-hero-story-stack">
-<section id="top" class="grps-section"
-  style="top:5%;left:9%;width:66%;">
-  <p class="grps-lead">
-    官公庁・自治体・企業のイベントを<br>
+<section class="grps-section" id="top" style="top:5%;left:9%;width:66%;">
+<p class="grps-lead">
+    官公庁・自治体・企業のイベントを<br/>
     企画から運営・テクニカルまで
   </p>
-  <h1 class="grps-space">
-    現場に寄り添い、<br>
-    <span class="grps-hero-accent">イベント成功</span>を支える。
+<h1 class="grps-space">
+    現場に寄り添い、<br/>
+<span class="grps-hero-accent">イベント成功</span>を支える。
   </h1>
-  <p class="grps-small-space">
-    グローパスは、官公庁・自治体・企業のイベントを<br>
-    企画から運営、映像・音響・配信まで一貫して支える<br>
+<p class="grps-small-space">
+    グローパスは、官公庁・自治体・企業のイベントを<br/>
+    企画から運営、映像・音響・配信まで一貫して支える<br/>
     イベントのプロフェッショナルです。
   </p>
-  <div class="grps-buttons">
-    <a href="#service">サービスを見る →</a>
-    <a href="#contact">お問い合わせ →</a>
-  </div>
+<div class="grps-buttons">
+<a href="#service">サービスを見る →</a>
+<a href="#contact">お問い合わせ →</a>
+</div>
 </section>
-
-<section id="name-story" class="grps-section"
-  style="top:26%;left:9%;width:43%;">
-  <div class="grps-eyebrow">NAME STORY</div>
-  <h2 class="grps-small-space">
+<section class="grps-section" id="name-story" style="top:26%;left:9%;width:100%;">
+<div class="grps-eyebrow">NAME STORY</div>
+<h2 class="grps-small-space">
     グローパスという名前に込めた想い
   </h2>
-  <p class="grps-space">
-    社名の「グローパス」は、Grow（育てる・成長する）と
+<p class="grps-space">
+    社名の「グローパス」は、Grow（育てる・成長する）と<br/>
     Pass（つなぐ・受け渡す）という考え方から生まれました。
   </p>
-  <p class="grps-small-space">
+<p class="grps-small-space">
     人の力、主催者の想い、そしてイベントの価値を次へつないでいく。
   </p>
-  <p class="grps-small-space">
+<p class="grps-small-space">
     一つひとつの現場に向き合いながら、成果へ導く姿勢を、
     この名前に込めています。
   </p>
-  
-<div class="grps-story-values" aria-label="グローパスの3つの想い">
-  <div class="grps-story-value">
-    <img src="./grps_images/name-story-connect.png" alt="">
-    <span>想いをつなぐ</span>
-  </div>
-  <div class="grps-story-value">
-    <img src="./grps_images/name-story-grow.png" alt="">
-    <span>現場を育てる</span>
-  </div>
-  <div class="grps-story-value">
-    <img src="./grps_images/name-story-deliver.png" alt="">
-    <span>価値を届ける</span>
-  </div>
+<div aria-label="グローパスの3つの想い" class="grps-story-values">
+<div class="grps-story-value">
+<img alt="" src="./grps_images/name-story-connect.png"/>
+<span>想いをつなぐ</span>
+</div>
+<div class="grps-story-value">
+<img alt="" src="./grps_images/name-story-grow.png"/>
+<span>現場を育てる</span>
+</div>
+<div class="grps-story-value">
+<img alt="" src="./grps_images/name-story-deliver.png"/>
+<span>価値を届ける</span>
+</div>
 </div>
 </section>
 </div>
-
-<section id="about" class="grps-section"
-  style="top:40%;left:9%;width:82%;">
-  <div class="grps-eyebrow">ABOUT</div>
-  <h2 class="grps-small-space">
+<section class="grps-section" id="about" style="top:40%;left:9%;width:82%;">
+<div class="grps-eyebrow">ABOUT</div>
+<h2 class="grps-small-space">
     一つとして同じ現場はありません。
   </h2>
-  <p class="grps-space">
+<p class="grps-space">
     開催目的、来場者規模、求められる演出は案件ごとに異なります。
   </p>
-  <p class="grps-small-space">
+<p class="grps-small-space">
     グローパスは、主催者の意図を丁寧に整理し、
     現場に合わせた進行・体制・技術を組み立てます。
   </p>
-  
-  <div class="grps-about-features" aria-label="グローパスの強み">
-    <div class="grps-about-feature">
-      <img src="grps_images/about-planning.png" alt="">
-      <span>企画と運営をつなぐ</span>
-    </div>
-    <div class="grps-about-feature">
-      <img src="grps_images/about-decision.png" alt="">
-      <span>現場判断に強い</span>
-    </div>
-    <div class="grps-about-feature">
-      <img src="grps_images/about-media.png" alt="">
-      <span>配信・音響・映像まで<br>一括対応</span>
-    </div>
-  </div>
-
+<div aria-label="グローパスの強み" class="grps-about-features">
+<div class="grps-about-feature">
+<img alt="" src="grps_images/about-planning.png"/>
+<span>企画と運営をつなぐ</span>
+</div>
+<div class="grps-about-feature">
+<img alt="" src="grps_images/about-decision.png"/>
+<span>現場判断に強い</span>
+</div>
+<div class="grps-about-feature">
+<img alt="" src="grps_images/about-media.png"/>
+<span>配信・音響・映像まで<br/>一括対応</span>
+</div>
+</div>
 </section>
-
-<section id="service" class="grps-section"
-  style="top:53%;left:9%;width:82%;">
-  <div class="grps-eyebrow">SERVICE &amp; WORKS</div>
-  <h2 class="grps-small-space">
+<section class="grps-section" id="service" style="top:53%;left:9%;width:82%;">
+<div class="grps-eyebrow">SERVICE &amp; WORKS</div>
+<h2 class="grps-small-space">
     グローパスをもっと知る
   </h2>
-  <p class="grps-small-space">
+<p class="grps-small-space">
     サービス内容とこれまでの実績をご紹介します。
   </p>
 </section>
-
-<section class="grps-section grps-service-detail"
-  style="top:60%;left:54%;width:37%;">
-  <div class="grps-eyebrow">01 / SERVICE</div>
-  <h3>サービス内容</h3>
-  <p class="grps-tags"><span>企画</span><span>運営</span><span>テクニカル</span></p>
-  <p class="grps-small-space">
+<section class="grps-section grps-service-detail" style="top:60%;left:54%;width:37%;">
+<div class="grps-eyebrow">01 / SERVICE</div>
+<h3>サービス内容</h3>
+<p class="grps-tags"><span>企画</span><span>運営</span><span>テクニカル</span></p>
+<p class="grps-small-space">
     イベントの企画から当日の運営、映像・音響・配信まで、
     トータルでサポートします。
   </p>
 </section>
-
-<section id="works" class="grps-section"
-  style="top:74%;left:10%;width:40%;">
-  <div class="grps-eyebrow">02 / WORKS</div>
-  <h3>実績</h3>
-  <p class="grps-tags"><span>官公庁</span><span>自治体</span><span>企業</span></p>
-  <p class="grps-small-space">
+<section class="grps-section" id="works" style="top:74%;left:10%;width:40%;">
+<div class="grps-eyebrow">02 / WORKS</div>
+<h3>実績</h3>
+<p class="grps-tags"><span>官公庁</span><span>自治体</span><span>企業</span></p>
+<p class="grps-small-space">
     これまでに支援してきたイベントの一例をご紹介します。
     豊富な実績が私たちの強みです。
   </p>
 </section>
-
-
-<section id="contact" class="grps-section grps-contact-area"
-  style="top:84%;left:9%;width:82%;text-align:center;">
-
-  <div class="grps-contact-heading">
-    <div class="grps-eyebrow">CONTACT</div>
-    <h2>お問い合わせ</h2>
-    <p>
+<section class="grps-section grps-contact-area" id="contact" style="top:84%;left:9%;width:82%;text-align:center;">
+<div class="grps-contact-heading">
+<div class="grps-eyebrow">CONTACT</div>
+<h2>お問い合わせ</h2>
+<p>
       イベントの企画・運営に関するご相談は、
-      お気軽にお問い合わせください。<br>
+      お気軽にお問い合わせください。<br/>
       ご要望をお伺いし、最適な進め方をご提案いたします。
     </p>
-  </div>
-
-  <div class="grps-contact-grid">
-
-    <article class="grps-contact-card">
-      <div class="grps-contact-card-body">
-        <img
-          class="grps-contact-icon"
-          src="./grps_images/contact-form-icon.png"
-          alt=""
-        >
-        <div class="grps-contact-card-copy">
-          <h3>お問い合わせフォーム</h3>
-          <p>
-            企業・官公庁・イベント主催者の方へ<br>
+</div>
+<div class="grps-contact-grid">
+<article class="grps-contact-card">
+<div class="grps-contact-card-body">
+<img alt="" class="grps-contact-icon" src="./grps_images/contact-form-icon.png"/>
+<div class="grps-contact-card-copy">
+<h3>お問い合わせフォーム</h3>
+<p>
+            企業・官公庁・イベント主催者の方へ<br/>
             正式なお見積り・ご相談はこちら。
           </p>
-        </div>
-      </div>
-      <span class="grps-contact-action grps-contact-action-blue">
+</div>
+</div>
+<span class="grps-contact-action grps-contact-action-blue">
         フォームから相談する <span aria-hidden="true">→</span>
-      </span>
-    </article>
-
-    <article class="grps-contact-card">
-      <div class="grps-contact-card-body">
-        <img
-          class="grps-contact-icon"
-          src="./grps_images/line-contact-icon.png"
-          alt=""
-        >
-        <div class="grps-contact-card-copy">
-          <h3>LINEで相談する</h3>
-          <p>
-            まずは気軽に相談したい方へ<br>
+</span>
+</article>
+<article class="grps-contact-card">
+<div class="grps-contact-card-body">
+<img alt="" class="grps-contact-icon" src="./grps_images/line-contact-icon.png"/>
+<div class="grps-contact-card-copy">
+<h3>LINEで相談する</h3>
+<p>
+            まずは気軽に相談したい方へ<br/>
             担当者が迅速に対応いたします。
           </p>
-        </div>
-      </div>
-      <span class="grps-contact-action grps-contact-action-green">
+</div>
+</div>
+<span class="grps-contact-action grps-contact-action-green">
         友だち追加して相談する <span aria-hidden="true">→</span>
-      </span>
-    </article>
-
-  </div>
+</span>
+</article>
+</div>
 </section>
-
 </div>
 <!-- GRPS-TEXT-END -->
-
-
-  </main>
-
-  <div class="menu-overlay" id="menuOverlay"></div>
-
-  <aside
-    class="side-menu"
-    id="sideMenu"
-    aria-label="サイトメニュー"
-    aria-hidden="true"
-    inert
-  >
-    <button class="menu-close" id="menuClose" type="button"
-      aria-label="メニューを閉じる">×</button>
-
-    <p class="menu-label">MENU / メニュー</p>
-
-    <nav class="menu-links">
-      <a href="#top"><small>HOME</small>トップページ</a>
-      <a href="#name-story"><small>NAME STORY</small>社名に込めた想い</a>
-      <a href="#about"><small>ABOUT</small>私たちについて</a>
-      <a href="#service"><small>SERVICE</small>サービス内容</a>
-      <a href="#works"><small>WORKS</small>実績</a>
-      <a href="./recruit/index.html"><small>RECRUIT</small>採用情報</a>
-      <a href="#contact"><small>CONTACT</small>お問い合わせ</a>
-    </nav>
-
-    <p class="menu-footer">Event for a Better Tomorrow.</p>
-  </aside>
-
+</main>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside aria-hidden="true" aria-label="サイトメニュー" class="side-menu" id="sideMenu" inert="">
+<button aria-label="メニューを閉じる" class="menu-close" id="menuClose" type="button">×</button>
+<p class="menu-label">MENU / メニュー</p>
+<nav class="menu-links">
+<a href="#top"><small>HOME</small>トップページ</a>
+<a href="#name-story"><small>NAME STORY</small>社名に込めた想い</a>
+<a href="#about"><small>ABOUT</small>私たちについて</a>
+<a href="#service"><small>SERVICE</small>サービス内容</a>
+<a href="#works"><small>WORKS</small>実績</a>
+<a href="./recruit/index.html"><small>RECRUIT</small>採用情報</a>
+<a href="#contact"><small>CONTACT</small>お問い合わせ</a>
+</nav>
+<p class="menu-footer">Event for a Better Tomorrow.</p>
+</aside>
 <script>
 (() => {
   const openButton = document.getElementById("menuOpen");
