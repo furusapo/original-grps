@@ -956,10 +956,10 @@
 <style id="grps-name-story-values-v1">
 @media (min-width: 601px) {
   #name-story {
-    width: 73% !important;
+    width: 93% !important;
     display: grid;
-    grid-template-columns: minmax(0, 58%) minmax(0, 35%);
-    column-gap: 7%;
+    grid-template-columns: minmax(0, 50%) minmax(0, 32%);
+    column-gap: 18%;
     align-items: center;
   }
   #name-story > :not(.grps-story-values) {
@@ -995,6 +995,21 @@
     flex-shrink: 0;
     border-radius: 50%;
   }
+
+  /* 緑枠：タイトルを白い余白の下側へ */
+  #name-story > h2 {
+    position: relative;
+    top: 1.3cqw;
+  }
+
+  /* 青枠：本文を少し大きく、下へ */
+  #name-story > p {
+    position: relative;
+    top: 1.6cqw;
+    font-size: 1.18cqw;
+    line-height: 1.85;
+  }
+
 }
 @media (max-width: 600px) {
   #name-story .grps-story-values {
