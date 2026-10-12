@@ -1307,31 +1307,40 @@
 <style id="grps-about-label-nowrap-fix">
 @media screen and (min-width: 601px) {
 
-  /* アイコン全体の位置と並びは現状維持 */
+  /* 3項目を写真より左の領域に収める */
   #about .grps-about-features {
-    width: 78% !important;
-    grid-template-columns: 1.15fr 1fr 1.6fr !important;
+    left: 0 !important;
+    width: 57% !important;
+    display: grid !important;
+    grid-template-columns: 1.25fr 1.05fr 1.45fr !important;
     gap: .7cqw !important;
+    align-items: center !important;
   }
 
-  #about .grps-about-feature {
+  #about .grps-about-feature,
+  #about .grps-about-feature:nth-child(1),
+  #about .grps-about-feature:nth-child(2),
+  #about .grps-about-feature:nth-child(3) {
     min-width: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
     justify-content: flex-start !important;
     gap: .4cqw !important;
   }
 
-  /* 元の文字サイズに戻す */
+  #about .grps-about-feature img {
+    width: 3.5cqw !important;
+    height: 3.5cqw !important;
+    flex-shrink: 0 !important;
+  }
+
   #about .grps-about-feature span {
     font-size: 1.05cqw !important;
     font-weight: 700 !important;
     line-height: 1.4 !important;
     white-space: nowrap !important;
     word-break: keep-all !important;
-  }
-
-  /* 3つ目だけ指定位置で改行 */
-  #about .grps-about-feature:nth-child(3) span {
-    white-space: nowrap !important;
   }
 
   #about .grps-about-feature span br {
