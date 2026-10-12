@@ -1388,6 +1388,41 @@
 }
 </style>
 
+<style id="grps-works-tag-pills">
+#works > p.grps-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8cqw;
+  margin-top: .7cqw;
+}
+
+#works > p.grps-tags > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .28cqw 1.35cqw;
+  border-radius: 999px;
+  background: #e3f3fc;
+  color: #087aa9;
+  font-size: 1.25cqw;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  #works > p.grps-tags {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  #works > p.grps-tags > span {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -1540,7 +1575,7 @@
   style="top:69%;left:10%;width:40%;">
   <div class="grps-eyebrow">02 / WORKS</div>
   <h3>実績</h3>
-  <p class="grps-tags">官公庁　自治体　企業</p>
+  <p class="grps-tags"><span>官公庁</span><span>自治体</span><span>企業</span></p>
   <p class="grps-small-space">
     これまでに支援してきたイベントの一例をご紹介します。
     豊富な実績が私たちの強みです。
