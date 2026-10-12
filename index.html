@@ -1150,6 +1150,58 @@
 }
 </style>
 
+<style id="grps-name-about-heading-match">
+/* Desktop: ABOUT headings match NAME STORY heading sizes */
+@media screen and (min-width: 601px) {
+  #about > .grps-eyebrow {
+    font-size: 1.3cqw;
+    line-height: 1.4;
+  }
+  #about > h2 {
+    font-size: 2.1cqw;
+    line-height: 1.4;
+  }
+}
+</style>
+
+<style id="grps-final-heading-unification">
+/* NAME STORY / ABOUT を基準に、各セクションの見出しを統一 */
+@media screen and (min-width: 601px) {
+  #about > .grps-eyebrow,
+  #service > .grps-eyebrow,
+  #service + .grps-section > .grps-eyebrow,
+  #works > .grps-eyebrow,
+  #contact .grps-contact-heading > .grps-eyebrow {
+    font-size: 1.3cqw;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: .14em;
+  }
+  #about > h2,
+  #service > h2,
+  #service + .grps-section > h3,
+  #works > h3,
+  #contact .grps-contact-heading > h2 {
+    font-size: 2.1cqw;
+    line-height: 1.4;
+    font-weight: 800;
+  }
+  #about > p,
+  #service > p,
+  #service + .grps-section > p,
+  #works > p,
+  #contact .grps-contact-heading > p {
+    font-size: 1.65cqw;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  #about > p.grps-tags,
+  #service + .grps-section > p.grps-tags,
+  #works > p.grps-tags {
+    font-weight: 700;
+  }
+}
+</style>
 </head>
 <body>
 
