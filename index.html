@@ -1207,34 +1207,39 @@
 
 
 
+
+
+
 <style id="grps-about-layout-fix">
 @media (min-width: 601px) {
 
-  /* ABOUTのアイコンを右側に三角形で配置 */
+  /* ABOUTの右側に三角形で配置 */
   #about .grps-about-features {
     position: absolute !important;
-    top: 0 !important;
-    left: 110% !important;
-    width: 95% !important;
-    height: 15cqw !important;
+    top: -3cqw !important;
+    left: 58% !important;
+    width: 42% !important;
+    height: 19cqw !important;
+    margin: 0 !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     grid-template-rows: 1fr 1fr !important;
-    gap: 0.6cqw !important;
-    margin: 0 !important;
+    gap: 1cqw !important;
     align-items: center !important;
     justify-items: center !important;
   }
 
   #about .grps-about-feature {
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 0.5cqw !important;
-    border: none !important;
+    gap: .35cqw !important;
     padding: 0 !important;
-    font-size: 1.2cqw !important;
-    white-space: nowrap;
+    border: none !important;
+    text-align: center !important;
+    white-space: normal !important;
+    font-size: 1.05cqw !important;
   }
 
   #about .grps-about-feature:nth-child(1) {
@@ -1253,15 +1258,17 @@
   }
 
   #about .grps-about-feature img {
-    width: 3.5cqw !important;
-    height: 3.5cqw !important;
+    display: block !important;
+    width: 5cqw !important;
+    height: 5cqw !important;
     object-fit: contain !important;
-    flex-shrink: 0 !important;
   }
 
-  /* SERVICEの重なりを解消 */
-  #service {
-    top: 61% !important;
+  /* SERVICE詳細を「グローパスをもっと知る」の下へ */
+  .grps-service-detail {
+    top: 63% !important;
+    left: 54% !important;
+    width: 37% !important;
   }
 }
 </style>
@@ -1403,7 +1410,7 @@
   </p>
 </section>
 
-<section class="grps-section"
+<section class="grps-section grps-service-detail"
   style="top:60%;left:54%;width:37%;">
   <div class="grps-eyebrow">01 / SERVICE</div>
   <h3>サービス内容</h3>
