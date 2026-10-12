@@ -1275,16 +1275,30 @@
 <style id="grps-about-text-up-fix">
 @media screen and (min-width: 601px) {
 
+  /* ABOUTと大見出しだけ上へ */
+  #about > .grps-eyebrow,
+  #about > h2 {
+    position: relative !important;
+    top: -5.5cqw !important;
+  }
+
+  /* 本文は現在の高さを維持 */
   #about > p {
+    position: relative !important;
+    top: -2.2cqw !important;
     line-height: 1.5 !important;
   }
 
+  #about > h2.grps-small-space {
+    margin-top: .8cqw !important;
+  }
+
   #about > p.grps-space {
-    margin-top: 1.2cqw !important;
+    margin-top: 1.1cqw !important;
   }
 
   #about > p.grps-small-space {
-    margin-top: .6cqw !important;
+    margin-top: .65cqw !important;
   }
 
 }
