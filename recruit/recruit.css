@@ -173,3 +173,112 @@ body.menu-open {
     transition: none;
   }
 }
+
+/* GROWPAS recruitment mobile layout restoration */
+@media screen and (max-width: 850px) {
+  .message.section {
+    padding: 54px 24px 60px;
+  }
+
+  .message-grid {
+    display: block;
+  }
+
+  .message-grid > div:first-child {
+    margin: 0 0 26px;
+  }
+
+  .message .eyebrow {
+    margin: 0 0 8px;
+    font-size: 12px;
+  }
+
+  .message h1 {
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.4;
+    margin: 0 0 8px;
+  }
+
+  .message-watermark {
+    font-size: clamp(36px, 10vw, 60px);
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .message-copy {
+    border-left: 0;
+    border-top: 1px solid #b6dce9;
+    padding: 24px 0 0;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .message-copy p {
+    margin: 0 0 16px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(27px, 6vw, 36px);
+  }
+
+  .job-grid,
+  .voice-grid,
+  .attraction-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .job-info-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .entry h2 {
+    font-size: clamp(24px, 6vw, 34px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero {
+    min-height: 350px;
+  }
+
+  .hero-writing {
+    width: 85%;
+  }
+
+  .hero-badge {
+    width: 80px;
+  }
+
+  .section {
+    padding: 58px 20px;
+  }
+
+  .message.section {
+    padding: 46px 20px 54px;
+  }
+
+  .job-cover {
+    height: 260px;
+    padding: 22px;
+  }
+
+  .job-content {
+    padding: 20px;
+  }
+
+  .voice-card > img {
+    height: 220px;
+  }
+
+  .attraction-card {
+    padding: 24px;
+  }
+
+  .entry {
+    background-position: center;
+  }
+}
