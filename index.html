@@ -1520,59 +1520,300 @@
 
 
 <style>
-/* grps-mobile-service-works-two-columns */
+/* grps-mobile-service-works-grid-v2 */
+
+/* PC版では元のレイアウト構造を維持 */
+.grps-mobile-service-works-grid {
+  display: contents;
+}
+
 @media screen and (max-width: 600px) {
-  .page {
+
+  /* 01と02だけを2列にする */
+  .grps-text-layer > .grps-mobile-service-works-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+    width: 88%;
+    margin: 0 auto 66px;
+    padding: 0;
     position: relative;
   }
 
-  #service,
-  #works {
-    position: absolute !important;
-    top: 53% !important;
-    width: 43% !important;
+  /* 元の絶対配置を解除してグリッド内に収める */
+  .grps-text-layer .grps-mobile-service-works-grid > .grps-section {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column;
+    width: 100% !important;
     min-width: 0 !important;
     max-width: none !important;
+    height: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    transform: none !important;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
   }
 
-  #service {
-    left: 5% !important;
-    right: auto !important;
-  }
-
-  #works {
-    left: 52% !important;
-    right: auto !important;
-  }
-
-  #service .grps-numbered-eyebrow,
-  #works .grps-numbered-eyebrow {
-    font-size: 13px !important;
+  /* 番号と英語見出し */
+  .grps-mobile-service-works-grid .grps-numbered-eyebrow {
+    font-size: 12px !important;
+    gap: 4px !important;
+    padding: 0 !important;
+    margin: 0 0 10px !important;
+    letter-spacing: 0;
     white-space: nowrap;
   }
 
-  #service h3,
-  #works h3 {
-    font-size: 19px !important;
-    line-height: 1.35 !important;
+  .grps-mobile-service-works-grid .grps-section-number {
+    font-size: 1.5em !important;
   }
 
-  #service p,
-  #works p {
+  .grps-mobile-service-works-grid .grps-number-label {
+    letter-spacing: .06em !important;
+  }
+
+  /* 日本語タイトル */
+  .grps-mobile-service-works-grid h3 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 14px !important;
+  }
+
+  /* タグは各列の中で折り返す */
+  .grps-mobile-service-works-grid p.grps-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-content: flex-start;
+    gap: 6px !important;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+  }
+
+  .grps-mobile-service-works-grid p.grps-tags > span {
     font-size: 11px !important;
-    line-height: 1.7 !important;
+    padding: 4px 8px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 説明文 */
+  .grps-mobile-service-works-grid p.grps-small-space {
+    font-size: 12px !important;
+    line-height: 1.75 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     overflow-wrap: anywhere;
   }
 
-  #service .grps-tags,
-  #works .grps-tags {
-    flex-wrap: wrap !important;
-    gap: 5px !important;
+  .grps-mobile-service-works-grid .grps-detail-break {
+    display: none;
   }
+
+  /* 矢印を各列の下側に配置 */
+  .grps-mobile-service-works-grid .grps-detail-arrow,
+  .grps-mobile-service-works-grid #works > .grps-detail-arrow {
+    position: relative !important;
+    inset: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    align-self: flex-end;
+    flex-shrink: 0;
+    width: 40px !important;
+    height: 40px !important;
+    margin: auto 0 0 auto !important;
+    font-size: 23px !important;
+  }
+
+}
+</style>
+
+
+<style>
+/* grps-mobile-service-works-cards */
+@media screen and (max-width: 600px) {
+
+  .grps-text-layer .grps-mobile-service-works-grid {
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .grps-text-layer .grps-mobile-service-works-grid > .grps-section {
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(36,155,240,.14) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 24px rgba(15,70,105,.09) !important;
+    padding: 16px 12px !important;
+    min-width: 0 !important;
+    height: 100% !important;
+  }
+
+  .grps-mobile-service-works-grid .grps-detail-arrow {
+    margin-top: auto !important;
+    padding-top: 12px;
+  }
+
+}
+</style>
+
+
+<style>
+/* grps-mobile-three-column-features-v1 */
+@media screen and (max-width: 600px) {
+
+  /* 3つの想い：横3列 */
+  .grps-story-values {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .grps-story-value {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 14px 5px !important;
+    border-radius: 18px !important;
+    text-align: center !important;
+  }
+
+  .grps-story-value img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain !important;
+    flex-shrink: 0;
+  }
+
+  .grps-story-value span {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+  }
+
+  /* グローパスの強み：横3列 */
+  .grps-about-features {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .grps-about-feature {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 3px !important;
+    text-align: center !important;
+  }
+
+  .grps-about-feature img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain !important;
+    flex-shrink: 0;
+  }
+
+  .grps-about-feature span {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    overflow-wrap: anywhere;
+  }
+
+}
+</style>
+
+
+<style>
+/* grps-about-mobile-horizontal-fix */
+@media screen and (max-width: 600px) {
+
+  #about .grps-about-features {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: none !important;
+    justify-content: stretch !important;
+    align-items: start !important;
+  }
+
+  #about .grps-about-features > .grps-about-feature {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 8px 2px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  #about .grps-about-feature img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain !important;
+    margin: 0 auto 8px !important;
+  }
+
+  #about .grps-about-feature span {
+    display: block !important;
+    width: 100% !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    overflow-wrap: anywhere;
+  }
+
+}
+</style>
+
+
+<style>
+/* grps-mobile-card-arrow-alignment-v1 */
+@media screen and (max-width: 600px) {
+
+  .grps-mobile-service-works-grid > .grps-section {
+    position: relative !important;
+    padding-bottom: 76px !important;
+  }
+
+  .grps-mobile-service-works-grid > .grps-section > .grps-detail-arrow {
+    position: absolute !important;
+    top: auto !important;
+    left: auto !important;
+    right: 12px !important;
+    bottom: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
 }
 </style>
 
@@ -1680,6 +1921,7 @@
     サービス内容とこれまでの実績をご紹介します。
   </p>
 </section>
+<div class="grps-mobile-service-works-grid">
 <section class="grps-section grps-service-detail" style="top:60%;left:54%;width:37%;">
 <div class="grps-eyebrow grps-numbered-eyebrow"><span class="grps-section-number">01</span><span class="grps-number-divider">/</span><span class="grps-number-label">SERVICE</span></div>
 <h3>サービス内容</h3>
@@ -1700,6 +1942,7 @@
   </p>
 <a aria-label="実績の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定">→</a>
 </section>
+</div>
 <section class="grps-section grps-contact-area" id="contact" style="top:84%;left:9%;width:82%;text-align:center;">
 <div class="grps-contact-heading">
 <div class="grps-eyebrow">CONTACT</div>

@@ -3196,6 +3196,33 @@ img{
 }
 </style>
 
+
+<style id="grps-recruit-mobile-header-flow-fix">
+@media screen and (max-width: 768px) {
+
+  /* ヘッダーの下からページを開始 */
+  body {
+    padding-top: 72px !important;
+  }
+
+  /* メイン画像をヘッダー直下に配置 */
+  .hero {
+    margin-top: 0 !important;
+  }
+
+  /* 丸い画像は元のスマホ用サイズに戻す */
+  body .hero .hero-badge {
+    width: 24% !important;
+    height: auto !important;
+    max-width: none !important;
+    right: 5% !important;
+    top: 7% !important;
+    transform: none !important;
+  }
+
+}
+</style>
+
 </head>
 <body>
 
@@ -3631,6 +3658,7 @@ img{
           type="button" aria-label="メニューを閉じる">×</button>
   <p class="menu-label">MENU / メニュー</p>
   <nav class="menu-links">
+<a href="../index.html"><small>HOME</small>ホーム</a>
     <a href="../service/index.html"><small>SERVICE</small>サービス内容</a>
     <a href="../results/index.html"><small>WORKS</small>実績</a>
     <a href="../recruit/index.html"><small>RECRUIT</small>リクルート</a>
