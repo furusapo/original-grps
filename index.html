@@ -407,24 +407,25 @@
   color: #0878ca;
 }
 
-/* TOP: 「を」だけ小さく、明るいアイスブルーに */
+/* TOP: 「を」を見出しと同じ大きさにする */
 #top .grps-hero-particle {
   display: inline-block;
-  font-size: 0.52em;
+  font-size: 1em;
   background: linear-gradient(100deg, #249BF0 0%, #16B8CB 50%, #3CD59B 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #249BF0;
-  vertical-align: 0.08em;
+  vertical-align: baseline;
 }
 
 
 
-/* TOPの説明文だけ調整 */
+/* TOPの説明文：共通本文フォント、2pt縮小、行間調整 */
 #top > p.grps-small-space {
-  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-               "Noto Sans JP", sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: calc(1.65cqw - 2pt);
+  line-height: 1.4;
   font-weight: 400;
   margin-top: 4cqw;
 }
@@ -1184,8 +1185,20 @@
   pointer-events: auto;
   transition: transform .2s ease, box-shadow .2s ease;
 }
+.grps-detail-arrow span {
+  display: inline-block;
+  animation: grpsArrowSlide 1.8s ease-in-out infinite;
+}
+@keyframes grpsArrowSlide {
+  0%, 100% { transform: translateX(-3px); opacity: .75; }
+  50% { transform: translateX(4px); opacity: 1; }
+}
 .grps-detail-arrow:hover { transform: translateX(3px); box-shadow: 0 6px 22px rgba(26,100,155,.22); }
+.grps-detail-arrow:hover span { animation-duration: .8s; }
 .grps-detail-arrow:focus-visible { outline: 3px solid #249BF0; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .grps-detail-arrow span { animation: none; }
+}
 
 
 /* Footer: background artwork remains untouched */
@@ -1982,7 +1995,7 @@
     イベントの企画から当日の運営、映像・音響・配信まで、<br class="grps-detail-break"/>
     トータルでサポートします。
   </p>
-<a aria-label="サービス内容の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定">→</a>
+<a aria-label="サービス内容の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定"><span aria-hidden="true">→</span></a>
 </section>
 <section class="grps-section" id="works" style="top:74%;left:10%;width:40%;">
 <div class="grps-eyebrow grps-numbered-eyebrow"><span class="grps-section-number">02</span><span class="grps-number-divider">/</span><span class="grps-number-label">WORKS</span></div>
@@ -1992,7 +2005,7 @@
     これまでに支援してきたイベントの一例をご紹介します。<br class="grps-detail-break"/>
     豊富な実績が私たちの強みです。
   </p>
-<a aria-label="実績の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定">→</a>
+<a aria-label="実績の詳細（リンク先は後日設定）" class="grps-detail-arrow" href="#" onclick="return false;" title="リンク先は後日設定"><span aria-hidden="true">→</span></a>
 </section>
 </div>
 <section class="grps-section grps-contact-area" id="contact" style="top:84%;left:9%;width:82%;text-align:center;">
