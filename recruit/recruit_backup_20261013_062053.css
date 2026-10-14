@@ -1,0 +1,175 @@
+@charset "UTF-8";
+:root{--navy:#153b60;--blue:#0a8dbb;--mint:#eaf9f5;--ink:#4b6476}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--navy);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.site-header{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:88px;padding:18px max(5vw,20px);background:white}
+.brand{font-size:23px;letter-spacing:.04em;font-weight:800}.brand span{font-size:12px;font-weight:500;margin-left:12px}
+.top-link{font-size:12px;letter-spacing:.08em;border:1px solid #c9e4ed;border-radius:100px;padding:10px 18px}
+.hero{min-height:560px;position:relative;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,27,48,.72),rgba(4,35,54,.16)),url("../grps_images/recruit/hero-bg.jpg") center/cover no-repeat;overflow:hidden}
+.hero-inner{width:min(1160px,90%);margin:auto}.hero-writing{width:min(750px,70%);max-height:340px;object-fit:contain;object-position:left}
+.hero-fallback{font-size:14px;letter-spacing:.3em;color:white}.hero-badge{position:absolute;width:180px;right:6%;top:8%}
+.container{max-width:1160px;margin:auto}.section{padding:100px 6%}.eyebrow{font-size:12px;letter-spacing:.25em;color:#1c94bb;font-weight:700}
+h1,h2,h3,h4,p{overflow-wrap:break-word}h1{font-size:clamp(35px,5vw,56px);margin:8px 0}h2{font-size:clamp(31px,4vw,45px);margin:8px 0 14px}
+.message{background:linear-gradient(130deg,#fff,#f1fbfe)}.message-grid{display:grid;grid-template-columns:36% 1fr;gap:65px}
+.message-grid>div:first-child{position:relative}.message-watermark{font-size:clamp(42px,6vw,90px);color:#d7edf7;font-weight:800;letter-spacing:-.04em}
+.message-copy{border-left:1px solid #b6dce9;padding-left:45px;color:#34546a}.message-copy p{margin:0 0 22px}
+.section-heading{text-align:center;margin-bottom:45px}.section-heading p:last-child{color:var(--ink)}
+.job-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.job-card{overflow:hidden;border-radius:18px;box-shadow:0 12px 38px #18445b14;background:#fff}
+.job-cover{height:345px;background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:flex-end;padding:35px;color:white}
+.job-cover span{font-size:13px;letter-spacing:.15em}.job-cover h3{font-size:clamp(24px,2.7vw,34px);margin:8px 0}.job-cover p{margin:0;max-width:340px}
+.job-content{padding:28px}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}.tags span{background:#e8f5fc;color:#126b98;border-radius:100px;padding:5px 13px;font-size:12px}
+.job-card.event .tags span{background:#fff1e9;color:#c75e3b}
+.job-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.job-info{background:#f3f9fc;padding:20px;border-radius:12px}.event .job-info{background:#fff6f1}
+.job-info h4{margin:0 0 12px;font-size:17px}.job-info ul{padding-left:18px;margin:0;color:var(--ink);font-size:13px}
+.job-note{font-size:13px;color:var(--ink);line-height:1.9;margin:22px 0 0}
+.voices{background:#f4fafc}.voice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.voice-card{display:grid;grid-template-columns:38% 62%;border-radius:18px;overflow:hidden;background:white;box-shadow:0 9px 24px #18445b12}
+.voice-card>img{width:100%;height:100%;min-height:310px;object-fit:cover}
+.voice-content{padding:28px}.voice-meta{font-size:12px;color:#0d8bb9}.voice-content h3{font-size:21px;line-height:1.5}.voice-content>p:not(.voice-meta){font-size:14px;color:var(--ink)}
+.gallery{overflow:hidden}.gallery-track{display:flex;gap:16px;overflow-x:auto;padding:0 max(6vw,20px) 22px;scroll-snap-type:x mandatory}
+.gallery-track img{width:min(390px,78vw);height:245px;object-fit:cover;border-radius:16px;flex-shrink:0;scroll-snap-align:start}
+.attraction-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.attraction-card{border-radius:18px;padding:34px;background:linear-gradient(145deg,#eefaff,#f0fbf6)}
+.attraction-card img{width:95px;height:95px;object-fit:contain}.attraction-card h3{font-size:20px;line-height:1.5}.attraction-card p{font-size:14px;color:var(--ink)}
+.entry{text-align:center;background:linear-gradient(#ffffffd9,#e5f6f7d9),url("../grps_images/recruit/international.jpg") center/cover}
+.entry h2{line-height:1.5}.entry p{color:var(--ink)}.entry-link{display:inline-block;background:#0b9dbb;color:white;padding:15px 32px;border-radius:100px;margin-top:20px;font-weight:700}
+.entry .entry-note{font-size:12px}footer{padding:35px 6%;text-align:center;font-size:12px;color:#68808c}footer a{margin-left:20px;text-decoration:underline}
+@media(max-width:850px){.job-grid,.voice-grid,.attraction-grid{grid-template-columns:1fr}.message-grid{grid-template-columns:1fr;gap:10px}.message-copy{border-left:0;border-top:1px solid #b6dce9;padding:24px 0 0}.hero{min-height:420px}.hero-badge{width:110px}.job-info-grid{grid-template-columns:1fr}}
+@media(max-width:550px){.section{padding:65px 20px}.site-header{min-height:72px}.brand{font-size:19px}.brand span{display:none}.hero{min-height:330px}.hero-writing{width:85%}.hero-badge{width:80px}.job-cover{height:270px;padding:24px}.job-content{padding:20px}.voice-card{grid-template-columns:1fr}.voice-card>img{height:230px;min-height:0}.voice-content{padding:22px}.attraction-card{padding:25px}.entry h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* ===== GRPS SHARED HAMBURGER MENU ===== */
+.site-header {
+  position: relative;
+  z-index: 100;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 58px;
+  min-height: 54px;
+  border: 0;
+  background: transparent;
+  color: #124b74;
+  cursor: pointer;
+}
+
+.menu-toggle > span {
+  display: block;
+  width: 34px;
+  height: 2px;
+  background: currentColor;
+}
+
+.menu-toggle small {
+  margin-top: 1px;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(2, 24, 43, .52);
+}
+
+.menu-backdrop[hidden] {
+  display: none;
+}
+
+.slide-menu {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: min(390px, 88vw);
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  padding: 95px 34px 45px;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 105% 90%,
+      rgba(104, 240, 211, .75),
+      transparent 55%
+    ),
+    linear-gradient(150deg, #07518c, #098fc0 65%, #26bfc3);
+  box-shadow: -15px 0 45px rgba(0, 30, 55, .18);
+  transform: translateX(105%);
+  visibility: hidden;
+  transition: transform .35s ease, visibility .35s;
+}
+
+.slide-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.menu-close {
+  position: absolute;
+  right: 26px;
+  top: 20px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 43px;
+  font-weight: 200;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 8px;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.menu-links a small {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .17em;
+}
+
+.menu-links a:hover,
+.menu-links a[aria-current="page"] {
+  background: rgba(255,255,255,.09);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 550px) {
+  .slide-menu {
+    padding: 80px 24px 35px;
+  }
+  .menu-links a {
+    padding: 13px 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-menu {
+    transition: none;
+  }
+}

@@ -1,0 +1,3678 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>採用情報｜株式会社グローパス</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:#173354;background:#fff}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+:root{
+  --navy:#0b4f78;
+  --blue:#0785b7;
+  --sky:#edfaff;
+  --mint:#f2fbf8;
+  --coral:#eb7251;
+  --peach:#fff5ef;
+  --text:#52697a;
+}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e8eef2}
+.header-inner{height:74px;max-width:1320px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:.05em}
+.nav{display:flex;align-items:center;gap:26px;font-size:13px}
+.nav a{position:relative}
+.nav a:not(.contact)::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:#0c94bd;transform:scaleX(0);transform-origin:left;transition:.25s}
+.nav a:hover::after{transform:scaleX(1)}
+.contact{padding:12px 24px;border-radius:999px;background:#0798bd;color:#fff}
+
+/* hero */
+.hero{position:relative;min-height:720px;overflow:hidden;display:flex;align-items:center;background:linear-gradient(90deg,rgba(4,25,39,.80),rgba(4,31,47,.36)),url("../assets/recruit/hero-bg.jpg") center 42%/125% auto no-repeat}
+.hero-inner{width:min(1260px,100%);margin:auto;padding:65px 38px;position:relative;z-index:2}
+.hero-handwriting{width:min(900px,65vw);height:auto;object-fit:contain;object-position:left center}
+.hero-badge{position:absolute;right:6%;top:13%;width:230px;height:230px;object-fit:contain;z-index:3;filter:drop-shadow(0 10px 22px rgba(0,60,100,.16))}
+
+/* recruit message */
+.recruit-message{position:relative;overflow:hidden;padding:88px 55px 60px;background:linear-gradient(135deg,#fff 0%,#fbfdfe 100%)}
+.recruit-message::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;left:-250px;top:-230px;background:rgba(219,244,252,.70)}
+.recruit-message::after{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-340px;bottom:-370px;background:rgba(222,246,253,.72)}
+.rm-inner{position:relative;z-index:2;max-width:1260px;margin:auto;display:grid;grid-template-columns:40% 60%;gap:70px;align-items:center}
+.rm-left{position:relative;min-height:300px;display:flex;align-items:center}
+.rm-title{display:flex;gap:18px;align-items:center;position:relative;z-index:2}
+.rm-title::before{content:"";width:48px;height:2px;background:#173354}
+.rm-title h2{font-size:34px;margin:0;letter-spacing:.07em}
+.rm-watermark{position:absolute;left:0;bottom:28px;font-size:112px;line-height:.8;font-weight:800;color:rgba(40,133,188,.12);letter-spacing:-.045em}
+.rm-right{padding:20px 75px 20px 50px;border-left:1px solid #cfe3ed}
+.rm-right p{margin:0 0 20px;font-size:15px;line-height:2.05;color:#324b5c}
+.rm-bottom{position:relative;z-index:2;max-width:1260px;margin:30px auto 0;display:flex;align-items:center;gap:28px}
+.rm-bottom span{font-size:11px;letter-spacing:.28em;color:#178dc2;white-space:nowrap}
+.rm-bottom-line{height:1px;background:#9ed8ed;flex:1}
+
+/* jobs */
+.jobs{padding:35px 28px 60px}
+.jobs-grid{max-width:1260px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.job-card{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 14px 40px rgba(25,66,88,.09)}
+.job-visual{height:400px;position:relative;overflow:hidden}
+.job-visual img{width:100%;height:100%;object-fit:cover}
+.job-overlay{position:absolute;inset:0;padding:42px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.technical .job-overlay{background:linear-gradient(90deg,rgba(0,70,110,.96) 0%,rgba(0,85,130,.88) 38%,rgba(0,90,140,.55) 65%,rgba(0,90,140,.16) 100%)}
+.event .job-overlay{background:linear-gradient(90deg,rgba(205,75,40,.95) 0%,rgba(225,90,50,.86) 38%,rgba(238,112,72,.52) 65%,rgba(238,112,72,.14) 100%)}
+.job-label{font-size:25px;font-style:italic;margin-bottom:10px}
+.job-card h2{margin:0;font-size:37px;line-height:1.35}
+.job-copy{margin-top:14px;line-height:1.8;font-size:16px}
+.job-body{padding:38px 40px 44px}
+.technical .job-body{background:linear-gradient(#f1fbff,#fff)}
+.event .job-body{background:linear-gradient(#fff5ef,#fff)}
+.job-body p,.job-body li{color:#536978;line-height:1.95}
+.job-body h3{font-size:19px;margin:28px 0 12px}
+.technical .job-body h3{color:#087fa9}
+.event .job-body h3{color:#df6c4b}
+.job-body ul{margin:0;padding-left:20px}
+.job-note{margin-top:24px;padding:20px;border-radius:11px;background:#fff;color:#536978;line-height:1.9}
+
+/* gallery */
+.gallery-wrap{padding:48px 0 20px}
+.gallery-title{text-align:center;font-size:31px;color:var(--navy);margin:0 0 28px}
+.event-gallery{width:100%;overflow-x:auto;overflow-y:hidden;padding:8px 5vw 24px;cursor:grab;user-select:none;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.event-gallery::-webkit-scrollbar{display:none}
+.event-gallery.is-dragging{cursor:grabbing}
+.gallery-track{display:flex;gap:16px;width:max-content}
+.gallery-track img{width:420px;height:260px;object-fit:cover;border-radius:14px;pointer-events:none;box-shadow:0 8px 24px rgba(23,65,88,.08)}
+
+/* voices */
+.voices{padding:95px 30px;background:#f7fbfd}
+.section-title{text-align:center;font-size:40px;color:var(--navy);margin:0 0 52px}
+.voice-grid{max-width:1240px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.voice-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(20,70,95,.07)}
+.voice-head{padding:17px 20px;color:#fff;font-weight:700;line-height:1.6}
+.voice-card.tech .voice-head{background:#078fbe}
+.voice-card.eventvoice .voice-head{background:#ee835e}
+.voice-text{padding:24px;font-size:14px;line-height:1.9;color:#566b7a}
+
+/* attraction */
+.attraction{padding:95px 30px;background:#fff}
+.attraction-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.attraction-card{padding:42px 42px 44px;border-radius:18px;background:linear-gradient(135deg,#f3fbff,#f7fff9)}
+.attraction-card:last-child{background:linear-gradient(135deg,#fff7f1,#fff)}
+.attraction-icon{width:118px;height:118px;margin-bottom:24px}
+.attraction-icon img{width:100%;height:100%;object-fit:contain}
+.attraction-card h3{font-size:20px;margin:0 0 20px;color:#0784b3}
+.attraction-card:last-child h3{color:#e36f4d}
+.attraction-card p{margin:0;color:#536978;line-height:1.95}
+
+/* entry */
+.entry{position:relative;padding:90px 30px;text-align:center;background:linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.88)),url("../assets/recruit/international.jpg") center/cover}
+.entry h2{margin:0;color:var(--navy);font-size:39px}
+.entry p{color:#536978;line-height:2}
+.line-btn{display:inline-block;margin-top:23px;padding:18px 54px;border-radius:999px;background:#06c755;color:#fff;font-size:18px;font-weight:700;box-shadow:0 14px 30px rgba(6,199,85,.20)}
+footer{padding:42px 30px;text-align:center;color:#78909c;font-size:12px}
+
+@media(max-width:900px){
+  .nav a:not(.contact){display:none}
+  .hero{min-height:560px;background-size:cover}
+  .hero-handwriting{width:82vw}
+  .hero-badge{width:145px;height:145px;right:3%;top:8%}
+  .rm-inner,.jobs-grid,.voice-grid,.attraction-grid{grid-template-columns:1fr}
+  .rm-left{min-height:160px}
+  .rm-watermark{font-size:76px;bottom:8px}
+  .rm-right{padding:28px 0 0;border-left:0;border-top:1px solid #cfe3ed}
+  .rm-bottom span{white-space:normal}
+  .job-visual{height:320px}
+  .gallery-track img{width:78vw;height:220px}
+}
+</style>
+<style>
+.header-logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+  text-decoration:none;
+}
+.header-logo img{
+  display:block;
+  width:auto;
+  height:58px;
+  object-fit:contain;
+}
+@media(max-width:768px){
+  .header-logo img{
+    height:46px;
+  }
+}
+</style>
+<style id="glowpas-header-logo-style">
+.header-logo{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-shrink:0;
+  text-decoration:none;
+}
+
+.header-logo img{
+  display:block;
+  width:auto;
+  height:58px;
+  object-fit:contain;
+}
+
+.header-logo-copy{
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.08em;
+  color:#1b2d4f;
+  white-space:nowrap;
+  padding-left:18px;
+  border-left:1px solid #d7dce5;
+}
+
+@media(max-width:768px){
+  .header-logo{
+    gap:10px;
+  }
+
+  .header-logo img{
+    height:46px;
+  }
+
+  .header-logo-copy{
+    font-size:10px;
+    letter-spacing:.03em;
+    padding-left:10px;
+  }
+}
+
+@media(max-width:480px){
+  .header-logo-copy{
+    display:none;
+  }
+}
+</style>
+<style id="responsive-center-fix">
+/* ===== PCサイズ差による横ズレ防止 ===== */
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  margin:0;
+  overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+/* ヘッダー内側を常に画面中央へ */
+.header-inner,
+.header-top,
+.main-nav-inner{
+  width:min(1280px, calc(100% - 48px)) !important;
+  max-width:1280px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* 各主要コンテンツも中央基準 */
+.hero-inner,
+.page-hero-inner,
+.results-inner,
+.intro-inner,
+.jobs-inner,
+.voices-inner,
+.attraction-inner,
+.gallery-inner{
+  width:min(1280px, calc(100% - 48px)) !important;
+  max-width:1280px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* TOPページのカスタムセクション */
+#globus-top-hero > *,
+#globus-support > *,
+#globus-contact > *{
+  max-width:1280px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* 画像が画面幅を押し広げない */
+img{
+  max-width:100%;
+}
+
+/* タブレット以下 */
+@media(max-width:900px){
+  .header-inner,
+  .header-top,
+  .main-nav-inner,
+  .hero-inner,
+  .page-hero-inner,
+  .results-inner,
+  .intro-inner,
+  .jobs-inner,
+  .voices-inner,
+  .attraction-inner,
+  .gallery-inner{
+    width:calc(100% - 32px) !important;
+  }
+}
+</style>
+<style id="gp-global-header-v2">
+.gp-header,.gp-header *{box-sizing:border-box!important}
+.gp-header{position:relative!important;z-index:1000!important;width:100%!important;margin:0!important;padding:0!important;background:#fff!important;color:#12395f!important;border-bottom:1px solid #e7edf1!important;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif!important}
+.gp-header a{color:inherit!important;text-decoration:none!important}
+.gp-header-main{width:min(1280px,calc(100% - 48px))!important;min-height:104px!important;margin:0 auto!important;padding:12px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:30px!important}
+.gp-brand{display:flex!important;align-items:center!important;gap:22px!important;min-width:0!important;width:auto!important;max-width:none!important}
+.gp-brand img{display:block!important;width:auto!important;height:70px!important;max-width:none!important;object-fit:contain!important;flex:0 0 auto!important}
+.gp-brand-text{display:block!important;padding-left:22px!important;border-left:1px solid #cfdae2!important;color:#173b60!important;font-size:17px!important;line-height:1.45!important;font-weight:700!important;letter-spacing:.02em!important;white-space:nowrap!important}
+.gp-header-toplinks{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:30px!important;flex:0 0 auto!important;font-size:14px!important;font-weight:700!important}
+.gp-contact{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:150px!important;min-height:52px!important;padding:12px 24px!important;border-radius:14px!important;color:#fff!important;background:linear-gradient(90deg,#058bd1,#10b8cf)!important}
+.gp-header-nav{width:100%!important;border-top:1px solid #edf1f4!important;background:#fff!important}
+.gp-header-nav-inner{width:min(1280px,calc(100% - 48px))!important;min-height:66px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:36px!important;font-size:15px!important;font-weight:700!important;white-space:nowrap!important}
+@media(max-width:1050px){
+.gp-header-main,.gp-header-nav-inner{width:calc(100% - 32px)!important}
+.gp-brand{gap:14px!important}.gp-brand img{height:58px!important}.gp-brand-text{padding-left:14px!important;font-size:14px!important}
+.gp-header-toplinks{gap:18px!important;font-size:13px!important}
+.gp-header-nav-inner{gap:24px!important;overflow-x:auto!important;justify-content:flex-start!important}
+}
+@media(max-width:760px){
+.gp-header-main{min-height:76px!important;gap:12px!important}
+.gp-brand img{height:48px!important}
+.gp-brand-text{max-width:170px!important;padding-left:10px!important;font-size:10px!important;line-height:1.4!important;white-space:normal!important}
+.gp-header-toplinks>a:not(.gp-contact){display:none!important}
+.gp-contact{min-width:auto!important;min-height:42px!important;padding:10px 15px!important;border-radius:11px!important;font-size:12px!important}
+.gp-header-nav-inner{min-height:52px!important;gap:21px!important;font-size:12px!important}
+}
+</style>
+<style id="gp-mobile-final">
+/* =========================================
+   GROWPAS FINAL MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px){
+
+  html,body{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow-x:hidden !important;
+  }
+
+  *,*::before,*::after{
+    box-sizing:border-box !important;
+  }
+
+  img,video,iframe{
+    max-width:100% !important;
+    height:auto;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  .gp-header{
+    width:100% !important;
+  }
+
+  .gp-header-main{
+    width:100% !important;
+    min-height:72px !important;
+    padding:10px 16px !important;
+    margin:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:10px !important;
+  }
+
+  .gp-brand{
+    display:flex !important;
+    align-items:center !important;
+    gap:9px !important;
+    min-width:0 !important;
+    flex:1 1 auto !important;
+  }
+
+  .gp-brand img{
+    width:auto !important;
+    height:45px !important;
+    max-width:125px !important;
+    flex:0 0 auto !important;
+  }
+
+  .gp-brand-text{
+    padding-left:9px !important;
+    border-left:1px solid #d6e0e6 !important;
+    max-width:130px !important;
+    font-size:9px !important;
+    line-height:1.45 !important;
+    white-space:normal !important;
+  }
+
+  .gp-header-toplinks{
+    flex:0 0 auto !important;
+    gap:0 !important;
+  }
+
+  .gp-header-toplinks > a:not(.gp-contact),
+  .gp-toplinks > a:not(.gp-contact){
+    display:none !important;
+  }
+
+  .gp-contact{
+    min-width:0 !important;
+    min-height:38px !important;
+    padding:9px 12px !important;
+    border-radius:9px !important;
+    font-size:10px !important;
+    white-space:nowrap !important;
+  }
+
+  /* nav = 横スクロール可能 */
+  .gp-header-nav,
+  .gp-nav{
+    width:100% !important;
+    overflow:hidden !important;
+  }
+
+  .gp-header-nav-inner,
+  .gp-nav-inner{
+    width:100% !important;
+    min-height:48px !important;
+    padding:0 16px !important;
+    margin:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:22px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    white-space:nowrap !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    font-size:11px !important;
+  }
+
+  .gp-header-nav-inner::-webkit-scrollbar,
+  .gp-nav-inner::-webkit-scrollbar{
+    display:none;
+  }
+
+  /* ---------- OLD TOP HEADER ---------- */
+
+  #header .inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+    margin:0 auto !important;
+  }
+
+  #siteTtl{
+    max-width:55% !important;
+  }
+
+  #siteTtl img{
+    max-width:100% !important;
+    height:auto !important;
+  }
+
+  /* ---------- TOP HERO ---------- */
+
+  #globus-top-hero{
+    width:100% !important;
+    max-width:none !important;
+    overflow:hidden !important;
+  }
+
+  #globus-top-hero > img{
+    width:100% !important;
+    max-width:none !important;
+    height:auto !important;
+    display:block !important;
+  }
+
+  #globus-top-hero .hero-inner,
+  #globus-top-hero .gph-inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
+  .gph-title{
+    font-size:34px !important;
+    line-height:1.15 !important;
+  }
+
+  /* ---------- SECTIONS ---------- */
+
+  section{
+    max-width:100% !important;
+  }
+
+  .inner,
+  .intro-inner,
+  .jobs-inner,
+  .voices-inner,
+  .attraction-inner,
+  .gallery-inner,
+  .results-inner,
+  .contact-inner{
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  /* ---------- SUPPORT CARDS ---------- */
+
+  .gs-grid,
+  .support-grid{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  .gs-card{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  /* ---------- RECRUIT ---------- */
+
+  .hero{
+    min-height:430px !important;
+    background-size:cover !important;
+    background-position:center !important;
+  }
+
+  .hero-inner{
+    width:100% !important;
+    padding:45px 20px !important;
+  }
+
+  .hero-handwriting{
+    width:88% !important;
+    max-width:520px !important;
+  }
+
+  .hero-badge{
+    width:115px !important;
+    height:115px !important;
+    right:12px !important;
+    top:20px !important;
+  }
+
+  .jobs-grid,
+  .voices-grid,
+  .attraction-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .job-card,
+  .voice-card,
+  .attraction-card{
+    width:100% !important;
+  }
+
+  /* ---------- RESULTS ---------- */
+
+  .page-hero{
+    width:100% !important;
+    height:190px !important;
+    min-height:190px !important;
+  }
+
+  .page-hero-inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding:30px 20px !important;
+  }
+
+  .page-hero h1{
+    font-size:29px !important;
+  }
+
+  .year-block{
+    min-height:0 !important;
+    padding-left:62px !important;
+  }
+
+  .year-number{
+    left:-8px !important;
+    top:5px !important;
+    font-size:62px !important;
+    line-height:.8 !important;
+  }
+
+  .year-title{
+    font-size:26px !important;
+  }
+
+  .result-item{
+    display:block !important;
+  }
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-wrap{
+    padding:45px 16px 70px !important;
+  }
+
+  .contact-inner{
+    padding:0 !important;
+  }
+
+  .form-row{
+    display:block !important;
+    grid-template-columns:none !important;
+    padding:19px 0 !important;
+  }
+
+  .form-label{
+    display:block !important;
+    padding:0 0 10px !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea{
+    width:100% !important;
+    font-size:16px !important;
+  }
+
+  .radio-group{
+    flex-wrap:wrap !important;
+  }
+
+  .submit-btn{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  /* ---------- TEXT ---------- */
+
+  h1,h2,h3,p{
+    overflow-wrap:anywhere;
+  }
+}
+
+@media (max-width: 430px){
+
+  .gp-brand img{
+    height:40px !important;
+    max-width:108px !important;
+  }
+
+  .gp-brand-text{
+    max-width:105px !important;
+    font-size:8px !important;
+  }
+
+  .gp-contact{
+    padding:8px 9px !important;
+    font-size:9px !important;
+  }
+
+  .gph-title{
+    font-size:30px !important;
+  }
+
+  .hero{
+    min-height:390px !important;
+  }
+}
+</style>
+<style id="jobs-reference-redesign">
+.jobs-redesign{padding:90px 38px 110px!important;background:#fff!important}
+.jobs-heading{max-width:1300px;margin:0 auto 55px;text-align:center}
+.jobs-en{color:#0b5687;font-size:14px;font-weight:700;letter-spacing:.35em}
+.jobs-heading-line{width:32px;height:3px;margin:13px auto 23px;background:#087caf}
+.jobs-heading>h2{margin:0!important;color:#102d55;font-size:44px!important;line-height:1.35;font-weight:700;letter-spacing:.12em}
+.jobs-heading>p{margin:18px 0 0;color:#52697a;font-size:17px;letter-spacing:.05em}
+.jobs-redesign .jobs-grid{max-width:1360px!important;margin:0 auto!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}
+.jobs-redesign .job-card{overflow:hidden;border-radius:16px!important;background:#fff;box-shadow:0 12px 36px rgba(21,66,94,.08),0 2px 8px rgba(21,66,94,.04)!important}
+.jobs-redesign .job-visual{position:relative;height:375px!important;overflow:hidden}
+.jobs-redesign .job-visual img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.jobs-redesign .job-card:hover .job-visual img{transform:scale(1.025)}
+.jobs-redesign .job-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:38px 34px 32px!important;color:#fff}
+.jobs-redesign .technical .job-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(3,79,126,.66) 0%,
+    rgba(3,91,143,.52) 42%,
+    rgba(3,104,159,.20) 75%,
+    rgba(3,104,159,.03) 100%
+  )!important
+}
+.jobs-redesign .event .job-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(222,83,46,.64) 0%,
+    rgba(235,101,62,.50) 42%,
+    rgba(238,117,77,.18) 75%,
+    rgba(238,117,77,.03) 100%
+  )!important
+}
+.jobs-redesign .job-label{margin:0 0 9px;font-size:19px!important;font-weight:500;font-style:italic}
+.jobs-redesign .job-card .job-overlay h2{margin:0!important;color:#fff!important;font-size:31px!important;line-height:1.35!important;font-weight:700!important}
+.jobs-redesign .job-copy{margin-top:12px!important;color:#fff;font-size:15px!important;line-height:1.7!important}
+.jobs-redesign .job-body{padding:27px 28px 31px!important}
+.jobs-redesign .technical .job-body{background:linear-gradient(180deg,#f7fcff,#fff)!important}
+.jobs-redesign .event .job-body{background:linear-gradient(180deg,#fff9f5,#fff)!important}
+.jobs-redesign .job-tags{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.jobs-redesign .job-tags span{min-height:42px;display:flex;align-items:center;justify-content:center;padding:7px 8px;border-radius:999px;font-size:13px;font-weight:700;text-align:center;white-space:nowrap}
+.jobs-redesign .technical .job-tags span{color:#086b9c;background:#edf7fd}
+.jobs-redesign .event .job-tags span{color:#dc6442;background:#fff0e9}
+.jobs-redesign .job-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.jobs-redesign .job-info-box{padding:20px 18px 18px;border-radius:11px}
+.jobs-redesign .technical .job-info-box{background:#f3f9fd}
+.jobs-redesign .event .job-info-box{background:#fff5f0}
+.jobs-redesign .job-info-box h3{margin:0 0 14px!important;font-size:16px!important;font-weight:700!important}
+.jobs-redesign .technical .job-info-box h3{color:#076b9c!important}
+.jobs-redesign .event .job-info-box h3{color:#d75c37!important}
+.jobs-redesign .job-check-list{margin:0!important;padding:0!important;list-style:none!important}
+.jobs-redesign .job-check-list li{position:relative;margin:0 0 9px;padding-left:25px;color:#52697a;font-size:12.5px;line-height:1.65!important}
+.jobs-redesign .job-check-list li::before{content:"✓";position:absolute;left:0;top:1px;width:17px;height:17px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-size:10px;font-weight:700}
+.jobs-redesign .technical .job-check-list li::before{background:#74b8e4}
+.jobs-redesign .event .job-check-list li::before{background:#f19a7d}
+.jobs-redesign .job-career{margin-top:22px;padding:15px 17px;border-radius:9px;color:#52697a;font-size:12px;line-height:1.8}
+.jobs-redesign .technical .job-career{background:#f5fbfe}
+.jobs-redesign .event .job-career{background:#fff7f3}
+@media(max-width:1050px){
+  .jobs-redesign{padding:75px 24px 90px!important}
+  .jobs-redesign .job-visual{height:320px!important}
+  .jobs-redesign .job-tags{grid-template-columns:repeat(2,1fr)}
+  .jobs-redesign .job-info-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .jobs-redesign{padding:65px 16px 75px!important}
+  .jobs-heading{margin-bottom:38px}
+  .jobs-heading>h2{font-size:32px!important}
+  .jobs-heading>p{font-size:14px;line-height:1.8}
+  .jobs-redesign .jobs-grid{grid-template-columns:1fr!important;gap:28px!important}
+  .jobs-redesign .job-visual{height:290px!important}
+  .jobs-redesign .job-overlay{padding:28px 24px 25px!important}
+  .jobs-redesign .job-card .job-overlay h2{font-size:25px!important}
+  .jobs-redesign .job-body{padding:22px 18px 25px!important}
+}
+</style>
+<style id="voices-reference-redesign">
+.voices-redesign{
+  position:relative;
+  padding:95px 34px 105px !important;
+  background:
+    radial-gradient(circle at 0 0,rgba(72,188,220,.10),transparent 28%),
+    radial-gradient(circle at 100% 100%,rgba(100,210,197,.12),transparent 26%),
+    #f8fcfe !important;
+  overflow:hidden;
+}
+
+.voices-redesign .voices-heading{
+  text-align:center;
+  margin-bottom:52px;
+}
+
+.voices-redesign .voices-en{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  color:#267eaa;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.30em;
+}
+
+.voices-redesign .voices-en span{
+  width:38px;
+  height:1px;
+  background:#6db3d6;
+}
+
+.voices-redesign .voices-heading h2{
+  margin:18px 0 0;
+  color:#11365d;
+  font-size:42px;
+  line-height:1.3;
+  letter-spacing:.08em;
+}
+
+.voices-redesign .voice-grid{
+  max-width:1320px !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:22px !important;
+}
+
+.voices-redesign .voice-card{
+  display:grid !important;
+  grid-template-columns:34% 66%;
+  min-height:310px;
+  border:1px solid #e2edf3;
+  border-radius:18px !important;
+  overflow:hidden;
+  background:rgba(255,255,255,.96) !important;
+  box-shadow:0 10px 28px rgba(34,81,109,.06) !important;
+}
+
+.voices-redesign .voice-photo{
+  width:100%;
+  height:100%;
+  min-height:310px;
+  aspect-ratio:auto !important;
+  overflow:hidden;
+  background:#edf5f8;
+}
+
+.voices-redesign .voice-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center 22%;
+}
+
+.voices-redesign .voice-content{
+  padding:28px 30px 26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.voices-redesign .voice-meta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#667786;
+  font-size:13px;
+}
+
+.voices-redesign .voice-meta i{
+  width:1px;
+  height:14px;
+  background:#aab9c3;
+}
+
+.voices-redesign .voice-role{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:5px 14px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.voices-redesign .tech .voice-role{
+  color:#0b76a7;
+  background:#e5f5fd;
+}
+
+.voices-redesign .eventvoice .voice-role{
+  color:#d95f3d;
+  background:#fff0e9;
+}
+
+.voices-redesign .voice-content h3{
+  margin:22px 0 18px;
+  color:#12395f;
+  font-size:24px;
+  line-height:1.55;
+  font-weight:700;
+}
+
+.voices-redesign .voice-content p{
+  margin:0;
+  color:#586d7c;
+  font-size:14px;
+  line-height:1.9;
+}
+
+.voices-redesign .voice-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+.voices-redesign .voice-tags span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:6px 18px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.voices-redesign .tech .voice-tags span{
+  color:#176f9c;
+  background:#eaf6fc;
+}
+
+.voices-redesign .eventvoice .voice-tags span{
+  color:#cf6548;
+  background:#fff1eb;
+}
+
+@media(max-width:1000px){
+  .voices-redesign .voice-card{
+    grid-template-columns:38% 62%;
+  }
+  .voices-redesign .voice-content{
+    padding:24px 22px;
+  }
+  .voices-redesign .voice-content h3{
+    font-size:21px;
+  }
+}
+
+@media(max-width:768px){
+  .voices-redesign{
+    padding:70px 16px 80px !important;
+  }
+
+  .voices-redesign .voices-heading h2{
+    font-size:32px;
+  }
+
+  .voices-redesign .voice-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .voices-redesign .voice-card{
+    grid-template-columns:34% 66%;
+    min-height:260px;
+  }
+
+  .voices-redesign .voice-photo{
+    min-height:260px;
+  }
+
+  .voices-redesign .voice-content{
+    padding:20px 18px;
+  }
+
+  .voices-redesign .voice-content h3{
+    margin:16px 0 12px;
+    font-size:18px;
+  }
+
+  .voices-redesign .voice-content p{
+    font-size:12px;
+    line-height:1.75;
+  }
+
+  .voices-redesign .voice-tags{
+    gap:7px;
+    margin-top:16px;
+  }
+
+  .voices-redesign .voice-tags span{
+    padding:5px 11px;
+    font-size:10px;
+  }
+
+  .voices-redesign .voice-meta{
+    font-size:11px;
+    gap:7px;
+  }
+
+  .voices-redesign .voice-role{
+    padding:4px 10px;
+  }
+}
+
+@media(max-width:520px){
+  .voices-redesign .voice-card{
+    grid-template-columns:1fr;
+  }
+
+  .voices-redesign .voice-photo{
+    height:260px;
+    min-height:0;
+  }
+
+  .voices-redesign .voice-photo img{
+    object-position:center 20%;
+  }
+}
+</style>
+<style id="recruit-heading-icon-style">
+.jobs-redesign .recruit-icon-heading{
+  display:flex !important;
+  align-items:center !important;
+  gap:9px !important;
+}
+.jobs-redesign .recruit-heading-icon{
+  display:block !important;
+  width:26px !important;
+  height:26px !important;
+  object-fit:contain !important;
+  flex:0 0 26px !important;
+  border-radius:0 !important;
+}
+@media(max-width:768px){
+  .jobs-redesign .recruit-heading-icon{
+    width:22px !important;
+    height:22px !important;
+    flex-basis:22px !important;
+  }
+}
+</style>
+<style id="entry-bg-soft-blue">
+.entry{
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255,255,255,.76) 0%,
+      rgba(245,252,255,.68) 34%,
+      rgba(221,243,252,.44) 66%,
+      rgba(188,229,244,.36) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(183,229,247,.20) 0%,
+      rgba(255,255,255,.04) 28%,
+      rgba(255,255,255,.04) 72%,
+      rgba(180,228,244,.22) 100%
+    ),
+    url("../assets/recruit/international.jpg") center / cover no-repeat !important;
+}
+
+@media(max-width:768px){
+  .entry{
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,.80) 0%,
+        rgba(240,250,254,.72) 45%,
+        rgba(200,235,248,.42) 100%
+      ),
+      url("../assets/recruit/international.jpg") center / cover no-repeat !important;
+  }
+}
+</style>
+<style id="recruit-job-overlay-final">
+/* 募集職種：白文字を読みやすく、写真は活かす */
+.jobs-redesign .technical .job-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(3,79,126,.66) 0%,
+    rgba(3,91,143,.50) 22%,
+    rgba(3,104,159,.24) 38%,
+    rgba(3,104,159,.08) 50%,
+    rgba(3,104,159,0) 62%
+  )!important;
+}
+.jobs-redesign .event .job-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(222,83,46,.64) 0%,
+    rgba(235,101,62,.48) 22%,
+    rgba(238,117,77,.23) 38%,
+    rgba(238,117,77,.08) 50%,
+    rgba(238,117,77,0) 62%
+  )!important;
+}
+</style>
+
+
+
+<style id="recruit-mobile-title-layout-20260923">
+/* 採用情報：スマホのタイトル・本文レイアウト調整 */
+@media (max-width:768px){
+
+  .recruit-message{
+    padding:58px 0 55px !important;
+  }
+
+  .recruit-message .rm-inner{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 38px !important;
+    display:block !important;
+  }
+
+  .recruit-message .rm-left{
+    position:relative !important;
+    min-height:185px !important;
+    display:block !important;
+    padding:0 !important;
+  }
+
+  .recruit-message .rm-title{
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:18px !important;
+    margin:0 !important;
+    padding:0 !important;
+    z-index:2 !important;
+  }
+
+  .recruit-message .rm-title::before{
+    content:"" !important;
+    display:block !important;
+    width:48px !important;
+    height:2px !important;
+    flex:0 0 48px !important;
+    background:#173354 !important;
+  }
+
+  .recruit-message .rm-title h2{
+    margin:0 !important;
+    padding:0 !important;
+    color:#173354 !important;
+    font-size:38px !important;
+    line-height:1.25 !important;
+    font-weight:700 !important;
+    letter-spacing:.04em !important;
+    text-align:left !important;
+  }
+
+  .recruit-message .rm-watermark{
+    position:absolute !important;
+    left:48px !important;
+    top:48px !important;
+    bottom:auto !important;
+    margin:0 !important;
+    color:rgba(40,133,188,.11) !important;
+    font-size:82px !important;
+    line-height:1 !important;
+    font-weight:800 !important;
+    letter-spacing:-.045em !important;
+    white-space:nowrap !important;
+    z-index:0 !important;
+  }
+
+  .recruit-message .rm-right{
+    width:100% !important;
+    margin:0 !important;
+    padding:34px 0 0 !important;
+    border-left:0 !important;
+    border-top:1px solid #cfe3ed !important;
+  }
+
+  .recruit-message .rm-right p{
+    margin:0 0 24px !important;
+    color:#324b5c !important;
+    font-size:16px !important;
+    line-height:2 !important;
+    letter-spacing:.02em !important;
+    text-align:left !important;
+  }
+
+  .recruit-message .rm-bottom{
+    width:calc(100% - 76px) !important;
+    margin:10px 38px 0 !important;
+  }
+}
+
+@media (max-width:430px){
+  .recruit-message .rm-inner{
+    padding-left:26px !important;
+    padding-right:26px !important;
+  }
+
+  .recruit-message .rm-title{
+    gap:14px !important;
+  }
+
+  .recruit-message .rm-title::before{
+    width:42px !important;
+    flex-basis:42px !important;
+  }
+
+  .recruit-message .rm-title h2{
+    font-size:34px !important;
+  }
+
+  .recruit-message .rm-watermark{
+    left:56px !important;
+    top:44px !important;
+    font-size:68px !important;
+  }
+
+  .recruit-message .rm-right p{
+    font-size:15px !important;
+  }
+
+  .recruit-message .rm-bottom{
+    width:calc(100% - 52px) !important;
+    margin-left:26px !important;
+    margin-right:26px !important;
+  }
+}
+</style>
+
+
+<style id="staff-voice-mobile-horizontal-20260923">
+/* スタッフの声：スマホ専用レイアウト */
+@media (max-width:520px){
+
+  .voices-redesign .voice-card{
+    display:grid !important;
+    grid-template-columns:38% 62% !important;
+    grid-template-rows:auto auto !important;
+    align-items:start !important;
+    min-height:0 !important;
+    border-radius:16px !important;
+    overflow:hidden !important;
+  }
+
+  /* 左上：写真 */
+  .voices-redesign .voice-photo{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    width:100% !important;
+    height:190px !important;
+    min-height:190px !important;
+    align-self:stretch !important;
+  }
+
+  .voices-redesign .voice-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center 20% !important;
+  }
+
+  /* 右上：職種・年齢・見出し */
+  .voices-redesign .voice-content{
+    display:contents !important;
+  }
+
+  .voices-redesign .voice-meta{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+    margin:0 !important;
+    padding:20px 16px 0 !important;
+    display:flex !important;
+    align-items:center !important;
+    flex-wrap:wrap !important;
+    gap:6px !important;
+    font-size:11px !important;
+  }
+
+  .voices-redesign .voice-role{
+    width:max-content !important;
+    min-height:28px !important;
+    padding:4px 10px !important;
+    font-size:10px !important;
+  }
+
+  .voices-redesign .voice-content h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+    margin:78px 16px 0 !important;
+    padding:0 !important;
+    color:#12395f !important;
+    font-size:18px !important;
+    line-height:1.65 !important;
+  }
+
+  /* 写真の下：本文をカード横幅いっぱい */
+  .voices-redesign .voice-content p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+    margin:0 !important;
+    padding:22px 20px 10px !important;
+    color:#586d7c !important;
+    font-size:13px !important;
+    line-height:1.9 !important;
+  }
+
+  /* タグも全幅 */
+  .voices-redesign .voice-tags{
+    grid-column:1 / -1 !important;
+    grid-row:3 !important;
+    margin:0 !important;
+    padding:8px 20px 22px !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+  }
+
+  .voices-redesign .voice-tags span{
+    padding:6px 12px !important;
+    font-size:10px !important;
+  }
+}
+</style>
+
+
+<style id="recruit-attraction-mobile-compact-20260923">
+/* 採用情報：働く魅力 スマホ表示のみコンパクト化 */
+@media (max-width: 767px){
+
+  .attraction{
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .attraction .section-title{
+    font-size: 32px !important;
+    line-height: 1.35 !important;
+    letter-spacing: .02em !important;
+    margin: 0 0 34px !important;
+  }
+
+  .attraction-grid{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .attraction-card{
+    padding: 30px 28px 32px !important;
+    border-radius: 24px !important;
+    min-height: 0 !important;
+  }
+
+  .attraction-icon{
+    width: 82px !important;
+    height: 82px !important;
+    margin: 0 auto 22px !important;
+  }
+
+  .attraction-icon img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .attraction-card h3{
+    font-size: 23px !important;
+    line-height: 1.45 !important;
+    letter-spacing: .01em !important;
+    margin: 0 0 16px !important;
+  }
+
+  .attraction-card p{
+    font-size: 17px !important;
+    line-height: 1.85 !important;
+    letter-spacing: .01em !important;
+    margin: 0 !important;
+  }
+}
+</style>
+
+
+<style id="recruit-attraction-mobile-horizontal-20260923">
+/* =========================================
+   働く魅力：スマホ専用コンパクトレイアウト
+   ========================================= */
+@media (max-width:767px){
+
+  .attraction{
+    padding:46px 20px 52px !important;
+  }
+
+  /* タイトルは必ず1行 */
+  .attraction .section-title{
+    margin:0 0 30px !important;
+    font-size:26px !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+  }
+
+  .attraction-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  /* カード */
+  .attraction-card{
+    display:grid !important;
+    grid-template-columns:92px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:18px !important;
+    row-gap:18px !important;
+
+    min-height:0 !important;
+    margin:0 !important;
+    padding:26px 24px 28px !important;
+    border-radius:22px !important;
+    text-align:left !important;
+  }
+
+  /* 左上：アイコン */
+  .attraction-icon{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    width:92px !important;
+    height:92px !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    align-self:center !important;
+    justify-self:start !important;
+  }
+
+  .attraction-icon img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+  }
+
+  /* 右上：見出し */
+  .attraction-card h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    align-self:center !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:18px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+  }
+
+  /* 下段：説明をカード横幅いっぱい */
+  .attraction-card p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:14px !important;
+    line-height:1.85 !important;
+    letter-spacing:.01em !important;
+    text-align:left !important;
+  }
+}
+
+/* 小さいスマホでもタイトル1行を維持 */
+@media (max-width:390px){
+  .attraction{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .attraction .section-title{
+    font-size:23px !important;
+  }
+
+  .attraction-card{
+    grid-template-columns:78px minmax(0,1fr) !important;
+    column-gap:14px !important;
+    padding:22px 18px 24px !important;
+  }
+
+  .attraction-icon{
+    width:78px !important;
+    height:78px !important;
+  }
+
+  .attraction-card h3{
+    font-size:16px !important;
+  }
+
+  .attraction-card p{
+    font-size:13px !important;
+  }
+}
+</style>
+
+
+<style id="recruit-attraction-mobile-spacing-fix-20260923">
+/* 働く魅力：スマホ最終レイアウト調整 */
+@media (max-width:767px){
+
+  /* セクション全体はカード用の余白を維持 */
+  .attraction{
+    padding:46px 20px 52px !important;
+  }
+
+  /* タイトルだけ左右いっぱいまで広げる */
+  .attraction .section-title{
+    width:calc(100% + 24px) !important;
+    max-width:none !important;
+    margin:0 -12px 30px !important;
+    padding:0 !important;
+
+    font-size:28px !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+  }
+
+  /* カード：左アイコン領域を完全確保 */
+  .attraction-card{
+    display:grid !important;
+    grid-template-columns:110px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:22px !important;
+    row-gap:22px !important;
+
+    width:100% !important;
+    min-height:0 !important;
+    padding:28px 26px 30px !important;
+    box-sizing:border-box !important;
+  }
+
+  /* 左上アイコン */
+  .attraction-icon{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    width:100px !important;
+    height:100px !important;
+    margin:0 !important;
+
+    align-self:center !important;
+    justify-self:start !important;
+
+    position:relative !important;
+    z-index:1 !important;
+  }
+
+  .attraction-icon img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+  }
+
+  /* 右上見出し：アイコン領域へ侵入させない */
+  .attraction-card h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+
+    align-self:center !important;
+
+    font-size:16px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    z-index:2 !important;
+  }
+
+  /* 説明文はその下から全幅 */
+  .attraction-card p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:14px !important;
+    line-height:1.85 !important;
+    text-align:left !important;
+  }
+}
+
+/* 幅の狭いスマホ */
+@media (max-width:390px){
+
+  .attraction{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .attraction .section-title{
+    width:calc(100% + 20px) !important;
+    margin-left:-10px !important;
+    margin-right:-10px !important;
+    font-size:25px !important;
+  }
+
+  .attraction-card{
+    grid-template-columns:88px minmax(0,1fr) !important;
+    column-gap:16px !important;
+    padding:24px 20px 26px !important;
+  }
+
+  .attraction-icon{
+    width:84px !important;
+    height:84px !important;
+  }
+
+  .attraction-card h3{
+    font-size:15px !important;
+    line-height:1.5 !important;
+  }
+
+  .attraction-card p{
+    font-size:13px !important;
+  }
+}
+</style>
+
+
+<style id="recruit-attraction-no-overlap-final-20260923">
+/* スマホ：働く魅力 アイコンと見出しを完全分離 */
+@media (max-width:767px){
+
+  .attraction-card{
+    display:grid !important;
+    grid-template-columns:170px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:28px !important;
+    row-gap:30px !important;
+    align-items:center !important;
+
+    padding:34px 32px 34px !important;
+    box-sizing:border-box !important;
+  }
+
+  /* 左：アイコン領域 */
+  .attraction-icon{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    position:static !important;
+    width:170px !important;
+    height:170px !important;
+    max-width:170px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+    transform:none !important;
+
+    justify-self:start !important;
+    align-self:center !important;
+  }
+
+  .attraction-icon img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+  }
+
+  /* 右：見出し */
+  .attraction-card h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    position:static !important;
+    width:auto !important;
+    min-width:0 !important;
+    max-width:100% !important;
+
+    margin:0 !important;
+    padding:0 !important;
+    transform:none !important;
+
+    font-size:16px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+  }
+
+  /* 下：説明文はカード全幅 */
+  .attraction-card p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:14px !important;
+    line-height:1.85 !important;
+    text-align:left !important;
+  }
+}
+
+/* 画面幅が狭い端末 */
+@media (max-width:430px){
+
+  .attraction-card{
+    grid-template-columns:115px minmax(0,1fr) !important;
+    column-gap:20px !important;
+    padding:28px 24px 30px !important;
+  }
+
+  .attraction-icon{
+    width:115px !important;
+    height:115px !important;
+    max-width:115px !important;
+  }
+
+  .attraction-card h3{
+    font-size:14px !important;
+    line-height:1.5 !important;
+  }
+
+  .attraction-card p{
+    font-size:13px !important;
+  }
+}
+</style>
+
+
+<style id="recruit-attraction-balance-final-20260923">
+/* スマホ：働く魅力カードの余白をコンパクトに調整 */
+@media (max-width:767px){
+
+  .attraction-grid{
+    gap:16px !important;
+  }
+
+  .attraction-card{
+    grid-template-columns:150px minmax(0,1fr) !important;
+    column-gap:22px !important;
+    row-gap:16px !important;
+
+    padding:20px 28px 24px !important;
+    min-height:0 !important;
+    box-sizing:border-box !important;
+  }
+
+  .attraction-icon{
+    width:145px !important;
+    height:145px !important;
+    max-width:145px !important;
+    margin:0 !important;
+    align-self:center !important;
+  }
+
+  .attraction-card h3{
+    margin:0 !important;
+    padding:0 !important;
+    align-self:center !important;
+
+    font-size:16px !important;
+    line-height:1.45 !important;
+  }
+
+  .attraction-card p{
+    grid-column:1 / -1 !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:14px !important;
+    line-height:1.75 !important;
+  }
+}
+
+@media (max-width:430px){
+
+  .attraction-card{
+    grid-template-columns:110px minmax(0,1fr) !important;
+    column-gap:16px !important;
+    row-gap:14px !important;
+
+    padding:18px 20px 22px !important;
+  }
+
+  .attraction-icon{
+    width:108px !important;
+    height:108px !important;
+    max-width:108px !important;
+  }
+
+  .attraction-card h3{
+    font-size:14px !important;
+    line-height:1.45 !important;
+  }
+
+  .attraction-card p{
+    font-size:13px !important;
+    line-height:1.7 !important;
+  }
+}
+</style>
+
+
+<style id="recruit-attraction-middle-gap-fix-20260923">
+/* スマホ：働く魅力カード 上段と本文の間を詰める */
+@media (max-width:767px){
+
+  .attraction-card{
+    row-gap:4px !important;
+  }
+
+  .attraction-card p{
+    margin-top:-12px !important;
+  }
+
+}
+
+@media (max-width:430px){
+
+  .attraction-card{
+    row-gap:2px !important;
+  }
+
+  .attraction-card p{
+    margin-top:-10px !important;
+  }
+
+}
+</style>
+
+
+<style id="entry-mobile-redesign-20260923">
+/* 応募エリア：スマホ／境界のないソフトな白ぼかし */
+@media (max-width:768px){
+
+  .entry{
+    position:relative !important;
+    padding:58px 24px 66px !important;
+    min-height:auto !important;
+    text-align:center !important;
+
+    background:
+      radial-gradient(
+        ellipse 115% 82% at 50% 47%,
+        rgba(255,255,255,.90) 0%,
+        rgba(255,255,255,.82) 28%,
+        rgba(255,255,255,.66) 48%,
+        rgba(255,255,255,.42) 67%,
+        rgba(255,255,255,.20) 82%,
+        rgba(255,255,255,0) 100%
+      ),
+      url("../assets/recruit/international.jpg") center / cover no-repeat !important;
+  }
+
+  .entry h2{
+    display:block !important;
+    margin:0 0 34px !important;
+    padding:0 !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+
+    color:#074879 !important;
+    font-size:clamp(28px,7.2vw,36px) !important;
+    font-weight:700 !important;
+    line-height:1.45 !important;
+    letter-spacing:.01em !important;
+    text-align:left !important;
+  }
+
+  .entry p{
+    margin:0 !important;
+    padding:0 8px !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+
+    color:#405f73 !important;
+    font-size:16px !important;
+    line-height:2 !important;
+    letter-spacing:.015em !important;
+    text-align:center !important;
+  }
+
+  .entry .line-btn{
+    display:block !important;
+    width:calc(100% - 34px) !important;
+    max-width:520px !important;
+    margin:32px auto 0 !important;
+    padding:19px 20px !important;
+    box-sizing:border-box !important;
+
+    border-radius:999px !important;
+    background:#06c755 !important;
+    color:#fff !important;
+    font-size:18px !important;
+    font-weight:700 !important;
+    line-height:1.4 !important;
+    text-align:center !important;
+    text-decoration:none !important;
+    box-shadow:0 12px 30px rgba(6,199,85,.24) !important;
+  }
+}
+</style>
+
+
+<style id="recruit-mobile-hero-ratio-20260924">
+/* 採用ページ：スマホTOP画像をラフに合わせて横長化 */
+@media (max-width:768px){
+  .hero{
+    height:450px !important;
+    min-height:450px !important;
+    max-height:450px !important;
+    overflow:hidden !important;
+    background-size:cover !important;
+    background-position:center center !important;
+  }
+
+  .hero-inner{
+    height:100% !important;
+    padding:0 20px !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+
+  .hero-handwriting{
+    max-height:100% !important;
+  }
+}
+</style>
+
+
+<style id="recruit-mobile-hero-landscape-20260924">
+@media (max-width:768px){
+
+  body .hero{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:1.9 / 1 !important;
+    position:relative !important;
+    overflow:hidden !important;
+    background-size:cover !important;
+    background-position:center 42% !important;
+  }
+
+  body .hero-inner{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  body .hero-handwriting{
+    position:absolute !important;
+    left:7% !important;
+    bottom:11% !important;
+    width:68% !important;
+    max-width:none !important;
+    height:auto !important;
+    object-fit:contain !important;
+  }
+
+  body .hero-badge{
+    position:absolute !important;
+    width:24% !important;
+    height:auto !important;
+    right:5% !important;
+    top:7% !important;
+  }
+}
+</style>
+
+
+<style id="recruit-message-mobile-rough-layout-20260924">
+@media (max-width:768px){
+
+  .recruit-message{
+    padding:42px 26px 40px !important;
+  }
+
+  /*
+    rm-inner自体をcontents化して、
+    rm-left / rm-right内の文章を同じGrid上へ配置
+  */
+  .recruit-message .rm-inner{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    display:grid !important;
+    grid-template-columns:38% minmax(0,1fr) !important;
+    column-gap:22px !important;
+    row-gap:0 !important;
+    align-items:start !important;
+  }
+
+  /* 左上：採用情報 */
+  .recruit-message .rm-left{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    position:relative !important;
+    min-height:125px !important;
+    margin:0 !important;
+    padding:5px 0 0 !important;
+    display:block !important;
+  }
+
+  .recruit-message .rm-title{
+    display:flex !important;
+    align-items:center !important;
+    gap:9px !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .recruit-message .rm-title::before{
+    content:"" !important;
+    display:block !important;
+    width:23px !important;
+    height:2px !important;
+    flex:0 0 23px !important;
+    background:#173354 !important;
+  }
+
+  .recruit-message .rm-title h2{
+    margin:0 !important;
+    padding:0 !important;
+    color:#173354 !important;
+    font-size:19px !important;
+    line-height:1.3 !important;
+    font-weight:700 !important;
+    letter-spacing:0 !important;
+    white-space:nowrap !important;
+  }
+
+  .recruit-message .rm-watermark{
+    position:absolute !important;
+    left:23px !important;
+    top:48px !important;
+    bottom:auto !important;
+    margin:0 !important;
+
+    color:rgba(40,133,188,.10) !important;
+    font-size:37px !important;
+    line-height:1 !important;
+    font-weight:800 !important;
+    letter-spacing:-.05em !important;
+    white-space:nowrap !important;
+  }
+
+  /*
+    rm-rightをcontentsにすることで、
+    中のpをrm-innerのGridへ直接配置
+  */
+  .recruit-message .rm-right{
+    display:contents !important;
+  }
+
+  /* 1段落目：右上 */
+  .recruit-message .rm-right p:first-child{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    margin:0 !important;
+    padding:3px 0 0 !important;
+
+    color:#324b5c !important;
+    font-size:12px !important;
+    line-height:1.85 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+  }
+
+  /* 2〜4段落：左右いっぱい */
+  .recruit-message .rm-right p:nth-child(n+2){
+    grid-column:1 / -1 !important;
+
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    color:#324b5c !important;
+    font-size:13px !important;
+    line-height:1.9 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(2){
+    grid-row:2 !important;
+    margin-top:24px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(3){
+    grid-row:3 !important;
+    margin-top:18px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(4){
+    grid-row:4 !important;
+    margin-top:18px !important;
+  }
+
+  /* 下の英字ライン */
+  .recruit-message .rm-bottom{
+    width:100% !important;
+    margin:28px 0 0 !important;
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+  }
+
+  .recruit-message .rm-bottom span{
+    font-size:8px !important;
+    letter-spacing:.15em !important;
+    white-space:nowrap !important;
+  }
+}
+</style>
+
+<style id="recruit-mobile-job-visual-half-20260924">
+@media (max-width:768px){
+
+  /* 募集職種：写真カードの天地を約半分に */
+  .jobs-redesign .job-visual{
+    height:145px !important;
+    min-height:145px !important;
+  }
+
+  .jobs-redesign .job-visual img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+
+  .jobs-redesign .job-overlay{
+    padding:14px 18px 13px !important;
+    justify-content:flex-end !important;
+  }
+
+  .jobs-redesign .job-label{
+    margin:0 0 3px !important;
+    font-size:12px !important;
+    line-height:1.2 !important;
+  }
+
+  .jobs-redesign .job-card .job-overlay h2{
+    margin:0 !important;
+    font-size:20px !important;
+    line-height:1.25 !important;
+  }
+
+  .jobs-redesign .job-copy{
+    margin-top:5px !important;
+    font-size:11px !important;
+    line-height:1.45 !important;
+  }
+}
+</style>
+<style id="recruit-mobile-job-info-columns-20260924">
+@media (max-width:768px){
+
+  /* 主な業務 / 歓迎する方を横2列 */
+  .jobs-redesign .job-info-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:10px !important;
+    width:100% !important;
+    margin-top:16px !important;
+  }
+
+  .jobs-redesign .job-info-box{
+    min-width:0 !important;
+    margin:0 !important;
+    padding:16px 12px 15px !important;
+    border-radius:12px !important;
+  }
+
+  /* 見出し */
+  .jobs-redesign .job-info-box .recruit-icon-heading{
+    display:flex !important;
+    align-items:center !important;
+    gap:6px !important;
+    margin:0 0 12px !important;
+    font-size:15px !important;
+    line-height:1.35 !important;
+    white-space:nowrap !important;
+  }
+
+  .jobs-redesign .job-info-box .recruit-heading-icon{
+    width:16px !important;
+    height:16px !important;
+    flex:0 0 16px !important;
+    object-fit:contain !important;
+  }
+
+  /* チェック項目 */
+  .jobs-redesign .job-check-list{
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .jobs-redesign .job-check-list li{
+    position:relative !important;
+    margin:0 0 9px !important;
+    padding:0 0 0 20px !important;
+    font-size:12px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+  }
+
+  .jobs-redesign .job-check-list li:last-child{
+    margin-bottom:0 !important;
+  }
+
+  .jobs-redesign .job-check-list li::before{
+    width:15px !important;
+    height:15px !important;
+    left:0 !important;
+    top:.1em !important;
+    font-size:10px !important;
+    line-height:15px !important;
+  }
+
+  /* 下のキャリア説明は全幅のまま */
+  .jobs-redesign .job-career{
+    width:100% !important;
+    margin-top:12px !important;
+    padding:14px 16px !important;
+    border-radius:12px !important;
+    font-size:12px !important;
+    line-height:1.75 !important;
+  }
+}
+</style>
+
+<style id="recruit-mobile-message-font-compact-20260924">
+@media (max-width:768px){
+
+  /* 採用情報・導入本文をコンパクトに */
+  .recruit-message .rm-right p{
+    font-size:8.5px !important;
+    line-height:1.75 !important;
+    letter-spacing:0 !important;
+  }
+
+  /* 段落間も縮める */
+  .recruit-message .rm-right p + p{
+    margin-top:10px !important;
+  }
+
+  .recruit-message .rm-right p:last-child{
+    margin-bottom:0 !important;
+  }
+}
+</style>
+
+<style id="recruit-mobile-gallery-compact-auto-20260924">
+@media (max-width:768px){
+
+  .gallery-wrap{
+    padding:42px 0 46px !important;
+    overflow:hidden !important;
+  }
+
+  .gallery-title{
+    margin:0 0 26px !important;
+    font-size:28px !important;
+    line-height:1.2 !important;
+  }
+
+  .event-gallery{
+    width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+
+  .event-gallery::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .gallery-track{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:10px !important;
+    width:max-content !important;
+    padding:0 10px !important;
+  }
+
+  .gallery-track img{
+    flex:0 0 44vw !important;
+    width:44vw !important;
+    height:29vw !important;
+    max-width:none !important;
+    object-fit:cover !important;
+    border-radius:12px !important;
+  }
+}
+</style>
+<style id="recruit-mobile-jobs-heading-compact-20260924">
+@media (max-width:768px){
+
+  /* 募集職種：見出しエリアの天地をコンパクトに */
+  .jobs-redesign{
+    padding-top:32px !important;
+    padding-bottom:38px !important;
+  }
+
+  .jobs-redesign .jobs-heading{
+    margin-bottom:24px !important;
+  }
+
+  .jobs-redesign .section-en{
+    margin-bottom:8px !important;
+  }
+
+  .jobs-redesign .section-title{
+    margin-top:14px !important;
+    margin-bottom:10px !important;
+  }
+
+  .jobs-redesign .section-lead{
+    margin-top:0 !important;
+    margin-bottom:22px !important;
+    line-height:1.6 !important;
+  }
+}
+</style>
+<style id="recruit-mobile-voice-gallery-layout-20260926">
+@media (max-width:520px){
+
+  /* ========================================
+     スマホだけ
+     スタッフの声 → イベントの現場 の順番
+     ======================================== */
+
+  main{
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .voices-redesign{
+    order:50 !important;
+  }
+
+  .gallery-wrap{
+    order:51 !important;
+  }
+
+  .attraction{
+    order:52 !important;
+  }
+
+  .entry{
+    order:53 !important;
+  }
+
+  /* ===== スタッフの声 ===== */
+
+  .voices-redesign{
+    padding:38px 12px 34px !important;
+  }
+
+  .voices-redesign .voices-heading{
+    margin-bottom:22px !important;
+  }
+
+  .voices-redesign .voices-heading h2{
+    margin:8px 0 0 !important;
+    font-size:26px !important;
+    line-height:1.25 !important;
+  }
+
+  /* 4人を2列×2段 */
+  .voices-redesign .voice-grid{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+  }
+
+  /* 1カード＝小さい横長 */
+  .voices-redesign .voice-card{
+    display:grid !important;
+    grid-template-columns:38% 62% !important;
+    grid-template-rows:auto auto auto !important;
+
+    min-width:0 !important;
+    min-height:0 !important;
+    margin:0 !important;
+
+    border-radius:11px !important;
+    overflow:hidden !important;
+  }
+
+  /* 左：写真 */
+  .voices-redesign .voice-photo{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    width:100% !important;
+    height:105px !important;
+    min-height:105px !important;
+  }
+
+  .voices-redesign .voice-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center 20% !important;
+  }
+
+  /*
+    voice-content を展開して
+    写真右側へ情報を配置
+  */
+  .voices-redesign .voice-content{
+    display:contents !important;
+  }
+
+  .voices-redesign .voice-meta{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+
+    margin:0 !important;
+    padding:9px 7px 0 !important;
+
+    display:flex !important;
+    align-items:flex-start !important;
+    flex-wrap:wrap !important;
+    gap:3px !important;
+
+    font-size:7px !important;
+    line-height:1.35 !important;
+  }
+
+  .voices-redesign .voice-role{
+    width:auto !important;
+    min-height:0 !important;
+
+    padding:3px 5px !important;
+    font-size:6.5px !important;
+    line-height:1.25 !important;
+  }
+
+  .voices-redesign .voice-content h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+
+    margin:46px 7px 0 !important;
+    padding:0 !important;
+
+    font-size:9px !important;
+    line-height:1.45 !important;
+  }
+
+  /* 本文はカード下部を横いっぱい */
+  .voices-redesign .voice-content p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+
+    margin:0 !important;
+    padding:9px 9px 5px !important;
+
+    font-size:7.5px !important;
+    line-height:1.55 !important;
+  }
+
+  .voices-redesign .voice-tags{
+    grid-column:1 / -1 !important;
+    grid-row:3 !important;
+
+    margin:0 !important;
+    padding:3px 9px 9px !important;
+
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:3px !important;
+  }
+
+  .voices-redesign .voice-tags span{
+    padding:3px 5px !important;
+    font-size:6.5px !important;
+    line-height:1.2 !important;
+  }
+
+  /* ===== イベントの現場 ===== */
+
+  .gallery-wrap{
+    padding:30px 0 34px !important;
+  }
+
+  .gallery-title{
+    margin:0 0 18px !important;
+    font-size:18px !important;
+    line-height:1.3 !important;
+  }
+
+  .event-gallery{
+    width:100% !important;
+    padding:0 !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scrollbar-width:none !important;
+  }
+
+  .event-gallery::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .gallery-track{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    width:max-content !important;
+    padding:0 10px !important;
+  }
+
+  /* ラフのような小さい横長写真 */
+  .gallery-track img{
+    flex:0 0 31vw !important;
+    width:31vw !important;
+    height:19vw !important;
+    max-width:none !important;
+
+    object-fit:cover !important;
+    border-radius:9px !important;
+  }
+}
+</style>
+<style id="recruit-mobile-attraction-three-columns-20260926">
+@media (max-width:520px){
+
+  /* ===== グローパスで働く魅力 ===== */
+
+  .attraction{
+    padding:34px 10px 32px !important;
+    overflow:hidden !important;
+  }
+
+  .attraction .section-title{
+    margin:0 0 42px !important;
+    font-size:24px !important;
+    line-height:1.25 !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+  }
+
+  /* 3枚横並び */
+  .attraction-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:7px !important;
+
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+
+  /* ラフに合わせて縦長感をなくす */
+  .attraction-card{
+    position:relative !important;
+    display:block !important;
+
+    width:auto !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    height:auto !important;
+
+    margin:0 !important;
+    padding:38px 8px 14px !important;
+
+    border-radius:13px !important;
+    overflow:visible !important;
+
+    text-align:center !important;
+  }
+
+  /* アイコン：カード上辺に半分ほど重ねる */
+  .attraction-card .attraction-icon{
+    position:absolute !important;
+
+    top:-25px !important;
+    left:50% !important;
+    transform:translateX(-50%) !important;
+
+    display:block !important;
+
+    width:52px !important;
+    height:52px !important;
+    min-width:52px !important;
+    min-height:52px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    z-index:3 !important;
+  }
+
+  .attraction-card .attraction-icon img{
+    display:block !important;
+
+    width:52px !important;
+    height:52px !important;
+    max-width:52px !important;
+
+    object-fit:contain !important;
+  }
+
+  /* 見出し */
+  .attraction-card h3{
+    display:block !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 0 7px !important;
+    padding:0 !important;
+
+    font-size:8px !important;
+    font-weight:700 !important;
+    line-height:1.4 !important;
+    letter-spacing:-.02em !important;
+
+    writing-mode:horizontal-tb !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:anywhere !important;
+    text-align:center !important;
+  }
+
+  /* 本文も上に詰める */
+  .attraction-card p{
+    display:block !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:6.5px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+
+    writing-mode:horizontal-tb !important;
+    word-break:normal !important;
+    overflow-wrap:anywhere !important;
+    text-align:left !important;
+  }
+}
+</style>
+<style id="recruit-mobile-entry-type-balance-20260926">
+
+/* PCでは改行しない */
+.entry-mobile-break{
+  display:none;
+}
+
+@media (max-width:520px){
+
+  .entry{
+    min-height:0 !important;
+    padding:36px 22px 40px !important;
+  }
+
+  .entry h2{
+    width:100% !important;
+    max-width:360px !important;
+    margin:0 auto 17px !important;
+    padding:0 !important;
+
+    font-size:16px !important;
+    font-weight:700 !important;
+    line-height:1.55 !important;
+    letter-spacing:.01em !important;
+    text-align:center !important;
+  }
+
+  /* スマホだけここで改行 */
+  .entry-mobile-break{
+    display:block !important;
+  }
+
+  .entry p{
+    width:88% !important;
+    max-width:350px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+
+    font-size:9.5px !important;
+    font-weight:500 !important;
+    line-height:1.85 !important;
+    letter-spacing:0 !important;
+    text-align:center !important;
+  }
+
+  .entry .line-btn{
+    display:block !important;
+    width:82% !important;
+    max-width:330px !important;
+
+    box-sizing:border-box !important;
+    margin:21px auto 0 !important;
+    padding:13px 16px !important;
+
+    font-size:14px !important;
+    font-weight:700 !important;
+    line-height:1.3 !important;
+    text-align:center !important;
+  }
+}
+</style>
+<style id="recruit-mobile-job-rough-layout-20260926">
+@media (max-width:520px){
+
+  /* ==================================
+     JOB：手書きラフに合わせた左右配置
+     ================================== */
+
+  .jobs-redesign .job-card{
+    display:grid !important;
+    grid-template-columns:42% 58% !important;
+    grid-template-rows:auto auto !important;
+    align-items:stretch !important;
+    overflow:hidden !important;
+  }
+
+  /* 左：募集写真 */
+  .jobs-redesign .job-visual{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    width:100% !important;
+    height:auto !important;
+    min-height:330px !important;
+
+    margin:0 !important;
+    border-radius:0 !important;
+  }
+
+  .jobs-redesign .job-visual img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+
+  /* 写真上の文字も小型化 */
+  .jobs-redesign .job-overlay{
+    padding:15px 9px !important;
+    justify-content:flex-end !important;
+  }
+
+  .jobs-redesign .job-label{
+    margin:0 0 4px !important;
+    font-size:7px !important;
+    line-height:1.2 !important;
+  }
+
+  .jobs-redesign .job-card .job-overlay h2{
+    margin:0 !important;
+    font-size:11px !important;
+    line-height:1.35 !important;
+  }
+
+  .jobs-redesign .job-copy{
+    margin-top:6px !important;
+    font-size:6.5px !important;
+    line-height:1.55 !important;
+  }
+
+  /* 右：タグ＋主な業務＋歓迎する方 */
+  .jobs-redesign .job-body{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+
+    width:100% !important;
+    min-width:0 !important;
+
+    padding:10px !important;
+    box-sizing:border-box !important;
+  }
+
+  /* 4タグをラフ通り縦に */
+  .jobs-redesign .job-tags{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+
+    width:100% !important;
+    margin:0 0 9px !important;
+    gap:5px !important;
+  }
+
+  .jobs-redesign .job-tags span{
+    width:auto !important;
+    min-width:62px !important;
+    min-height:0 !important;
+
+    margin:0 !important;
+    padding:5px 9px !important;
+
+    font-size:8px !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+  }
+
+  /* 主な業務・歓迎する方は右側で上下に */
+  .jobs-redesign .job-info-grid{
+    display:flex !important;
+    flex-direction:column !important;
+
+    width:100% !important;
+    margin:0 !important;
+    gap:7px !important;
+  }
+
+  .jobs-redesign .job-info-box{
+    width:100% !important;
+    min-width:0 !important;
+
+    margin:0 !important;
+    padding:9px 8px !important;
+    box-sizing:border-box !important;
+
+    border-radius:8px !important;
+  }
+
+  .jobs-redesign .job-info-box h3,
+  .jobs-redesign .job-info-box .recruit-icon-heading{
+    display:flex !important;
+    align-items:center !important;
+
+    margin:0 0 6px !important;
+    gap:4px !important;
+
+    font-size:9px !important;
+    line-height:1.3 !important;
+    white-space:normal !important;
+  }
+
+  .jobs-redesign .job-info-box .recruit-heading-icon{
+    width:11px !important;
+    height:11px !important;
+    flex:0 0 11px !important;
+  }
+
+  .jobs-redesign .job-check-list{
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .jobs-redesign .job-check-list li{
+    margin:0 0 4px !important;
+    padding-left:15px !important;
+
+    font-size:7.5px !important;
+    line-height:1.45 !important;
+  }
+
+  .jobs-redesign .job-check-list li:last-child{
+    margin-bottom:0 !important;
+  }
+
+  .jobs-redesign .job-check-list li::before{
+    width:11px !important;
+    height:11px !important;
+
+    left:0 !important;
+    top:.1em !important;
+
+    font-size:6px !important;
+    line-height:11px !important;
+  }
+
+  /* キャリア説明だけ左右の下に全幅 */
+  .jobs-redesign .job-career{
+    grid-column:1 / -1 !important;
+
+    width:100% !important;
+    margin:10px 0 0 !important;
+    padding:10px 12px !important;
+
+    box-sizing:border-box !important;
+
+    font-size:8px !important;
+    line-height:1.65 !important;
+  }
+}
+</style>
+
+
+<style id="recruit-mobile-job-tags-final-2x2-20260926">
+@media screen and (max-width:520px){
+
+  .jobs-redesign .technical .job-tags,
+  .jobs-redesign .event .job-tags{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    flex-direction:initial !important;
+
+    width:100% !important;
+    gap:5px !important;
+    margin:0 0 9px !important;
+  }
+
+  .jobs-redesign .technical .job-tags span,
+  .jobs-redesign .event .job-tags span{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    min-height:25px !important;
+
+    margin:0 !important;
+    padding:4px 2px !important;
+    box-sizing:border-box !important;
+
+    font-size:10px !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+  }
+}
+</style>
+
+
+<style id="recruit-message-mobile-final-compact-20260926">
+@media (max-width:768px){
+
+  /* 採用情報：本文を最終調整 */
+  .recruit-message .rm-right p:first-child{
+    font-size:11px !important;
+    line-height:1.65 !important;
+    letter-spacing:0 !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(n+2){
+    font-size:11px !important;
+    line-height:1.65 !important;
+    letter-spacing:0 !important;
+  }
+
+  /* 2段落目までの空きを縮める */
+  .recruit-message .rm-right p:nth-child(2){
+    margin-top:16px !important;
+  }
+
+  /* 以降の段落間もコンパクトに */
+  .recruit-message .rm-right p:nth-child(3),
+  .recruit-message .rm-right p:nth-child(4){
+    margin-top:11px !important;
+  }
+
+  /* セクション下部も少し詰める */
+  .recruit-message .rm-bottom{
+    margin-top:20px !important;
+  }
+}
+</style>
+
+
+<style id="recruit-message-mobile-smaller-20260926">
+@media (max-width:768px){
+
+  /* 右上の導入文 */
+  .recruit-message .rm-right p:first-child{
+    font-size:10px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+  }
+
+  /* 下3段落 */
+  .recruit-message .rm-right p:nth-child(n+2){
+    font-size:9px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(2){
+    margin-top:13px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(3),
+  .recruit-message .rm-right p:nth-child(4){
+    margin-top:9px !important;
+  }
+
+  /* 英字ラインも少し上へ */
+  .recruit-message .rm-bottom{
+    margin-top:16px !important;
+  }
+}
+</style>
+
+
+<style id="recruit-message-mobile-spacing-final-20260926">
+@media (max-width:768px){
+
+  /* セクション全体：左右余白を確保しつつ天地を圧縮 */
+  .recruit-message{
+    padding:24px 24px 22px !important;
+    box-sizing:border-box !important;
+  }
+
+  .recruit-message .rm-inner{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 auto !important;
+    padding:0 !important;
+
+    /* 上段と本文の間を詰める */
+    row-gap:0 !important;
+  }
+
+  /* 「採用情報」 */
+  .recruit-message .rm-left h2{
+    font-size:18px !important;
+    line-height:1.25 !important;
+    margin:0 !important;
+  }
+
+  /* タイトル横の線も少し小さく */
+  .recruit-message .rm-left h2::before{
+    width:24px !important;
+    margin-right:9px !important;
+  }
+
+  /* 薄い RECRUIT */
+  .recruit-message .rm-left .rm-en,
+  .recruit-message .rm-left .rm-bg-text{
+    font-size:36px !important;
+    line-height:1 !important;
+  }
+
+  /* 上段左右 */
+  .recruit-message .rm-left{
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  /* 右上説明 */
+  .recruit-message .rm-right p:first-child{
+    margin:0 !important;
+  }
+
+  /* 下本文を上へ寄せる */
+  .recruit-message .rm-right p:nth-child(2){
+    margin-top:4px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(3),
+  .recruit-message .rm-right p:nth-child(4){
+    margin-top:8px !important;
+  }
+
+  /* 下の英字ラインも近づける */
+  .recruit-message .rm-bottom{
+    margin-top:12px !important;
+    margin-bottom:0 !important;
+  }
+}
+</style>
+
+
+<style id="recruit-mobile-job-heading-compact-20260926">
+@media (max-width:768px){
+
+  /* JOBセクション上部そのものを圧縮 */
+  .jobs-redesign{
+    padding-top:28px !important;
+  }
+
+  .jobs-redesign .jobs-heading{
+    margin:0 0 22px !important;
+    padding:0 !important;
+  }
+
+  /* JOB */
+  .jobs-redesign .jobs-heading .section-kicker,
+  .jobs-redesign .jobs-heading .jobs-en{
+    margin:0 0 8px !important;
+    font-size:10px !important;
+    line-height:1.2 !important;
+    letter-spacing:.28em !important;
+  }
+
+  /* JOB下の青線 */
+  .jobs-redesign .jobs-heading .section-kicker::after,
+  .jobs-redesign .jobs-heading .jobs-en::after{
+    width:28px !important;
+    margin-top:7px !important;
+  }
+
+  /* 募集職種 */
+  .jobs-redesign .jobs-heading > h2{
+    margin:12px 0 8px !important;
+    font-size:22px !important;
+    line-height:1.25 !important;
+    letter-spacing:.04em !important;
+  }
+
+  /* それぞれの専門性で〜 */
+  .jobs-redesign .jobs-heading > p{
+    margin:0 !important;
+    font-size:9px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+  }
+
+  /* タイトルから最初の募集カードまでの空白も縮める */
+  .jobs-redesign .jobs-grid{
+    margin-top:0 !important;
+  }
+}
+</style>
+
+<style>
+/* 働く魅力：アイコン中央揃え */
+.attraction-icon{
+  width:118px !important;
+  height:118px !important;
+  margin:0 auto 28px !important;
+}
+
+.attraction-icon img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+</style>
+
+<style id="recruit-mobile-entry-balance-v2-20260926">
+@media screen and (max-width:520px){
+
+  .entry{
+    min-height:0 !important;
+    height:auto !important;
+    padding:26px 20px 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  /* タイトル */
+  .entry h2{
+    width:82% !important;
+    max-width:310px !important;
+    margin:0 auto 18px !important;
+    padding:0 !important;
+
+    font-size:14px !important;
+    font-weight:700 !important;
+    line-height:1.5 !important;
+    letter-spacing:0 !important;
+    text-align:center !important;
+  }
+
+  /* 説明文 */
+  .entry p{
+    width:76% !important;
+    max-width:300px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+
+    font-size:8.5px !important;
+    font-weight:500 !important;
+    line-height:1.75 !important;
+    letter-spacing:0 !important;
+    text-align:center !important;
+  }
+
+  /* LINE */
+  .entry .line-btn{
+    display:block !important;
+    width:76% !important;
+    max-width:290px !important;
+
+    box-sizing:border-box !important;
+    margin:20px auto 0 !important;
+    padding:11px 14px !important;
+
+    border-radius:999px !important;
+    font-size:12.5px !important;
+    line-height:1.25 !important;
+  }
+
+  /* コピーライト */
+  .entry + footer{
+    min-height:0 !important;
+    height:auto !important;
+
+    margin:0 !important;
+    padding:17px 20px 19px !important;
+
+    font-size:9px !important;
+    line-height:1.3 !important;
+  }
+}
+</style>
+<link rel="stylesheet" href="../assets/grps-shared-header.css">
+<link rel="stylesheet" href="../assets/subpages.css">
+
+<style id="recruit-header-arrow-fix">
+#grps-independent-header + .breadcrumbs,
+#grps-independent-header + .breadcrumb,
+#grps-independent-header + .breadcrumb-nav {
+  display: none !important;
+}
+</style>
+
+
+<style id="grps-recruit-mobile-badge-position-20261014">
+@media screen and (max-width: 768px) {
+  .hero .hero-badge {
+    top: 50px !important;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header id="grps-independent-header">
+  <div class="grps-header-inner">
+    <a id="grps-header-logo" href="../index.html#top"
+       aria-label="グローパス トップページ">
+      <img src="../grps_images/glowpas-logo-horizontal.png" alt="グローパス">
+    </a>
+    <button class="menu-button" id="menuOpen" type="button"
+            aria-controls="sideMenu" aria-expanded="false"
+            aria-label="メニューを開く">
+      <img class="hamburger-icon"
+           src="../grps_images/hamburger-menu.png" alt="">
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<img alt="つくるのは、一瞬の体験。そして、未来につながる時間。" class="hero-handwriting" src="../assets/recruit/hero-handwriting.png"/>
+</div>
+<img alt="イベントの裏側に、あなたの力を。" class="hero-badge" src="../assets/recruit/recruitment-badge.png"/>
+</section>
+<section class="recruit-message">
+<div class="rm-inner">
+<div class="rm-left">
+<div class="rm-title"><h2>採用情報</h2></div>
+<div class="rm-watermark">RECRUIT</div>
+</div>
+<div class="rm-right">
+<p>株式会社グローパスでは、イベント運営を一緒に支えてくださるスタッフを募集しています。</p>
+<p>私たちは、官公庁主催のセミナー・シンポジウム・展示会を中心に、企画から会場運営、音響・映像・オンライン配信までを一貫して手がけています。</p>
+<p>イベントは、一人ではつくれません。受付や案内を担当するスタッフ、音響・映像・配信を支えるテクニカルスタッフなど、それぞれの力が合わさることで、ひとつのイベントが完成します。</p>
+<p>経験を活かしたい方はもちろん、イベント業界に興味があり、新しい仕事に挑戦したい方も歓迎しています。</p>
+</div>
+</div>
+<div class="rm-bottom">
+<span>LET'S CREATE AMAZING EVENTS TOGETHER</span>
+<div class="rm-bottom-line"></div>
+</div>
+</section>
+<section class="jobs jobs-redesign" id="jobs">
+<div class="jobs-heading">
+<div class="jobs-en">JOB</div>
+<div class="jobs-heading-line"></div>
+<h2>募集職種</h2>
+<p>それぞれの専門性で、イベントの成功を支えます。</p>
+</div>
+<div class="jobs-grid">
+<article class="job-card technical">
+<div class="job-visual">
+<img alt="テクニカルスタッフ" src="../assets/recruit/technical-card.jpg"/>
+<div class="job-overlay">
+<div class="job-label">Technical Staff</div>
+<h2>テクニカルスタッフ募集</h2>
+<div class="job-copy">音響・照明・映像などの技術で、<br/>イベントの空間をつくる仕事です。</div>
+</div>
+</div>
+<div class="job-body">
+<div class="job-tags">
+<span>音響</span><span>照明</span><span>映像</span><span>機材設営</span>
+</div>
+<div class="job-info-grid">
+<div class="job-info-box">
+<h3 class="recruit-icon-heading"><img alt="" class="recruit-heading-icon" src="../assets/recruit/icon-technical-work.png"/>主な業務</h3>
+<ul class="job-check-list">
+<li>音響・映像機材の設営・調整</li>
+<li>カメラ・スイッチャー操作</li>
+<li>オンライン配信対応</li>
+<li>本番中のオペレーション・撤去</li>
+</ul>
+</div>
+<div class="job-info-box">
+<h3 class="recruit-icon-heading"><img alt="" class="recruit-heading-icon" src="../assets/recruit/icon-technical-person.png"/>歓迎する方</h3>
+<ul class="job-check-list">
+<li>機材や配信に興味がある方</li>
+<li>チームで働く仕事が好きな方</li>
+<li>現場対応力を身につけたい方</li>
+</ul>
+</div>
+</div>
+<div class="job-career">経験やスキルに応じて、アシスタント → メインオペレーター → チーフオペレーター → テクニカルディレクターを目指すこともできます。</div>
+</div>
+</article>
+<article class="job-card event">
+<div class="job-visual">
+<img alt="イベント運営スタッフ" src="../assets/recruit/event-main.jpg"/>
+<div class="job-overlay">
+<div class="job-label">Event Staff</div>
+<h2>イベント運営スタッフ募集</h2>
+<div class="job-copy">イベントの進行・運営を支え、<br/>スムーズな現場づくりを行う仕事です。</div>
+</div>
+</div>
+<div class="job-body">
+<div class="job-tags">
+<span>運営・進行</span><span>来場者対応</span><span>会場設営</span><span>チーム連携</span>
+</div>
+<div class="job-info-grid">
+<div class="job-info-box">
+<h3 class="recruit-icon-heading"><img alt="" class="recruit-heading-icon" src="../assets/recruit/icon-event-work.png"/>主な業務</h3>
+<ul class="job-check-list">
+<li>受付・案内・誘導</li>
+<li>会場設営・撤去サポート</li>
+<li>参加者対応・問い合わせ対応</li>
+<li>進行補助・現場サポート</li>
+</ul>
+</div>
+<div class="job-info-box">
+<h3 class="recruit-icon-heading"><img alt="" class="recruit-heading-icon" src="../assets/recruit/icon-event-person.png"/>歓迎する方</h3>
+<ul class="job-check-list">
+<li>人と接することが好きな方</li>
+<li>丁寧な対応を大切にできる方</li>
+<li>イベント業界に興味がある方</li>
+</ul>
+</div>
+</div>
+<div class="job-career">未経験の方でも、現場で業務を覚えていただける環境です。</div>
+</div>
+</article>
+</div>
+</section>
+<section class="voices voices-redesign" id="voices">
+<div class="voices-heading">
+<div class="voices-en"><span></span>STAFF VOICE<span></span></div>
+<h2>スタッフの声</h2>
+</div>
+<div class="voice-grid">
+<article class="voice-card tech">
+<div class="voice-photo">
+<img alt="テクニカルスタッフ Cさん" src="../assets/recruit/voice-tech-d.jpg"/>
+</div>
+<div class="voice-content">
+<div class="voice-meta">
+<span class="voice-role">テクニカルスタッフ</span>
+<span>20代後半</span><i></i><span>経験3年</span>
+</div>
+<h3>「現場が変わるたびに、<br/>できることが増えていきます。」</h3>
+<p>音響・映像・配信など幅広い現場に関わりながら、実践を通して着実に成長できます。</p>
+<div class="voice-tags"><span>音響</span><span>映像</span><span>現場対応</span></div>
+</div>
+</article>
+<article class="voice-card eventvoice">
+<div class="voice-photo">
+<img alt="イベント運営スタッフ Aさん" src="../assets/recruit/voice-event-a.jpg"/>
+</div>
+<div class="voice-content">
+<div class="voice-meta">
+<span class="voice-role">イベント運営スタッフ</span>
+<span>大学生</span>
+</div>
+<h3>「初めてでも、<br/>安心して挑戦できました。」</h3>
+<p>先輩スタッフのサポートがあり、受付や案内などを通して現場での対応力が身につきます。</p>
+<div class="voice-tags"><span>受付</span><span>案内</span><span>学生歓迎</span></div>
+</div>
+</article>
+<article class="voice-card tech">
+<div class="voice-photo">
+<img alt="テクニカルスタッフ Dさん" src="../assets/recruit/voice-tech-c.jpg"/>
+</div>
+<div class="voice-content">
+<div class="voice-meta">
+<span class="voice-role">テクニカルスタッフ</span>
+<span>30代半ば</span><i></i><span>経験5年</span>
+</div>
+<h3>「官公庁案件だからこそ、<br/>技術の質が問われます。」</h3>
+<p>責任ある現場に携わる中で、判断力と対応力を高めながら技術者として経験を積めます。</p>
+<div class="voice-tags"><span>配信</span><span>オペレーション</span><span>チーム連携</span></div>
+</div>
+</article>
+<article class="voice-card eventvoice">
+<div class="voice-photo">
+<img alt="イベント運営スタッフ Bさん" src="../assets/recruit/voice-event-b.jpg"/>
+</div>
+<div class="voice-content">
+<div class="voice-meta">
+<span class="voice-role">イベント運営スタッフ</span>
+<span>40代</span><i></i><span>子育てと両立</span>
+</div>
+<h3>「家庭と両立しながら、<br/>やりがいを感じています。」</h3>
+<p>シフトの柔軟さがあり、参加者対応や会場運営を通して人と関わる楽しさを感じられます。</p>
+<div class="voice-tags"><span>シフト相談</span><span>未経験可</span><span>人と接する仕事</span></div>
+</div>
+</article>
+</div>
+</section>
+<section class="gallery-wrap">
+<h2 class="gallery-title">イベントの現場</h2>
+<div class="event-gallery" id="eventGallery">
+<div class="gallery-track">
+<img alt="" src="../assets/recruit/gallery-01.jpg"/>
+<img alt="" src="../assets/recruit/gallery-02.jpg"/>
+<img alt="" src="../assets/recruit/gallery-03.jpg"/>
+<img alt="" src="../assets/recruit/gallery-04.jpg"/>
+<img alt="" src="../assets/recruit/gallery-05.jpg"/>
+<img alt="" src="../assets/recruit/gallery-06.jpg"/>
+<img alt="" src="../assets/recruit/gallery-07.jpg"/>
+<img alt="" src="../assets/recruit/gallery-08.jpg"/>
+<img alt="" src="../assets/recruit/gallery-09.jpg"/>
+<img alt="" src="../assets/recruit/gallery-10.jpg"/>
+<img alt="" src="../assets/recruit/gallery-11.jpg"/>
+<img alt="" src="../assets/recruit/gallery-12.jpg"/>
+</div>
+</div>
+</section>
+<section class="attraction" id="attraction">
+<h2 class="section-title">グローパスで働く魅力</h2>
+<div class="attraction-grid">
+<div class="attraction-card">
+<div class="attraction-icon">
+<img alt="" src="../assets/recruit/attraction-event.png"/>
+</div>
+<h3>さまざまなイベントに携われる</h3>
+<p>官公庁関連のセミナーやシンポジウム、展示会など、毎回異なるテーマ・会場のイベントに携わることができます。</p>
+</div>
+<div class="attraction-card">
+<div class="attraction-icon">
+<img alt="" src="../assets/recruit/attraction-skill.png"/>
+</div>
+<h3>現場で役立つスキルが身につく</h3>
+<p>接客力、対応力、チームワークはもちろん、テクニカルスタッフの場合は音響・映像・配信などの専門技術も実践的に学べます。</p>
+</div>
+<div class="attraction-card">
+<div class="attraction-icon">
+<img alt="" src="../assets/recruit/attraction-team.png"/>
+</div>
+<h3>チームでイベントをつくる達成感</h3>
+<p>多くのスタッフと協力し、準備から本番、撤去までひとつのイベントをつくり上げます。無事にイベントを終えたときの達成感は、この仕事ならではです。</p>
+</div>
+</div>
+</section>
+<section class="entry" id="entry">
+<h2>あなたの力で、イベントを<span class="entry-mobile-break"></span>もっと特別なものに。</h2>
+<p>ご応募・お問い合わせは公式LINEより受け付けています。<br/>「イベント運営スタッフ希望」または「テクニカルスタッフ希望」とお送りください。<br/>まずは話を聞いてみたいという方も、お気軽にお問い合わせください。</p>
+<a class="line-btn" href="../index.html#globus-contact">LINEで応募する →</a>
+</section>
+
+<footer class="grps-site-footer" aria-label="サイトフッター">
+  <a class="grps-footer-logo" href="../index.html#top"
+     aria-label="トップページに戻る">
+    <img src="../grps_images/glowpas-logo-vertical.png"
+         alt="グローパス">
+  </a>
+</footer>
+
+<script>
+(() => {
+  const slider = document.getElementById('eventGallery');
+  if (!slider) return;
+  let down = false, startX = 0, startScroll = 0;
+
+  slider.addEventListener('mousedown', e => {
+    down = true;
+    slider.classList.add('is-dragging');
+    startX = e.pageX;
+    startScroll = slider.scrollLeft;
+  });
+
+  window.addEventListener('mouseup', () => {
+    down = false;
+    slider.classList.remove('is-dragging');
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    down = false;
+    slider.classList.remove('is-dragging');
+  });
+
+  slider.addEventListener('mousemove', e => {
+    if (!down) return;
+    e.preventDefault();
+    slider.scrollLeft = startScroll - (e.pageX - startX) * 1.35;
+  });
+
+  slider.addEventListener('wheel', e => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      slider.scrollLeft += e.deltaY;
+    }
+  }, {passive:false});
+})();
+</script>
+<script id="recruit-mobile-gallery-autoscroll-20260926">
+(() => {
+  const gallery = document.getElementById('eventGallery');
+  if (!gallery) return;
+
+  let paused = false;
+  let resumeTimer = null;
+  let lastTime = null;
+
+  /* 1秒あたりの移動量。端末のfpsに依存させない */
+  const SPEED = 24;
+
+  function isMobile() {
+    return window.matchMedia('(max-width:768px)').matches;
+  }
+
+  function pause() {
+    paused = true;
+    clearTimeout(resumeTimer);
+  }
+
+  function resumeLater() {
+    clearTimeout(resumeTimer);
+
+    resumeTimer = setTimeout(() => {
+      paused = false;
+      lastTime = null;
+    }, 1500);
+  }
+
+  /* iPhone Safari / Android Chrome / Pointer Events対応 */
+  gallery.addEventListener('touchstart', pause, { passive:true });
+  gallery.addEventListener('touchend', resumeLater, { passive:true });
+  gallery.addEventListener('touchcancel', resumeLater, { passive:true });
+
+  if (window.PointerEvent) {
+    gallery.addEventListener('pointerdown', pause, { passive:true });
+    gallery.addEventListener('pointerup', resumeLater, { passive:true });
+    gallery.addEventListener('pointercancel', resumeLater, { passive:true });
+  }
+
+  /* マウス操作にも対応 */
+  gallery.addEventListener('mouseenter', pause);
+  gallery.addEventListener('mouseleave', resumeLater);
+
+  function animate(time) {
+    if (lastTime === null) {
+      lastTime = time;
+    }
+
+    const delta = Math.min(time - lastTime, 50);
+    lastTime = time;
+
+    if (isMobile() && !paused) {
+      const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+
+      if (maxScroll > 0) {
+        gallery.scrollLeft += SPEED * (delta / 1000);
+
+        if (gallery.scrollLeft >= maxScroll - 1) {
+          gallery.scrollLeft = 0;
+        }
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  /* タブ復帰時の大ジャンプ防止 */
+  document.addEventListener('visibilitychange', () => {
+    lastTime = null;
+  });
+
+  window.addEventListener('resize', () => {
+    lastTime = null;
+  });
+
+  requestAnimationFrame(animate);
+})();
+</script>
+
+<style id="recruit-mobile-heading-size-unified-20260926">
+@media screen and (max-width:768px){
+
+  /* 採用情報を基準に、主要セクションタイトルを18pxへ統一 */
+
+  /* 募集職種 */
+  .jobs-redesign .jobs-heading > h2{
+    font-size:18px !important;
+    line-height:1.3 !important;
+  }
+
+  /* スタッフの声 */
+  .voices-redesign .voices-heading h2{
+    font-size:18px !important;
+    line-height:1.3 !important;
+  }
+
+  /* イベントの現場 */
+  .event-gallery h2,
+  .event-gallery .section-title,
+  .event-scenes h2,
+  .event-scenes .section-title{
+    font-size:18px !important;
+    line-height:1.3 !important;
+  }
+
+  /* グローパスで働く魅力 */
+  .attraction .section-title,
+  .attraction > h2{
+    font-size:18px !important;
+    line-height:1.3 !important;
+  }
+}
+</style>
+
+
+<style id="recruit-mobile-entry-background-crop-20260926">
+@media (max-width:520px){
+
+  /* ENTRY：背景写真の上側をトリミング */
+  .entry{
+    background-position:center calc(50% - 80px) !important;
+  }
+
+}
+</style>
+
+
+
+<style id="recruit-mobile-attraction-font-plus1-20260926">
+@media screen and (max-width:520px){
+
+  /* グローパスで働く魅力：カード内フォントを1pxアップ */
+  .attraction .attraction-card h3{
+    font-size:15px !important;
+  }
+
+  .attraction .attraction-card p{
+    font-size:11px !important;
+  }
+
+}
+</style>
+
+
+<div id="menuOverlay" class="menu-overlay"></div>
+<aside id="sideMenu" class="side-menu"
+       aria-hidden="true" aria-label="サイトメニュー" inert>
+  <button id="menuClose" class="menu-close"
+          type="button" aria-label="メニューを閉じる">×</button>
+  <p class="menu-label">MENU / メニュー</p>
+  <nav class="menu-links">
+<a href="../index.html"><small>HOME</small>ホーム</a>
+    <a href="../service/index.html"><small>SERVICE</small>サービス内容</a>
+    <a href="../results/index.html"><small>WORKS</small>実績</a>
+    <a href="../recruit/index.html"><small>RECRUIT</small>リクルート</a>
+    <a href="../privacy/index.html"><small>PRIVACY</small>個人情報</a>
+    <a href="../company/index.html"><small>COMPANY</small>会社概要</a>
+    <a href="../company/index.html#access"><small>ACCESS</small>アクセス</a>
+    <a href="../contact/index.html"><small>CONTACT</small>お問い合わせ</a>
+  </nav>
+  <p class="menu-footer">Event for a Better Tomorrow.</p>
+</aside>
+
+<script src="../assets/grps-shared-header.js" defer></script>
+</body>
+</html>
+
+
+<style id="recruit-mobile-attraction-font-final-20260926">
+@media screen and (max-width:520px){
+
+  /* グローパスで働く魅力：3列表示用 */
+  .attraction .attraction-card h3{
+    font-size:11px !important;
+    line-height:1.45 !important;
+    letter-spacing:0 !important;
+  }
+
+  .attraction .attraction-card p{
+    font-size:8.5px !important;
+    line-height:1.65 !important;
+    letter-spacing:0 !important;
+  }
+
+}
+</style>
+

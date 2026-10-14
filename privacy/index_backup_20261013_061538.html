@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>個人情報保護方針｜株式会社グローパス</title>
+<meta content="株式会社グローパスの個人情報保護方針です。" name="description"/>
+<style id="privacy-page-styles-clean">
+/* =========================================================
+   base-privacy
+   ========================================================= */
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
+    sans-serif;
+  color:#334e60;
+  background:#fff;
+  line-height:2;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* HEADER */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  height:76px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(23,51,84,.08);
+}
+
+.header-inner{
+  width:min(1200px,calc(100% - 48px));
+  height:100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.back{
+  font-size:14px;
+  color:#248da8;
+}
+
+.header-nav{
+  display:flex;
+  gap:28px;
+  font-size:13px;
+}
+
+.header-nav a{
+  position:relative;
+}
+
+.header-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:100%;
+  height:1px;
+  background:#248da8;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.35s ease;
+}
+
+.header-nav a:hover::after{
+  transform:scaleX(1);
+}
+
+
+/* HERO */
+
+.hero{
+  padding:105px 30px 90px;
+  text-align:center;
+  background:
+    linear-gradient(
+      135deg,
+      #eefaff 0%,
+      #effbf7 58%,
+      #f8fff5 100%
+    );
+}
+
+.hero-label{
+  margin:0 0 15px;
+  font-size:13px;
+  color:#248da8;
+  letter-spacing:.25em;
+  font-weight:600;
+}
+
+.hero-title{
+  margin:0;
+  font-size:clamp(36px,4.5vw,58px);
+  line-height:1.4;
+  font-weight:400;
+  color:#0877c9;
+}
+
+
+/* CONTENT */
+
+.policy{
+  padding:100px 30px 120px;
+}
+
+.policy-inner{
+  width:min(920px,100%);
+  margin:auto;
+}
+
+.intro{
+  margin:0 0 70px;
+  padding:36px 40px;
+  border-radius:16px;
+  background:#f5fbfd;
+  color:#536875;
+}
+
+.policy-section{
+  margin:0 0 65px;
+}
+
+.policy-section h2{
+  margin:0 0 25px;
+  padding-bottom:13px;
+  border-bottom:1px solid rgba(36,141,168,.23);
+  font-size:25px;
+  font-weight:500;
+  line-height:1.5;
+  color:#173354;
+}
+
+.policy-section h3{
+  margin:35px 0 14px;
+  font-size:18px;
+  color:#248da8;
+  font-weight:600;
+}
+
+.policy-section p{
+  margin:0 0 20px;
+}
+
+.policy-section ul{
+  margin:18px 0 28px;
+  padding:0;
+  list-style:none;
+}
+
+.policy-section li{
+  position:relative;
+  padding:4px 0 4px 20px;
+}
+
+.policy-section li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:18px;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#66c4c2;
+}
+
+.contact-box{
+  margin-top:25px;
+  padding:30px 34px;
+  border-radius:14px;
+  background:
+    linear-gradient(
+      135deg,
+      #f2fbff,
+      #f1fcf8
+    );
+}
+
+.signature{
+  margin-top:85px;
+  padding-top:35px;
+  border-top:1px solid rgba(23,51,84,.12);
+  text-align:right;
+  color:#465d6c;
+}
+
+.footer{
+  padding:45px 25px;
+  text-align:center;
+  background:#f7fbfc;
+  color:#70818d;
+  font-size:12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .header{
+    height:auto;
+  }
+
+  .header-inner{
+    width:calc(100% - 30px);
+    min-height:68px;
+  }
+
+  .header-nav{
+    gap:14px;
+    font-size:11px;
+  }
+
+  .back{
+    font-size:11px;
+  }
+
+  .hero{
+    padding:80px 20px 70px;
+  }
+
+  .policy{
+    padding:70px 20px 90px;
+  }
+
+  .intro{
+    padding:26px 23px;
+  }
+
+  .policy-section h2{
+    font-size:21px;
+  }
+
+  .contact-box{
+    padding:24px 22px;
+  }
+
+}
+
+/* =========================================================
+   privacy-reference-design-final
+   ========================================================= */
+body{color:#34495e;background:#fff;line-height:1.8}
+.hero{position:relative;overflow:hidden;padding:44px 24px 42px!important;text-align:center;background:radial-gradient(circle at -2% 5%,rgba(33,154,215,.10) 0 72px,transparent 73px),linear-gradient(110deg,#f2fbff 0%,#f8fdff 48%,#f1fbf8 100%)!important;border-bottom:1px solid #edf3f6}
+.hero::after{content:"";position:absolute;left:50%;bottom:22px;width:34px;height:2px;transform:translateX(-50%);background:#29b7c8}
+.hero-label{margin:0 0 18px!important;color:#21a9c0!important;font-size:12px!important;font-weight:700!important;letter-spacing:.24em!important}
+.hero-title{margin:0 0 20px!important;color:#0b3f73!important;font-size:clamp(30px,3.4vw,46px)!important;line-height:1.3!important;font-weight:500!important;letter-spacing:.04em}
+.policy{padding:34px 24px 74px!important;background:#fff!important}
+.policy-inner{width:min(1180px,100%)!important;margin:0 auto!important}
+.intro{margin:0 0 34px!important;padding:0 40px 26px!important;border-radius:0!important;background:transparent!important;color:#4d5f70!important;text-align:center;font-size:14px;line-height:1.9}
+.intro p{margin:0 0 3px!important}
+.policy-section{margin:0!important;padding:24px 0 25px;border-top:1px solid #dbe4ea}
+.policy-section:first-of-type{border-top:0}
+.policy-section h2{margin:0 0 12px!important;padding:0!important;border:0!important;color:#0b477d!important;font-size:20px!important;line-height:1.5!important;font-weight:700!important}
+.policy-section p{margin:0 34px 8px!important;font-size:14px;line-height:1.85}
+.policy-section h3{margin:12px 0 0!important;padding:0!important;color:#0b477d!important;font-size:14px!important;line-height:1.55;font-weight:700!important}
+.policy-section ul{margin:0!important;padding:0!important;list-style:none!important}
+.policy-section li{position:relative;padding:0 0 0 16px!important;font-size:13px;line-height:1.65}
+.policy-section li::before{content:"•"!important;position:absolute!important;left:0!important;top:0!important;width:auto!important;height:auto!important;border-radius:0!important;background:none!important;color:#51677a}
+.policy-section:nth-of-type(2){display:grid;grid-template-columns:245px 1fr}
+.policy-section:nth-of-type(2)>h2,.policy-section:nth-of-type(2)>p{grid-column:1/-1}
+.policy-section:nth-of-type(2)>h3,.policy-section:nth-of-type(2)>ul{margin:0!important;padding:15px 18px!important;border-top:2px solid #fff;background:#f3f6f8}
+.policy-section:nth-of-type(2)>h3{display:flex;align-items:center;border-right:2px solid #fff}
+.policy-section:nth-of-type(2)>p:not(:first-of-type){display:none}
+.policy-section:nth-of-type(2)>ul{display:flex;flex-direction:column;justify-content:center}
+.contact-box{margin:10px 34px 0!important;padding:16px 20px!important;border-radius:0!important;background:#f3f6f8!important;color:#42586b;font-size:14px;line-height:1.75}
+.signature{display:flex;justify-content:flex-end;gap:50px;margin-top:0!important;padding:20px 0 0!important;border-top:1px solid #dbe4ea!important;color:#455a6b;font-size:13px;text-align:left!important}
+.signature p{margin:0!important}
+.footer{padding:24px 25px!important;border-top:1px solid #e6edf1;background:#f4fbfd!important;color:#728493!important;font-size:11px!important}
+@media(max-width:900px){.policy-inner{width:min(760px,100%)!important}.policy-section:nth-of-type(2){grid-template-columns:210px 1fr}.intro{padding-left:10px!important;padding-right:10px!important}}
+@media(max-width:680px){.hero{padding:34px 18px!important}.hero-title{font-size:28px!important}.policy{padding:24px 18px 55px!important}.intro{padding:0 0 20px!important;text-align:left;font-size:13px}.policy-section{padding:20px 0}.policy-section h2{font-size:17px!important}.policy-section p{margin-left:0!important;margin-right:0!important;font-size:13px}.policy-section:nth-of-type(2){display:block}.policy-section:nth-of-type(2)>h3{margin-top:10px!important;padding:12px 14px!important;border-right:0;background:#eaf1f5}.policy-section:nth-of-type(2)>ul{padding:12px 14px!important;background:#f6f8fa}.contact-box{margin-left:0!important;margin-right:0!important}.signature{display:block}.signature p+p{margin-top:12px!important}}
+
+/* =========================================================
+   privacy-mobile-intro-move-20260923
+   ========================================================= */
+/* スマホのみ：
+   個人情報保護方針の導入文をヒーロー下部の空白へ移動 */
+@media (max-width:680px){
+
+  .hero{
+    padding-bottom:300px !important;
+  }
+
+  .policy{
+    position:relative !important;
+    padding-top:0 !important;
+  }
+
+  .policy-inner{
+    position:relative !important;
+  }
+
+  .intro{
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:100% !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 18px 48px !important;
+    background:transparent !important;
+    text-align:left !important;
+    font-size:13px !important;
+    line-height:1.9 !important;
+    z-index:5 !important;
+  }
+}
+
+/* =========================================================
+   privacy-hero-title-unified-final
+   ========================================================= */
+/* ===== PRIVACY HERO：タイトル書体を他ページと統一 ===== */
+
+.hero-title{
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    "Meiryo",
+    sans-serif !important;
+  font-weight:700 !important;
+  letter-spacing:.02em !important;
+}
+
+/* ===== SMARTPHONE ===== */
+
+@media (max-width:680px){
+
+  .hero-label{
+    position:relative !important;
+    margin-bottom:38px !important;
+  }
+
+  /* PRIVACY POLICY の直下に水色ライン */
+  .hero-label::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:calc(100% + 12px);
+    width:34px;
+    height:2px;
+    background:#29b7c8;
+    transform:translateX(-50%);
+  }
+
+  /* HERO最下部にあった元のラインはスマホだけ消す */
+  .hero::after{
+    display:none !important;
+  }
+
+  .hero-title{
+    font-size:28px !important;
+    line-height:1.35 !important;
+    font-weight:700 !important;
+  }
+
+}
+
+/* =========================================================
+   privacy-mobile-content-compact-final
+   ========================================================= */
+@media (max-width:680px){
+
+  /* 本文エリア */
+  .policy{
+    padding-left:28px !important;
+    padding-right:28px !important;
+    padding-bottom:35px !important;
+  }
+
+  /* 各章をかなりコンパクトに */
+  .policy-section{
+    margin:0 !important;
+    padding:12px 0 13px !important;
+  }
+
+  /* 章タイトル */
+  .policy-section h2{
+    margin:0 0 7px !important;
+    padding:0 !important;
+    font-size:16px !important;
+    line-height:1.35 !important;
+  }
+
+  /* 本文 */
+  .policy-section p{
+    margin:0 0 5px !important;
+    padding:0 !important;
+    font-size:12.5px !important;
+    line-height:1.48 !important;
+    letter-spacing:0 !important;
+  }
+
+  /* 同じ章の2段落目以降 */
+  .policy-section p + p{
+    margin-top:6px !important;
+  }
+
+  /* 小見出し */
+  .policy-section h3{
+    margin:8px 0 4px !important;
+    padding:0 !important;
+    font-size:13px !important;
+    line-height:1.4 !important;
+  }
+
+  /* 箇条書き */
+  .policy-section ul{
+    margin:4px 0 6px !important;
+  }
+
+  .policy-section li{
+    padding-top:1px !important;
+    padding-bottom:1px !important;
+    font-size:12px !important;
+    line-height:1.45 !important;
+  }
+
+  /* 問い合わせBOX */
+  .contact-box{
+    margin:6px 0 0 !important;
+    padding:12px 14px !important;
+    font-size:12.5px !important;
+    line-height:1.5 !important;
+  }
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="../assets/grps-shared-header.css">
+<style id="grps-contact-footer-only">.grps-site-footer{position:relative;z-index:6;width:100%;padding:34px 20px 30px;background:#fff;text-align:center;color:#20242c}.grps-site-footer .grps-footer-logo{display:inline-flex;justify-content:center;align-items:center;width:125px;max-width:55%}.grps-site-footer .grps-footer-logo img{display:block;width:100%;height:auto}@media(max-width:600px){.grps-site-footer{padding:30px 16px 25px}.grps-site-footer .grps-footer-logo{width:112px}}</style>
+</head>
+<body>
+<header id="grps-independent-header"><div class="grps-header-inner"><a id="grps-header-logo" href="../index.html#top" aria-label="グローパス トップページ"><img src="../grps_images/glowpas-logo-horizontal.png" alt="グローパス"></a><button class="menu-button" id="menuOpen" type="button" aria-controls="sideMenu" aria-expanded="false" aria-label="メニューを開く"><img class="hamburger-icon" src="../grps_images/hamburger-menu.png" alt=""></button></div></header>
+<section class="hero">
+<p class="hero-label">PRIVACY POLICY</p>
+<h1 class="hero-title">
+    個人情報保護方針
+  </h1>
+</section>
+<main class="policy">
+<div class="policy-inner">
+<div class="intro">
+<p>
+        株式会社グローパス（以下「当社」といいます。）は、
+        イベント・セミナー・シンポジウム・展示会等の企画・運営を行う事業者として、
+        お客様、イベント参加者、出演者・登壇者、取引先、採用応募者その他関係者の
+        個人情報を適切に取り扱うことを重要な責務と考えています。
+      </p>
+<p>
+        当社は、個人情報の保護に関する法律その他関係法令・ガイドラインを遵守し、
+        以下の方針に基づき個人情報の適切な管理・保護に努めます。
+      </p>
+</div>
+<section class="policy-section">
+<h2>1．個人情報の取得・利用について</h2>
+<p>
+        当社は、個人情報を適正かつ公正な方法により取得し、
+        あらかじめ明示または公表した利用目的の達成に必要な範囲内で利用します。
+      </p>
+<p>
+        取得した個人情報を、本人の同意なく利用目的の範囲を超えて利用することはありません。
+        ただし、法令により認められる場合を除きます。
+      </p>
+</section>
+<section class="policy-section">
+<h2>2．個人情報の利用目的</h2>
+<p>
+        当社では、取得または業務上お預かりする個人情報を、
+        主に以下の目的で利用します。
+      </p>
+<h3>イベント出演者・登壇者等の個人情報</h3>
+<p>
+        氏名、所属、役職、連絡先、プロフィール、写真その他イベント運営に必要な情報について、
+        以下の目的で利用します。
+      </p>
+<ul>
+<li>イベントの企画、運営および進行管理</li>
+<li>イベントに関する各種ご連絡</li>
+<li>プログラム、チラシ、Webサイト、案内資料等の制作</li>
+<li>主催者その他関係者との必要な連絡・調整</li>
+<li>その他、受託したイベント業務の遂行に必要な対応</li>
+</ul>
+<h3>イベント参加者・申込者の個人情報</h3>
+<p>
+        氏名、所属、連絡先、申込情報その他イベント参加に必要な情報について、
+        以下の目的で利用します。
+      </p>
+<ul>
+<li>イベントへの申込受付および参加者管理</li>
+<li>イベントに関する各種ご案内・ご連絡</li>
+<li>受付、入場管理その他イベント運営業務</li>
+<li>お問い合わせへの対応</li>
+<li>主催者から受託した業務の遂行</li>
+</ul>
+<h3>イベント当日の写真・映像・音声</h3>
+<p>
+        イベントの記録、配信、収録、主催者への納品その他イベント運営上必要な目的で
+        取り扱う場合があります。
+      </p>
+<p>
+        撮影・収録した写真、映像または音声の利用については、
+        主催者との契約、主催者の指示およびイベントごとの利用条件等に基づき
+        適切に取り扱います。
+      </p>
+<h3>お問い合わせいただいた方の個人情報</h3>
+<p>
+        お問い合わせへの回答、連絡および必要な対応のために利用します。
+      </p>
+<h3>採用応募者の個人情報</h3>
+<p>
+        採用選考、応募者への連絡、面接日程の調整、採否の決定
+        その他採用活動に必要な目的で利用します。
+      </p>
+</section>
+<section class="policy-section">
+<h2>3．個人情報の第三者提供について</h2>
+<p>
+        当社は、法令に基づく場合その他法令により認められる場合を除き、
+        あらかじめ本人の同意を得ることなく、個人データを第三者に提供しません。
+      </p>
+<p>
+        なお、イベント運営業務等において主催者その他関係者との間で
+        個人情報を取り扱う必要がある場合には、
+        契約内容および法令等に従い適切に取り扱います。
+      </p>
+</section>
+<section class="policy-section">
+<h2>4．個人情報の取扱いの委託について</h2>
+<p>
+        当社は、業務遂行上必要な範囲において、
+        個人情報の取扱いを外部事業者に委託する場合があります。
+      </p>
+<p>
+        その場合、委託先の安全管理体制等を確認し、
+        必要かつ適切な監督を行います。
+      </p>
+</section>
+<section class="policy-section">
+<h2>5．個人情報の安全管理について</h2>
+<p>
+        当社は、個人情報への不正アクセス、紛失、漏えい、改ざん、毀損等を防止するため、
+        必要かつ適切な安全管理措置を講じます。
+      </p>
+<p>
+        また、個人情報を取り扱う従業者に対する教育・管理を行うとともに、
+        情報システムのセキュリティ管理やアクセス管理等を実施し、
+        個人情報の適切な管理に努めます。
+      </p>
+<p>
+        万一、個人情報に関する事故が発生した場合には、
+        被害拡大の防止、原因究明および再発防止等の必要な措置を速やかに講じます。
+      </p>
+</section>
+<section class="policy-section">
+<h2>6．個人情報の開示・訂正・利用停止等について</h2>
+<p>
+        当社が保有する個人データについて、
+        本人から利用目的の通知、開示、訂正、追加、削除、利用停止、
+        消去または第三者提供の停止等のご請求があった場合には、
+        法令に基づき適切に対応します。
+      </p>
+<p>
+        ご請求の際には、ご本人であることを確認させていただく場合があります。
+      </p>
+<p>
+        詳しい手続については、下記お問い合わせ窓口までご連絡ください。
+      </p>
+</section>
+<section class="policy-section">
+<h2>7．個人情報保護管理者</h2>
+<div class="contact-box">
+        株式会社グローパス<br/>
+        個人情報保護管理者：石坂絹果
+      </div>
+</section>
+<section class="policy-section">
+<h2>8．個人情報に関するお問い合わせ窓口</h2>
+<p>
+        個人情報の取扱いに関するお問い合わせ、苦情、開示等のご請求については、
+        下記までご連絡ください。
+      </p>
+<div class="contact-box">
+        株式会社グローパス<br/>
+        個人情報お問い合わせ窓口<br/><br/>
+
+        所在地：埼玉県さいたま市大宮区宮町5-3-1<br/>
+        電話：080-7503-0202
+      </div>
+</section>
+<section class="policy-section">
+<h2>9．個人情報保護方針の変更</h2>
+<p>
+        当社は、法令の改正、事業内容の変更その他必要に応じて、
+        本方針の内容を変更することがあります。
+      </p>
+<p>
+        変更した場合は、当社Webサイト上に掲載する方法
+        その他適切な方法により公表します。
+      </p>
+</section>
+<div class="signature">
+
+<p>
+        株式会社グローパス<br/>
+        代表取締役　石坂絹果
+      </p>
+</div>
+</div>
+</main>
+<footer class="grps-site-footer" aria-label="サイトフッター"><a class="grps-footer-logo" href="../index.html#top" aria-label="トップページに戻る"><img src="../grps_images/glowpas-logo-vertical.png" alt="グローパス"></a></footer>
+<script src="../assets/grps-shared-header.js" defer></script>
+</body>
+</html>
