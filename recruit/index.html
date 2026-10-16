@@ -3223,6 +3223,32 @@ img{
 }
 </style>
 
+
+<style id="mobile-staff-voice-text-fix">
+/* MOBILE STAFF VOICE TEXT FIX */
+.voice-mobile-quote {
+  display:none;
+}
+
+@media (max-width:600px) {
+  .voice-desktop-quote {
+    display:none;
+  }
+
+  .voice-mobile-quote {
+    display:inline;
+  }
+
+  .voice-card .voice-content h3 {
+    font-size:clamp(12px,3vw,15px);
+    line-height:1.6;
+    letter-spacing:-0.025em;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -3360,7 +3386,7 @@ img{
 <span class="voice-role">テクニカルスタッフ</span>
 <span>20代後半</span><i></i><span>経験3年</span>
 </div>
-<h3>「現場が変わるたびに、<br/>できることが増えていきます。」</h3>
+<h3><span class="voice-desktop-quote">「現場が変わるたびに、<br/>できることが増えていきます。」</span><span class="voice-mobile-quote">「現場が変わるたびに、できることが増えていきます。」</span></h3>
 <p>音響・映像・配信など幅広い現場に関わりながら、実践を通して着実に成長できます。</p>
 <div class="voice-tags"><span>音響</span><span>映像</span><span>現場対応</span></div>
 </div>
@@ -3374,7 +3400,7 @@ img{
 <span class="voice-role">イベント運営スタッフ</span>
 <span>大学生</span>
 </div>
-<h3>「初めてでも、<br/>安心して挑戦できました。」</h3>
+<h3><span class="voice-desktop-quote">「初めてでも、<br/>安心して挑戦できました。」</span><span class="voice-mobile-quote">「初めてでも、安心して挑戦できました。」</span></h3>
 <p>先輩スタッフのサポートがあり、受付や案内などを通して現場での対応力が身につきます。</p>
 <div class="voice-tags"><span>受付</span><span>案内</span><span>学生歓迎</span></div>
 </div>
@@ -3388,7 +3414,7 @@ img{
 <span class="voice-role">テクニカルスタッフ</span>
 <span>30代半ば</span><i></i><span>経験5年</span>
 </div>
-<h3>「官公庁案件だからこそ、<br/>技術の質が問われます。」</h3>
+<h3><span class="voice-desktop-quote">「官公庁案件だからこそ、<br/>技術の質が問われます。」</span><span class="voice-mobile-quote">「官公庁案件だからこそ、技術の質が問われます。」</span></h3>
 <p>責任ある現場に携わる中で、判断力と対応力を高めながら技術者として経験を積めます。</p>
 <div class="voice-tags"><span>配信</span><span>オペレーション</span><span>チーム連携</span></div>
 </div>
@@ -3402,7 +3428,7 @@ img{
 <span class="voice-role">イベント運営スタッフ</span>
 <span>40代</span><i></i><span>子育てと両立</span>
 </div>
-<h3>「家庭と両立しながら、<br/>やりがいを感じています。」</h3>
+<h3><span class="voice-desktop-quote">「家庭と両立しながら、<br/>やりがいを感じています。」</span><span class="voice-mobile-quote">「家庭と両立しながら、やりがいを感じています。」</span></h3>
 <p>シフトの柔軟さがあり、参加者対応や会場運営を通して人と関わる楽しさを感じられます。</p>
 <div class="voice-tags"><span>シフト相談</span><span>未経験可</span><span>人と接する仕事</span></div>
 </div>

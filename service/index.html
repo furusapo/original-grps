@@ -620,7 +620,6 @@ main{
 }
 </style>
 
-<link href="../assets/header.css?v=20260917-2136" rel="stylesheet"/>
 <style id="service-styles-page">
 /* =========================================================
    service-continuous-background-final
@@ -1681,31 +1680,53 @@ main{
 }
 </style>
 
-<script src="../assets/header.js?v=20260929" defer></script>
 <link rel="stylesheet" href="../assets/footer.css?v=20260929">
+<style id="grps-shared-header-styles">
+#grps-independent-header{position:fixed;top:0;left:0;width:100%;height:88px;z-index:300;background:rgba(255,255,255,.90);backdrop-filter:blur(12px);box-shadow:0 2px 16px rgba(12,73,120,.06)}
+.grps-header-inner{height:100%;padding:0 3.5%;display:flex;align-items:center;justify-content:space-between}#grps-header-logo{width:220px;height:60px;display:flex;align-items:center}#grps-header-logo img{width:100%;height:100%;object-fit:contain}.menu-button{width:80px;height:80px;border:0;padding:0;background:transparent;cursor:pointer}.hamburger-icon{height:100%;width:100%;object-fit:contain}
+.menu-overlay{position:fixed;inset:0;background:rgba(5,28,52,.45);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;z-index:400}.menu-overlay.active{opacity:1;visibility:visible}.side-menu{position:fixed;right:0;top:0;width:min(400px,88vw);height:100dvh;z-index:401;padding:90px 38px 35px;overflow-y:auto;color:#fff;background:linear-gradient(155deg,#0754a2,#0589bd 70%,#3dbda6);transform:translateX(105%);visibility:hidden;transition:transform .4s,visibility .4s}.side-menu.active{transform:translateX(0);visibility:visible}.menu-close{position:absolute;top:24px;right:26px;width:46px;height:46px;border:1px solid #ffffffa6;border-radius:50%;color:#fff;background:#ffffff1a;font-size:27px;cursor:pointer}.menu-label{font-size:13px;letter-spacing:.25em;opacity:.8;margin:0 0 30px}.menu-links{display:flex;flex-direction:column}.menu-links a{padding:18px 0;color:#fff;border-bottom:1px solid #ffffff47;text-decoration:none;font-size:17px;font-weight:700}.menu-links small{display:block;font-size:10px;letter-spacing:.14em;font-weight:400;opacity:.7}.menu-footer{margin-top:50px;font-size:11px;opacity:.75}
+body.menu-open{overflow:hidden}
+body{padding-top:88px}
+@media(max-width:600px){
+  #grps-independent-header{height:72px;background:rgba(255,255,255,.96)}
+  .grps-header-inner{padding:0 5%}
+  #grps-header-logo{width:150px;height:52px}
+  .menu-button{width:56px;height:56px}
+  .side-menu{width:min(85vw,340px);padding:82px 25px 30px}
+  .menu-links a{font-size:15px;padding:14px 0}
+  body{padding-top:72px}
+}
+
+</style>
+
+<style id="grps-service-footer-styles">
+footer.grps-site-footer {
+  text-align:center;
+  background:#fff;
+  padding:34px 20px 30px;
+  border-top:0;
+}
+.grps-footer-logo {
+  display:inline-flex;
+  width:125px;
+}
+.grps-footer-logo img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+</style>
 </head>
 <body>
-<header class="service-copy-header" id="gp-unified-header">
-<div class="service-copy-header-main">
-<a class="service-copy-brand" href="../index.html">
-<img alt="グローパス" src="../assets/glowpas-logo.png"/>
-<span class="service-copy-brand-text">官公庁・企業イベントの制作・運営</span>
+<header id="grps-independent-header">
+<div class="grps-header-inner">
+<a aria-label="グローパス トップページ" href="../index.html#top" id="grps-header-logo">
+<img alt="グローパス" src="../grps_images/glowpas-logo-horizontal.png"/>
 </a>
-<div class="service-copy-links">
-<a href="../company/index.html">会社概要</a>
-<a href="../company/index.html#access">アクセス</a>
-<a class="service-copy-contact" href="../contact/index.html">お問い合わせ</a>
+<button aria-controls="sideMenu" aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuOpen" type="button">
+<img alt="" class="hamburger-icon" src="../grps_images/hamburger-menu.png"/>
+</button>
 </div>
-</div>
-<nav aria-label="メインナビゲーション" class="service-copy-nav">
-<div class="service-copy-nav-inner">
-<a href="../index.html">HOME</a>
-<a href="../service/index.html">サービス内容</a>
-<a href="../results/index.html">実績</a>
-<a href="../recruit/index.html">採用情報</a>
-<a href="../privacy/index.html">個人情報保護方針</a>
-</div>
-</nav>
 </header>
 <main>
 <section class="service-page-hero">
@@ -1882,16 +1903,10 @@ main{
 <a href="../contact/index.html">お問い合わせはこちら →</a>
 </section>
 </main>
-<footer id="gp-unified-footer">
-  <p class="gp-footer-tagline">官公庁・企業イベント運営のプロフェッショナル</p>
-
-  <img
-    class="gp-footer-logo"
-    src="../assets/glowpas-logo.png"
-    alt="株式会社グローパス"
-  >
-
-  <p class="gp-footer-copyright">© 株式会社グローパス. All Rights Reserved.</p>
+<footer aria-label="サイトフッター" class="grps-site-footer">
+  <a aria-label="トップページに戻る" class="grps-footer-logo" href="../index.html#top">
+    <img alt="グローパス" src="../grps_images/glowpas-logo-vertical.png"/>
+  </a>
 </footer>
 
 <script id="service-photo-gallery-script">
@@ -1997,6 +2012,63 @@ main{
   }
 
   requestAnimationFrame(animate);
+})();
+</script>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside aria-hidden="true" aria-label="サイトメニュー" class="side-menu" id="sideMenu" inert="">
+<button aria-label="メニューを閉じる" class="menu-close" id="menuClose" type="button">×</button>
+<p class="menu-label">MENU / メニュー</p>
+<nav class="menu-links">
+<a href="../index.html"><small>HOME</small>ホーム</a>
+<a href="../service/index.html"><small>SERVICE</small>サービス内容</a>
+<a href="../results/index.html"><small>WORKS</small>実績</a>
+<a href="../recruit/index.html"><small>RECRUIT</small>採用情報</a>
+<a href="../privacy/index.html"><small>PRIVACY</small>個人情報</a>
+<a href="../company/index.html"><small>COMPANY</small>会社概要</a>
+<a href="../company/index.html#access"><small>ACCESS</small>アクセス</a>
+<a href="../contact/index.html"><small>CONTACT</small>お問い合わせ</a>
+</nav>
+<p class="menu-footer">Event for a Better Tomorrow.</p>
+</aside>
+<script>
+(() => {
+  const openButton = document.getElementById("menuOpen");
+  const closeButton = document.getElementById("menuClose");
+  const overlay = document.getElementById("menuOverlay");
+  const menu = document.getElementById("sideMenu");
+
+  function openMenu() {
+    menu.inert = false;
+    menu.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("menu-open");
+    openButton.setAttribute("aria-expanded", "true");
+    menu.setAttribute("aria-hidden", "false");
+    closeButton.focus();
+  }
+
+  function closeMenu() {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    openButton.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
+    menu.inert = true;
+    openButton.focus();
+  }
+
+  openButton.addEventListener("click", openMenu);
+  closeButton.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // 現時点では画像プレビューなので
+  // 各セクションへのリンク接続は後で実装
 })();
 </script>
 </body>
