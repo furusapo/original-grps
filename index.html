@@ -19,15 +19,27 @@
 #service>h2{margin-top:.9cqw!important}#service>p{margin-top:.6cqw!important} .grps-numbered-eyebrow{display:flex;align-items:baseline;gap:.55cqw}.grps-section-number{font-size:1.65em;font-style:italic;font-weight:800;background:linear-gradient(110deg,var(--blue),var(--aqua),var(--green));background-clip:text;-webkit-text-fill-color:transparent}.grps-number-divider{color:var(--aqua)}.grps-service-detail h3,#works h3{margin-top:.6cqw}.grps-tags{display:flex;flex-wrap:wrap;gap:.7cqw;margin-top:.7cqw!important}.grps-tags span{display:inline-flex;align-items:center;padding:.3cqw 1.25cqw;border-radius:99px;background:linear-gradient(110deg,#e7f7ff,#d5f5ff,#d8fae9);color:#0879ae;font-size:1.2cqw;font-weight:700}.grps-service-detail>p.grps-small-space,#works>p.grps-small-space{margin-top:1cqw!important;padding-right:5cqw}.grps-detail-arrow{position:absolute;right:0;bottom:-1cqw;display:flex;justify-content:center;align-items:center;width:4.5cqw;height:4.5cqw;border:1px solid #249bf022;border-radius:50%;background:#fffffff5;box-shadow:0 4px 18px #1a649b29;color:#167fca;text-decoration:none;font-size:2.5cqw;pointer-events:auto}
 #contact{text-align:center}#contact .grps-contact-heading .grps-eyebrow{font-size:1.3cqw}#contact .grps-contact-heading h2{margin-top:.6cqw;font-size:2.1cqw;color:#103968}#contact .grps-contact-heading p{margin-top:1.1cqw;font-size:1.08cqw;line-height:1.65;color:#45637c}#contact .grps-contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4cqw;margin-top:2.3cqw}#contact .grps-contact-card{display:flex;flex-direction:column;gap:.8cqw;padding:1.2cqw 1.7cqw;text-align:left}#contact .grps-contact-card-body{display:flex;align-items:center;gap:1.5cqw}#contact .grps-contact-icon{width:5.3cqw;height:5.3cqw;object-fit:contain}#contact .grps-contact-card h3{font-size:1.55cqw;margin:0 0 .4cqw}#contact .grps-contact-card p{font-size:.9cqw;line-height:1.5;color:#506d85}#contact .grps-contact-action{display:flex;align-items:center;justify-content:center;min-height:3.3cqw;width:calc(100% - 6.8cqw);margin-left:6.8cqw;border-radius:99px;color:#fff;font-size:1.1cqw;font-weight:700}#contact .grps-contact-action-blue{background:linear-gradient(100deg,#1767ca,#2799ee)}#contact .grps-contact-action-green{background:linear-gradient(100deg,#05bc4c,#2bd397)}
 .grps-site-footer{text-align:center;background:#fff;padding:34px 20px 30px}.grps-footer-logo{display:inline-flex;width:125px}.grps-footer-logo img{width:100%;height:auto}
-/* The only desktop-positioning block: fractions of the artwork height. */
-@media(min-width:601px){
- #top{top:4.4%;left:5.2%;width:50%}
- #name-story{top:29.3%;left:9%;width:82%}
- #about{top:41.7%;left:9%;width:82%}
- #service{top:65.2%;left:9%;width:82%}
- .grps-service-detail{top:71.3%;left:9%;width:43%}
- #works{top:77.8%;left:54%;width:37%}
- #contact{top:86.3%;left:9%;width:82%}
+/* Desktop layout for 1440 x 3500 artwork */
+@media (min-width:601px){
+  #top{top:4.4%;left:5.2%;width:50%}
+  #name-story{top:28.7%;left:6.4%;width:87%}
+  #about{top:41%;left:6.4%;width:87%}
+  #service{top:50.5%;left:6.4%;width:48%}
+  #works{top:56.5%;left:53%;width:40%;min-height:15.3cqw}
+  .grps-service-detail{top:67%;left:6.4%;width:44%;min-height:17.5cqw}
+  #contact{top:85.8%;left:9%;width:82%}
+  #name-story .grps-story-values{
+    left:59%;top:1.3cqw;gap:1.15cqw;
+  }
+  #works,.grps-service-detail{
+    padding:1.3cqw 1.5cqw 1.8cqw;
+    border-radius:1.3cqw;
+    background:rgba(245,252,255,.91);
+  }
+  #works .grps-detail-arrow,
+  .grps-service-detail .grps-detail-arrow{
+    right:1cqw;bottom:1cqw;
+  }
 }
 @media(max-width:600px){
  #grps-independent-header{position:fixed;height:72px;background:rgba(255,255,255,.96)}.grps-header-inner{padding:0 5%}#grps-header-logo{width:150px;height:52px}.menu-button{width:56px;height:56px}.side-menu{width:min(85vw,340px);padding:82px 25px 30px}.menu-links a{font-size:15px;padding:14px 0}
