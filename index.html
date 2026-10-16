@@ -9,7 +9,7 @@
 <style id="grps-unified-styles">
 :root{--blue:#249bf0;--navy:#102d54;--aqua:#16b8cb;--green:#3cd59b}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eaf7fb;color:var(--navy);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}body.menu-open{overflow:hidden}
-#grps-independent-header{position:absolute;top:0;left:0;width:100%;height:88px;z-index:300;background:rgba(255,255,255,.90);backdrop-filter:blur(12px);box-shadow:0 2px 16px rgba(12,73,120,.06)}
+#grps-independent-header{position:fixed;top:0;left:0;width:100%;height:88px;z-index:300;background:rgba(255,255,255,.90);backdrop-filter:blur(12px);box-shadow:0 2px 16px rgba(12,73,120,.06)}
 .grps-header-inner{height:100%;padding:0 3.5%;display:flex;align-items:center;justify-content:space-between}#grps-header-logo{width:220px;height:60px;display:flex;align-items:center}#grps-header-logo img{width:100%;height:100%;object-fit:contain}.menu-button{width:80px;height:80px;border:0;padding:0;background:transparent;cursor:pointer}.hamburger-icon{height:100%;width:100%;object-fit:contain}
 .menu-overlay{position:fixed;inset:0;background:rgba(5,28,52,.45);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;z-index:400}.menu-overlay.active{opacity:1;visibility:visible}.side-menu{position:fixed;right:0;top:0;width:min(400px,88vw);height:100dvh;z-index:401;padding:90px 38px 35px;overflow-y:auto;color:#fff;background:linear-gradient(155deg,#0754a2,#0589bd 70%,#3dbda6);transform:translateX(105%);visibility:hidden;transition:transform .4s,visibility .4s}.side-menu.active{transform:translateX(0);visibility:visible}.menu-close{position:absolute;top:24px;right:26px;width:46px;height:46px;border:1px solid #ffffffa6;border-radius:50%;color:#fff;background:#ffffff1a;font-size:27px;cursor:pointer}.menu-label{font-size:13px;letter-spacing:.25em;opacity:.8;margin:0 0 30px}.menu-links{display:flex;flex-direction:column}.menu-links a{padding:18px 0;color:#fff;border-bottom:1px solid #ffffff47;text-decoration:none;font-size:17px;font-weight:700}.menu-links small{display:block;font-size:10px;letter-spacing:.14em;font-weight:400;opacity:.7}.menu-footer{margin-top:50px;font-size:11px;opacity:.75}
 .page{position:relative;width:100%;container-type:inline-size;overflow:hidden}.background-image{display:block;width:100%;height:auto}.grps-text-layer{position:absolute;inset:0;pointer-events:none}.grps-section{position:absolute;line-height:1.6}.grps-section a{pointer-events:auto}.grps-section h1,.grps-section h2,.grps-section h3,.grps-section p{margin:0}.grps-section h1{font-size:4.05cqw;line-height:1.38;font-weight:800}.grps-section h2,.grps-section h3{font-size:2.1cqw;line-height:1.4;font-weight:800}.grps-section p{font-size:1.08cqw;line-height:1.7}.grps-eyebrow{font-size:1.3cqw;font-weight:700;line-height:1.45;letter-spacing:.14em;color:var(--blue)}.grps-section>.grps-eyebrow:not(.grps-numbered-eyebrow):after,.grps-contact-heading>.grps-eyebrow:after{content:"";display:inline-block;width:4.5cqw;height:2px;margin-left:1.1cqw;vertical-align:middle;background:linear-gradient(90deg,var(--blue),var(--aqua),var(--green))}
@@ -44,7 +44,7 @@
 
 /* Single-point adjustments for the 1440 × 3500 background */
 @media (min-width:601px){
-  #grps-independent-header{position:absolute;top:0;left:0;right:0;}
+
   #top{transform:none;}
   #name-story{overflow:visible;}
   #name-story>h2{max-width:58%;}
