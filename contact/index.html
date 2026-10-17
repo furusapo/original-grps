@@ -475,6 +475,87 @@ footer{
 }
 </style>
 
+
+<style>
+/* CONTACT COMPACT LAYOUT V1 */
+
+/* PC・共通 */
+.page-title-inner {
+  height: 165px;
+}
+.page-title-inner:after {
+  top: 75px;
+}
+.contact-wrap {
+  padding: 36px 24px 65px;
+}
+.contact-inner {
+  width: min(820px, 100%);
+}
+.contact-inner .lead {
+  margin-bottom: 18px;
+  line-height: 1.75;
+}
+.required-note {
+  margin-bottom: 8px;
+}
+.form-row {
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 13px 0;
+}
+.form-label {
+  padding-top: 8px;
+}
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"] {
+  padding: 10px 12px;
+}
+.form-row textarea {
+  min-height: 125px;
+  padding: 10px 12px;
+}
+.radio-group {
+  padding-top: 7px;
+}
+.submit-area {
+  padding-top: 22px;
+}
+.submit-btn {
+  padding: 13px 30px;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .page-title-inner {
+    height: 125px !important;
+  }
+  .page-title-inner:after {
+    top: 67px !important;
+  }
+  .contact-wrap {
+    padding: 24px 16px 44px !important;
+  }
+  .contact-inner .lead {
+    margin-bottom: 15px !important;
+    line-height: 1.7 !important;
+  }
+  .form-row {
+    padding: 11px 0 !important;
+  }
+  .form-label {
+    padding: 0 0 7px !important;
+  }
+  .form-row textarea {
+    min-height: 115px;
+  }
+  .submit-area {
+    padding-top: 18px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header id="grps-independent-header"><div class="grps-header-inner"><a id="grps-header-logo" href="../index.html#top" aria-label="グローパス トップページ"><img src="../grps_images/glowpas-logo-horizontal.png" alt="グローパス"></a><button class="menu-button" id="menuOpen" type="button" aria-controls="sideMenu" aria-expanded="false" aria-label="メニューを開く"><img class="hamburger-icon" src="../grps_images/hamburger-menu.png" alt=""></button></div></header>
