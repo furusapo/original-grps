@@ -1,0 +1,16 @@
+
+/* Safari animation compatibility */
+.side-menu {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#top .grps-hero-accent,
+#top .grps-hero-particle,
+.grps-section-number {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.grps-detail-arrow span {
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+}
