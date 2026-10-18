@@ -802,6 +802,55 @@
   }
 }
 
+
+/* CONTACT ALIGNMENT PATCH 20261018 */
+@media (min-width:601px) {
+  #contact .grps-contact-grid {
+    align-items: stretch;
+  }
+
+  #contact .grps-contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+  }
+
+  #contact .grps-contact-card-body {
+    display: grid;
+    grid-template-columns: 5.3cqw 1fr;
+    column-gap: 1.5cqw;
+    align-items: center;
+  }
+
+  #contact .grps-contact-icon {
+    width: 5.3cqw;
+    height: 5.3cqw;
+    justify-self: center;
+  }
+
+  #contact .grps-contact-card-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  #contact .grps-contact-card h3 {
+    margin: 0 0 .4cqw;
+  }
+
+  #contact .grps-contact-card p {
+    margin: 0;
+  }
+
+  #contact .grps-contact-action {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1.2cqw;
+  }
+}
+
 </style><link rel="stylesheet" href="./assets/safari-animation-fix.css">
 </head>
 <body>
