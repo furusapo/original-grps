@@ -529,6 +529,58 @@
   }
 }
 
+
+/* MOBILE HEADING LINE BREAKS */
+.mobile-heading-break {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-heading-break {
+    display: initial;
+  }
+}
+
+
+/* GRPS CONTACT OUTWARD FADE */
+@media (min-width:601px) {
+  #contact .grps-contact-card {
+    position: relative;
+    isolation: isolate;
+    background: transparent !important;
+    border-radius: 22px;
+  }
+
+  #contact .grps-contact-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  #contact .grps-contact-card:first-child::before {
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,.55) 27%,
+      rgba(255,255,255,.95) 75%,
+      rgba(255,255,255,.98) 100%
+    );
+  }
+
+  #contact .grps-contact-card:last-child::before {
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.98) 0%,
+      rgba(255,255,255,.95) 25%,
+      rgba(255,255,255,.55) 73%,
+      rgba(255,255,255,0) 100%
+    );
+  }
+}
+
 </style></head>
 <body>
 <header id="grps-independent-header">
@@ -573,7 +625,7 @@
 <section class="grps-section" id="name-story">
 <div class="grps-eyebrow">NAME STORY</div>
 <h2 class="grps-small-space">
-    グローパスという名前に込めた想い
+    グローパスという名前に<br class="mobile-heading-break">込めた想い
   </h2>
 <p class="grps-space">
     社名の「グローパス」は、Grow（育てる・成長する）と<br/>
@@ -605,7 +657,7 @@
 <section class="grps-section" id="about">
 <div class="grps-eyebrow">ABOUT</div>
 <h2 class="grps-small-space">
-    一つとして同じ現場はありません。
+    一つとして同じ現場は<br class="mobile-heading-break">ありません。
   </h2>
 <p class="grps-space">
     開催目的、来場者規模、求められる演出は案件ごとに異なります。
