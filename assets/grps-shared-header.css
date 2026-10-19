@@ -266,3 +266,19 @@ body:has(#grps-new-header) {
     padding-top:126px !important;
   }
 }
+
+
+/* GRPS FOOTER MOBILE SIZE UNIFIED */
+@media screen and (max-width:600px) {
+  .grps-site-footer .grps-footer-logo {
+    width:112px !important;
+    max-width:112px !important;
+    min-width:0 !important;
+  }
+
+  .grps-site-footer .grps-footer-logo img {
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+  }
+}
