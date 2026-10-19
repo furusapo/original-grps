@@ -282,3 +282,23 @@ body:has(#grps-new-header) {
     height:auto !important;
   }
 }
+
+
+/* GRPS MOBILE NAV COMPANY ACCESS 20261019 */
+.gnh-nav-inner .gnh-mobile-only {
+  display:none !important;
+}
+
+@media screen and (max-width:900px) {
+  #grps-new-header .gnh-nav-inner .gnh-mobile-only {
+    display:inline-flex !important;
+    align-items:center;
+    flex:0 0 auto;
+  }
+
+  #grps-new-header .gnh-nav-inner {
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
