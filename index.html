@@ -903,6 +903,53 @@
 .grps-artwork-service-bottom{left:66%;top:65.1%;width:31%;height:8%}
 .grps-artwork-results{left:7.5%;top:72.5%;width:29%;height:7.6%}
 .grps-artwork-contact-bottom{left:22.5%;top:93.95%;width:26%;height:2.7%}
+
+.grps-svg-overlay {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  object-fit:fill;
+}
+
+/* GRPS scroll-triggered line drawing */
+.grps-artwork-wrap > svg.grps-svg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.grps-svg-overlay .grps-draw {
+  animation: none !important;
+}
+
+.grps-svg-overlay .grps-draw.is-visible {
+  animation: grpsScrollDraw 1.7s ease-out forwards !important;
+}
+
+@keyframes grpsScrollDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+.grps-scroll-trigger {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grps-svg-overlay .grps-draw {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
 </style><link rel="stylesheet" href="./assets/safari-animation-fix.css">
 <style>
 
@@ -1007,7 +1054,137 @@ body:has(#grps-new-header) {
 
 <main class="grps-artwork-main" id="top" aria-label="グローパス トップページ">
   <div class="grps-artwork-wrap">
-    <img src="./grps_images/original_top.webp" alt="グローパス。イベント成功を支える。社名に込めた想い、サービス内容、実績、お問い合わせのご案内" width="1400" height="4230" decoding="async" fetchpriority="high" />
+    <img src="./grps_images/original_top.webp" alt="グローパス。イベント成功を支える。社名に込めた想い、サービス内容、実績、お問い合わせのご案内" width="1440" height="4231" decoding="async" fetchpriority="high" />
+
+<svg class="grps-svg-overlay" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_動画" data-name="動画" viewBox="0 0 1440 4230">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#_名称未設定グラデーション_521-5);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-10, .cls-11, .cls-5 {
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-10, .cls-11, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-10, .cls-11 {
+        stroke-linecap: round;
+      }
+
+      .cls-2 {
+        stroke: url(#_名称未設定グラデーション_521-2);
+      }
+
+      .cls-3 {
+        stroke: url(#_名称未設定グラデーション_521);
+      }
+
+      .cls-3, .cls-12, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        font-family: HiraKakuProN-W6-83pv-RKSJ-H, 'Hiragino Kaku Gothic ProN';
+        font-size: 21.651px;
+      }
+
+      .cls-4 {
+        stroke: url(#_名称未設定グラデーション_521-10);
+      }
+
+      .cls-4, .cls-6, .cls-7, .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-10 {
+        stroke: url(#_名称未設定グラデーション_521-6);
+      }
+
+      .cls-10, .cls-11 {
+        stroke-linejoin: round;
+      }
+
+      .cls-11 {
+        stroke: url(#_名称未設定グラデーション_521-3);
+      }
+
+      .cls-13 {
+        fill: url(#_名称未設定グラデーション_612);
+      }
+
+      .cls-14 {
+        fill: url(#_名称未設定グラデーション_582);
+      }
+
+      .cls-5 {
+        stroke: url(#_名称未設定グラデーション_521-4);
+      }
+
+      .cls-6 {
+        stroke: url(#_名称未設定グラデーション_521-9);
+      }
+
+      .cls-7 {
+        stroke: url(#_名称未設定グラデーション_521-7);
+      }
+
+      .cls-8 {
+        stroke: url(#_名称未設定グラデーション_521-8);
+      }
+
+      .cls-9 {
+        stroke: #2ea7e0;
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_521" data-name="名称未設定グラデーション 521" x1="846.306" y1="2934.081" x2="909.863" y2="2934.081" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#249bf0" />
+      <stop offset=".339" stop-color="#1aadd8" />
+      <stop offset=".501" stop-color="#16b8cb" />
+      <stop offset=".999" stop-color="#3cea9b" />
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_521-2" data-name="名称未設定グラデーション 521" x1="860.115" y1="2933.395" x2="893.839" y2="2933.395" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-3" data-name="名称未設定グラデーション 521" x1="877.606" y1="2944.35" x2="888.377" y2="2924.585" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-4" data-name="名称未設定グラデーション 521" x1="461.579" y1="3141.532" x2="525.137" y2="3141.532" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-5" data-name="名称未設定グラデーション 521" x1="475.388" y1="3140.845" x2="509.113" y2="3140.845" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-6" data-name="名称未設定グラデーション 521" x1="492.88" y1="3151.8" x2="503.651" y2="3132.036" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_582" data-name="名称未設定グラデーション 582" x1="331.955" y1="4026.496" x2="609.63" y2="4026.496" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003ee5" />
+      <stop offset=".117" stop-color="#0456df" />
+      <stop offset=".364" stop-color="#0f93d2" />
+      <stop offset=".501" stop-color="#16b8cb" />
+      <stop offset=".999" stop-color="#6deafa" />
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_612" data-name="名称未設定グラデーション 612" x1="942.02" y1="4026.496" x2="1219.694" y2="4026.496" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#03bb8c" />
+      <stop offset=".255" stop-color="#1ac978" />
+      <stop offset=".502" stop-color="#36d963" />
+      <stop offset=".817" stop-color="#8ced7f" />
+      <stop offset=".999" stop-color="#c1fa90" />
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_521-7" data-name="名称未設定グラデーション 521" x1="280.596" y1="945.435" x2="466.389" y2="945.435" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-8" data-name="名称未設定グラデーション 521" x1="871.434" y1="3477.226" x2="1057.228" y2="3477.226" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-9" data-name="名称未設定グラデーション 521" x1="391.452" y1="2528.279" x2="577.246" y2="2528.279" xlink:href="#_名称未設定グラデーション_521" />
+    <linearGradient id="_名称未設定グラデーション_521-10" data-name="名称未設定グラデーション 521" x1="791.175" y1="1651.723" x2="976.968" y2="1651.723" xlink:href="#_名称未設定グラデーション_521" />
+  </defs>
+  <line class="cls-7 grps-draw" x1="280.596" y1="945.435" x2="466.389" y2="945.435" style="stroke-dasharray:185.793;stroke-dashoffset:185.793;" />
+  <line class="cls-8 grps-draw" x1="871.434" y1="3477.226" x2="1057.228" y2="3477.226" style="stroke-dasharray:185.794;stroke-dashoffset:185.794;" />
+  <line class="cls-6 grps-draw" x1="391.452" y1="2528.279" x2="577.246" y2="2528.279" style="stroke-dasharray:185.794;stroke-dashoffset:185.794;" />
+  <line class="cls-9 grps-draw" x1="392.778" y1="2259.9" x2="349.187" y2="2332.079" style="stroke-dasharray:84.321;stroke-dashoffset:84.321;" />
+  <line class="cls-4 grps-draw" x1="791.175" y1="1651.723" x2="976.968" y2="1651.723" style="stroke-dasharray:185.793;stroke-dashoffset:185.793;" />
+<style>
+@keyframes grpsDraw {
+  to { stroke-dashoffset: 0; }
+}
+</style></svg>
+
     <a class="grps-artwork-link grps-artwork-service-top" href="./service/index.html" aria-label="サービスを見る"></a>
     <a class="grps-artwork-link grps-artwork-contact-top" href="./contact/index.html" aria-label="お問い合わせ"></a>
     <a class="grps-artwork-link grps-artwork-service-bottom" href="./service/index.html" aria-label="サービス内容を見る"></a>
@@ -1044,5 +1221,41 @@ document.addEventListener('DOMContentLoaded', () => {
   headings.forEach(el => observer.observe(el));
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.querySelector('.grps-artwork-wrap');
+  const svg = wrap?.querySelector('svg.grps-svg-overlay');
+  if (!wrap || !svg) return;
+
+  const lines = [...svg.querySelectorAll('line.grps-draw')];
+  if (lines.length !== 5) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const index = Number(entry.target.dataset.lineIndex);
+      lines[index]?.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+
+  lines.forEach((line, index) => {
+    const x = (Number(line.getAttribute('x1')) +
+               Number(line.getAttribute('x2'))) / 2;
+    const y = (Number(line.getAttribute('y1')) +
+               Number(line.getAttribute('y2'))) / 2;
+
+    const trigger = document.createElement('span');
+    trigger.className = 'grps-scroll-trigger';
+    trigger.dataset.lineIndex = String(index);
+    trigger.style.left = (x / 1440 * 100) + '%';
+    trigger.style.top = (y / 4230 * 100) + '%';
+    wrap.appendChild(trigger);
+    observer.observe(trigger);
+  });
+});
+</script>
+
 </body>
 </html>
