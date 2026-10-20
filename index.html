@@ -1019,6 +1019,24 @@ body:has(#grps-new-header) {
 
 </style>
 <style>
+
+/* Clickable animated arrows */
+.grps-artwork-link.grps-arrow-link-01,
+.grps-artwork-link.grps-arrow-link-02 {
+  z-index: 10;
+  width: 4.6%;
+  height: 1.6%;
+  border-radius: 50%;
+}
+.grps-artwork-link.grps-arrow-link-01 {
+  left: 58.65%;
+  top: 68.55%;
+}
+.grps-artwork-link.grps-arrow-link-02 {
+  left: 31.93%;
+  top: 73.45%;
+}
+
 /* GRPS SVG MOTION 20261021 */
 .grps-artwork-wrap > svg.grps-motion-overlay {
   position:absolute;
@@ -1342,6 +1360,8 @@ body:has(#grps-new-header) {
   </g>
 </svg>
 
+    <a class="grps-artwork-link grps-arrow-link-01" href="./service/index.html" aria-label="01 サービス内容へ"></a>
+    <a class="grps-artwork-link grps-arrow-link-02" href="./results/index.html" aria-label="02 実績へ"></a>
     <a class="grps-artwork-link grps-artwork-service-top" href="./service/index.html" aria-label="サービスを見る"></a>
     <a class="grps-artwork-link grps-artwork-contact-top" href="./contact/index.html" aria-label="お問い合わせ"></a>
     <a class="grps-artwork-link grps-artwork-service-bottom" href="./service/index.html" aria-label="サービス内容を見る"></a>
