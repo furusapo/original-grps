@@ -1346,6 +1346,19 @@ body:has(#grps-new-header) {
 }
 
 </style>
+
+<style id="grps-photo-scroll-reveal">
+.grps-artwork-wrap > object.grps-photo-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  pointer-events: none;
+}
+</style>
+
 </head>
 <body>
 
@@ -1383,9 +1396,11 @@ body:has(#grps-new-header) {
 <main class="grps-artwork-main" id="top" aria-label="グローパス トップページ">
   <div class="grps-artwork-wrap">
     <img src="./grps_images/original_top.jpg" alt="グローパス。イベント成功を支える。社名に込めた想い、サービス内容、実績、お問い合わせのご案内" width="1440" height="4231" decoding="async" fetchpriority="high" />
-    <img class="grps-photo-overlay"
-         src="./grps_images/original_top_4.svg"
-         alt="" aria-hidden="true">
+    <object class="grps-photo-overlay"
+        type="image/svg+xml"
+        data="./grps_images/original_top_4.svg"
+        aria-hidden="true"
+        tabindex="-1"></object>
 
 
 <svg class="grps-svg-overlay" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_動画" data-name="動画" viewBox="0 0 1440 4230">
@@ -1733,5 +1748,80 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
+<script id="grps-photo-scroll-reveal-js">
+document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.querySelector('.grps-artwork-wrap');
+  const photo = wrap?.querySelector('object.grps-photo-overlay');
+  if (!wrap || !photo) return;
+
+  let initialized = false;
+
+  function setup() {
+    if (initialized) return;
+
+    const doc = photo.contentDocument;
+    const root = doc?.documentElement;
+    if (!root) return;
+
+    const groups = [...root.querySelectorAll('.grps-photo-item')];
+    if (groups.length !== 3) return;
+
+    initialized = true;
+
+    const show = group => group.classList.add('is-visible');
+
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      groups.forEach(show);
+      return;
+    }
+
+    const viewBox = root.viewBox.baseVal;
+    if (!viewBox.width || !viewBox.height) {
+      groups.forEach(show);
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const index = Number(entry.target.dataset.photoIndex);
+        show(groups[index]);
+        observer.unobserve(entry.target);
+        entry.target.remove();
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    groups.forEach((group, index) => {
+      const bounds = group.getBBox();
+      const centerX = bounds.x + bounds.width / 2;
+      const centerY = bounds.y + bounds.height / 2;
+
+      const trigger = document.createElement('span');
+      trigger.className = 'grps-scroll-trigger';
+      trigger.dataset.photoIndex = String(index);
+      trigger.style.left =
+        ((centerX - viewBox.x) / viewBox.width * 100) + '%';
+      trigger.style.top =
+        ((centerY - viewBox.y) / viewBox.height * 100) + '%';
+
+      wrap.appendChild(trigger);
+      observer.observe(trigger);
+    });
+  }
+
+  photo.addEventListener('load', setup);
+
+  if (photo.contentDocument?.readyState === 'complete') {
+    setup();
+  }
+});
+</script>
+
 </body>
 </html>
