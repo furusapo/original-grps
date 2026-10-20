@@ -1018,6 +1018,47 @@ body:has(#grps-new-header) {
 }
 
 </style>
+<style>
+/* GRPS SVG MOTION 20261021 */
+.grps-artwork-wrap > svg.grps-motion-overlay {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:visible;
+  pointer-events:none;
+}
+.grps-motion-overlay .grps-float-item,
+.grps-motion-overlay .grps-hover-item {
+  transform-box:fill-box;
+  transform-origin:center;
+}
+@keyframes grpsFloatSide {
+  0%,100% { transform:translateX(-7px); }
+  50% { transform:translateX(7px); }
+}
+@media (prefers-reduced-motion:no-preference) {
+  .grps-motion-overlay .grps-float-item {
+    animation:grpsFloatSide 3s ease-in-out infinite;
+  }
+  .grps-motion-overlay .grps-float-item:nth-of-type(2) {
+    animation-delay:-1.5s;
+  }
+  .grps-motion-overlay .grps-hover-item {
+    transition:transform .3s ease,filter .3s ease;
+  }
+  .grps-motion-overlay .grps-hover-item.is-hovered {
+    transform:translateY(-5px) scale(1.025);
+    filter:brightness(1.08) drop-shadow(0 6px 6px #123b6633);
+  }
+}
+.grps-artwork-link.grps-contact-form-motion {
+  left:23.05%;top:94.3%;width:19.3%;height:1.8%;z-index:5;
+}
+.grps-artwork-link.grps-contact-line-motion {
+  left:65.4%;top:94.3%;width:19.3%;height:1.8%;z-index:5;
+}
+</style>
 </head>
 <body>
 
@@ -1184,12 +1225,129 @@ body:has(#grps-new-header) {
   to { stroke-dashoffset: 0; }
 }
 </style></svg>
+<svg class="grps-motion-overlay grps-motion2-overlay" id="_動く矢印" data-name="動く矢印" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 4230">
+  <defs>
+    <style>
+      .motion2-cls-1 {
+        stroke: url(#_motion2-名称未設定グラデーション_521-5);
+      }
+
+      .motion2-cls-1, .motion2-cls-2, .motion2-cls-3, .motion2-cls-4, .motion2-cls-5, .motion2-cls-6 {
+        stroke-width: 3px;
+      }
+
+      .motion2-cls-1, .motion2-cls-2, .motion2-cls-3, .motion2-cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .motion2-cls-1, .motion2-cls-2, .motion2-cls-4, .motion2-cls-5 {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .motion2-cls-2 {
+        stroke: url(#_motion2-名称未設定グラデーション_521-2);
+      }
+
+      .motion2-cls-3 {
+        stroke: url(#_motion2-名称未設定グラデーション_521);
+      }
+
+      .motion2-cls-3, .motion2-cls-6 {
+        fill: #fff;
+      }
+
+      .motion2-cls-4 {
+        stroke: url(#_motion2-名称未設定グラデーション_521-6);
+      }
+
+      .motion2-cls-4, .motion2-cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .motion2-cls-5 {
+        stroke: url(#_motion2-名称未設定グラデーション_521-3);
+      }
+
+      .motion2-cls-6 {
+        stroke: url(#_motion2-名称未設定グラデーション_521-4);
+      }
+    </style>
+    <linearGradient id="_motion2-名称未設定グラデーション_521" data-name="名称未設定グラデーション 521" x1="846.306" y1="2934.081" x2="909.863" y2="2934.081" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#249bf0"/>
+      <stop offset=".339" stop-color="#1aadd8"/>
+      <stop offset=".501" stop-color="#16b8cb"/>
+      <stop offset=".999" stop-color="#3cea9b"/>
+    </linearGradient>
+    <linearGradient id="_motion2-名称未設定グラデーション_521-2" data-name="名称未設定グラデーション 521" x1="860.115" y1="2933.395" x2="893.839" y2="2933.395" xlink:href="#_motion2-名称未設定グラデーション_521"/>
+    <linearGradient id="_motion2-名称未設定グラデーション_521-3" data-name="名称未設定グラデーション 521" x1="877.606" y1="2944.35" x2="888.377" y2="2924.585" xlink:href="#_motion2-名称未設定グラデーション_521"/>
+    <linearGradient id="_motion2-名称未設定グラデーション_521-4" data-name="名称未設定グラデーション 521" x1="461.579" y1="3141.532" x2="525.137" y2="3141.532" xlink:href="#_motion2-名称未設定グラデーション_521"/>
+    <linearGradient id="_motion2-名称未設定グラデーション_521-5" data-name="名称未設定グラデーション 521" x1="475.388" y1="3140.845" x2="509.113" y2="3140.845" xlink:href="#_motion2-名称未設定グラデーション_521"/>
+    <linearGradient id="_motion2-名称未設定グラデーション_521-6" data-name="名称未設定グラデーション 521" x1="492.88" y1="3151.8" x2="503.651" y2="3132.036" xlink:href="#_motion2-名称未設定グラデーション_521"/>
+  </defs>
+  <g class="grps-float-item">
+    <circle class="motion2-cls-3" cx="878.084" cy="2934.081" r="30.279"/>
+    <g>
+      <line class="motion2-cls-2" x1="861.615" y1="2933.395" x2="892.339" y2="2933.395"/>
+      <polyline class="motion2-cls-5" points="881.09 2922.322 892.102 2933.386 879.606 2943.731"/>
+    </g>
+  </g>
+  <g class="grps-float-item">
+    <circle class="motion2-cls-6" cx="493.358" cy="3141.532" r="30.279"/>
+    <g>
+      <line class="motion2-cls-1" x1="476.888" y1="3140.845" x2="507.613" y2="3140.845"/>
+      <polyline class="motion2-cls-4" points="496.364 3129.773 507.375 3140.836 494.88 3151.182"/>
+    </g>
+  </g>
+</svg>
+<svg class="grps-motion-overlay grps-motion3-overlay" id="_問合せフォーム" data-name="問合せフォーム" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 4230">
+  <defs>
+    <style>
+      .motion3-cls-1 {
+        fill: #fff;
+        font-family: HiraKakuProN-W6-83pv-RKSJ-H, 'Hiragino Kaku Gothic ProN';
+        font-size: 21.651px;
+      }
+
+      .motion3-cls-2 {
+        fill: url(#_motion3-名称未設定グラデーション_612);
+      }
+
+      .motion3-cls-3 {
+        fill: url(#_motion3-名称未設定グラデーション_582);
+      }
+    </style>
+    <linearGradient id="_motion3-名称未設定グラデーション_582" data-name="名称未設定グラデーション 582" x1="331.955" y1="4026.496" x2="609.63" y2="4026.496" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003ee5"/>
+      <stop offset=".117" stop-color="#0456df"/>
+      <stop offset=".364" stop-color="#0f93d2"/>
+      <stop offset=".501" stop-color="#16b8cb"/>
+      <stop offset=".999" stop-color="#6deafa"/>
+    </linearGradient>
+    <linearGradient id="_motion3-名称未設定グラデーション_612" data-name="名称未設定グラデーション 612" x1="942.02" y1="4026.496" x2="1219.694" y2="4026.496" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#03bb8c"/>
+      <stop offset=".255" stop-color="#1ac978"/>
+      <stop offset=".502" stop-color="#36d963"/>
+      <stop offset=".817" stop-color="#8ced7f"/>
+      <stop offset=".999" stop-color="#c1fa90"/>
+    </linearGradient>
+  </defs>
+  <g class="grps-hover-item">
+    <path class="motion3-cls-3" d="M609.63,4026.496c0-20.184-16.362-36.546-36.546-36.546-.838,0-1.667.038-2.491.094h-199.601c-.824-.056-1.653-.094-2.491-.094-20.184,0-36.546,16.362-36.546,36.546,0,19.473,15.231,35.384,34.43,36.48v.065h206.742c20.164-.024,36.503-16.376,36.503-36.546Z"/>
+    <text class="motion3-cls-1" transform="translate(363.2474 4034.4032)"><tspan x="0" y="0">フォームから相談する</tspan></text>
+  </g>
+  <g class="grps-hover-item">
+    <path class="motion3-cls-2" d="M1219.694,4026.496c0-20.184-16.362-36.546-36.546-36.546-.838,0-1.667.038-2.491.094h-199.601c-.824-.056-1.653-.094-2.491-.094-20.184,0-36.546,16.362-36.546,36.546,0,19.473,15.231,35.384,34.43,36.48v.065h206.742c20.164-.024,36.503-16.376,36.503-36.546Z"/>
+    <text class="motion3-cls-1" transform="translate(973.3099 4034.4032)"><tspan x="0" y="0">友達追加して相談する</tspan></text>
+  </g>
+</svg>
 
     <a class="grps-artwork-link grps-artwork-service-top" href="./service/index.html" aria-label="サービスを見る"></a>
     <a class="grps-artwork-link grps-artwork-contact-top" href="./contact/index.html" aria-label="お問い合わせ"></a>
     <a class="grps-artwork-link grps-artwork-service-bottom" href="./service/index.html" aria-label="サービス内容を見る"></a>
     <a class="grps-artwork-link grps-artwork-results" href="./results/index.html" aria-label="実績を見る"></a>
-    <a class="grps-artwork-link grps-artwork-contact-bottom" href="./contact/index.html" aria-label="お問い合わせフォームから相談する"></a>
+    <a class="grps-artwork-link grps-contact-form-motion" href="./contact/index.html" aria-label="フォームから相談する"></a>
+    <a class="grps-artwork-link grps-contact-line-motion" href="https://lin.ee/WwHYCKs" aria-label="LINEで友達追加して相談する" target="_blank" rel="noopener noreferrer"></a>
   </div>
 </main>
 <footer aria-label="サイトフッター" class="grps-site-footer">
@@ -1257,5 +1415,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.querySelector('.grps-artwork-wrap');
+  const groups = wrap?.querySelectorAll(
+    '.grps-motion3-overlay > g.grps-hover-item'
+  );
+  const links = wrap?.querySelectorAll(
+    '.grps-contact-form-motion, .grps-contact-line-motion'
+  );
+  if (!groups || groups.length !== 2 ||
+      !links || links.length !== 2) return;
+
+  links.forEach((link, i) => {
+    for (const event of ['pointerenter', 'focus']) {
+      link.addEventListener(event, () =>
+        groups[i].classList.add('is-hovered'));
+    }
+    for (const event of ['pointerleave', 'blur']) {
+      link.addEventListener(event, () =>
+        groups[i].classList.remove('is-hovered'));
+    }
+  });
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_動く矢印" data-name="動く矢印" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 4230">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#_名称未設定グラデーション_521-5);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5 {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .cls-2 {
+        stroke: url(#_名称未設定グラデーション_521-2);
+      }
+
+      .cls-3 {
+        stroke: url(#_名称未設定グラデーション_521);
+      }
+
+      .cls-3, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: url(#_名称未設定グラデーション_521-6);
+      }
+
+      .cls-4, .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-5 {
+        stroke: url(#_名称未設定グラデーション_521-3);
+      }
+
+      .cls-6 {
+        stroke: url(#_名称未設定グラデーション_521-4);
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_521" data-name="名称未設定グラデーション 521" x1="846.306" y1="2934.081" x2="909.863" y2="2934.081" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#249bf0"/>
+      <stop offset=".339" stop-color="#1aadd8"/>
+      <stop offset=".501" stop-color="#16b8cb"/>
+      <stop offset=".999" stop-color="#3cea9b"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_521-2" data-name="名称未設定グラデーション 521" x1="860.115" y1="2933.395" x2="893.839" y2="2933.395" xlink:href="#_名称未設定グラデーション_521"/>
+    <linearGradient id="_名称未設定グラデーション_521-3" data-name="名称未設定グラデーション 521" x1="877.606" y1="2944.35" x2="888.377" y2="2924.585" xlink:href="#_名称未設定グラデーション_521"/>
+    <linearGradient id="_名称未設定グラデーション_521-4" data-name="名称未設定グラデーション 521" x1="461.579" y1="3141.532" x2="525.137" y2="3141.532" xlink:href="#_名称未設定グラデーション_521"/>
+    <linearGradient id="_名称未設定グラデーション_521-5" data-name="名称未設定グラデーション 521" x1="475.388" y1="3140.845" x2="509.113" y2="3140.845" xlink:href="#_名称未設定グラデーション_521"/>
+    <linearGradient id="_名称未設定グラデーション_521-6" data-name="名称未設定グラデーション 521" x1="492.88" y1="3151.8" x2="503.651" y2="3132.036" xlink:href="#_名称未設定グラデーション_521"/>
+  </defs>
+  <g>
+    <circle class="cls-3" cx="878.084" cy="2934.081" r="30.279"/>
+    <g>
+      <line class="cls-2" x1="861.615" y1="2933.395" x2="892.339" y2="2933.395"/>
+      <polyline class="cls-5" points="881.09 2922.322 892.102 2933.386 879.606 2943.731"/>
+    </g>
+  </g>
+  <g>
+    <circle class="cls-6" cx="493.358" cy="3141.532" r="30.279"/>
+    <g>
+      <line class="cls-1" x1="476.888" y1="3140.845" x2="507.613" y2="3140.845"/>
+      <polyline class="cls-4" points="496.364 3129.773 507.375 3140.836 494.88 3151.182"/>
+    </g>
+  </g>
+</svg>

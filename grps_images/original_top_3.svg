@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_問合せフォーム" data-name="問合せフォーム" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 4230">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: HiraKakuProN-W6-83pv-RKSJ-H, 'Hiragino Kaku Gothic ProN';
+        font-size: 21.651px;
+      }
+
+      .cls-2 {
+        fill: url(#_名称未設定グラデーション_612);
+      }
+
+      .cls-3 {
+        fill: url(#_名称未設定グラデーション_582);
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_582" data-name="名称未設定グラデーション 582" x1="331.955" y1="4026.496" x2="609.63" y2="4026.496" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003ee5"/>
+      <stop offset=".117" stop-color="#0456df"/>
+      <stop offset=".364" stop-color="#0f93d2"/>
+      <stop offset=".501" stop-color="#16b8cb"/>
+      <stop offset=".999" stop-color="#6deafa"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_612" data-name="名称未設定グラデーション 612" x1="942.02" y1="4026.496" x2="1219.694" y2="4026.496" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#03bb8c"/>
+      <stop offset=".255" stop-color="#1ac978"/>
+      <stop offset=".502" stop-color="#36d963"/>
+      <stop offset=".817" stop-color="#8ced7f"/>
+      <stop offset=".999" stop-color="#c1fa90"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path class="cls-3" d="M609.63,4026.496c0-20.184-16.362-36.546-36.546-36.546-.838,0-1.667.038-2.491.094h-199.601c-.824-.056-1.653-.094-2.491-.094-20.184,0-36.546,16.362-36.546,36.546,0,19.473,15.231,35.384,34.43,36.48v.065h206.742c20.164-.024,36.503-16.376,36.503-36.546Z"/>
+    <text class="cls-1" transform="translate(363.2474 4034.4032)"><tspan x="0" y="0">フォームから相談する</tspan></text>
+  </g>
+  <g>
+    <path class="cls-2" d="M1219.694,4026.496c0-20.184-16.362-36.546-36.546-36.546-.838,0-1.667.038-2.491.094h-199.601c-.824-.056-1.653-.094-2.491-.094-20.184,0-36.546,16.362-36.546,36.546,0,19.473,15.231,35.384,34.43,36.48v.065h206.742c20.164-.024,36.503-16.376,36.503-36.546Z"/>
+    <text class="cls-1" transform="translate(973.3099 4034.4032)"><tspan x="0" y="0">友達追加して相談する</tspan></text>
+  </g>
+</svg>
