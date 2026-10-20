@@ -1,5 +1,262 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>会社概要｜株式会社グローパス</title><meta name="description" content="人と人をつなぎ、想いをカタチに。株式会社グローパスの会社概要とアクセス情報です。"><link rel="stylesheet" href="../assets/subpages.css"><link rel="stylesheet" href="../assets/grps-shared-header.css">
 <link rel="stylesheet" href="../assets/safari-animation-fix.css">
+
+<style id="grps-header-unified-20261021">
+/* GRPS NEW ORIGINAL HEADER */
+#grps-new-header {
+  position:relative;
+  z-index:300;
+  width:100%;
+  background:#fff;
+  color:#123b66;
+  font-family:"Hiragino Kaku Gothic ProN",
+              "Yu Gothic",Meiryo,sans-serif;
+}
+
+#grps-new-header a {
+  color:inherit;
+  text-decoration:none;
+}
+
+.gnh-top {
+  width:min(1280px,calc(100% - 48px));
+  min-height:98px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+
+.gnh-brand {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  min-width:0;
+}
+
+.gnh-brand img {
+  display:block;
+  width:auto;
+  max-width:220px;
+  height:64px;
+  object-fit:contain;
+}
+
+.gnh-copy {
+  padding-left:20px;
+  border-left:1px solid #d2dde4;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.gnh-links {
+  display:flex;
+  align-items:center;
+  gap:26px;
+  font-size:14px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+#grps-new-header .gnh-contact {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:12px 24px;
+  border-radius:14px;
+  color:#fff;
+  background:linear-gradient(100deg,#249bf0,#16b8cb 50%,#3cd59b);
+}
+
+.gnh-nav {
+  border-top:1px solid #edf2f5;
+  border-bottom:1px solid #e8eef2;
+}
+
+.gnh-nav-inner {
+  width:min(1280px,calc(100% - 48px));
+  min-height:62px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:34px;
+}
+
+.gnh-nav-inner a {
+  font-size:14px;
+  font-weight:700;
+  white-space:nowrap;
+  transition:color .2s;
+}
+
+.gnh-nav-inner a:hover,
+.gnh-links > a:not(.gnh-contact):hover {
+  color:#0b84c6!important;
+}
+
+@media(max-width:900px) {
+  .gnh-top,
+  .gnh-nav-inner {
+    width:calc(100% - 32px);
+  }
+
+  .gnh-top {
+    min-height:80px;
+    gap:12px;
+  }
+
+  .gnh-brand {
+    gap:12px;
+  }
+
+  .gnh-brand img {
+    height:50px;
+    max-width:170px;
+  }
+
+  .gnh-copy {
+    font-size:11px;
+    padding-left:12px;
+    white-space:normal;
+  }
+
+  .gnh-links > a:not(.gnh-contact) {
+    display:none;
+  }
+
+  .gnh-nav {
+    overflow:hidden;
+  }
+
+  .gnh-nav-inner {
+    justify-content:flex-start;
+    gap:22px;
+    min-height:50px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .gnh-nav-inner::-webkit-scrollbar {
+    display:none;
+  }
+}
+
+@media(max-width:560px) {
+  .gnh-top {
+    min-height:76px;
+    gap:10px;
+  }
+
+  .gnh-brand {
+    gap:9px;
+  }
+
+  .gnh-brand img {
+    height:43px;
+    max-width:125px;
+  }
+
+  .gnh-copy {
+    max-width:125px;
+    padding-left:9px;
+    font-size:8px;
+  }
+
+  #grps-new-header .gnh-contact {
+    padding:10px 12px;
+    min-height:40px;
+    font-size:10px;
+  }
+
+  .gnh-nav-inner a {
+    font-size:11px;
+  }
+}
+
+@media(max-width:360px) {
+  .gnh-copy {
+    display:none;
+  }
+
+  .gnh-brand img {
+    max-width:110px;
+  }
+}
+
+
+/* RECRUIT NAV */
+#grps-new-header .gnh-recruit {
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  white-space:nowrap;
+}
+
+#grps-new-header .gnh-recruit-label {
+  padding:3px 12px;
+  border-radius:999px;
+  background:linear-gradient(100deg,#249bf0,#16b8cb 50%,#3cd59b);
+  color:#fff;
+  font:700 12px/1.3 Arial,sans-serif;
+  letter-spacing:.04em;
+}
+
+#grps-new-header .gnh-recruit-text {
+  background:linear-gradient(100deg,#249bf0,#16b8cb 50%,#3cd59b);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:800;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+
+@media(max-width:560px) {
+  #grps-new-header .gnh-recruit {gap:6px}
+  #grps-new-header .gnh-recruit-label {
+    padding:3px 7px;
+    font-size:9px;
+  }
+}
+
+
+/* GRPS UNIFIED FIXED HEADER 20261019 */
+#grps-new-header {
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  z-index:1000 !important;
+  background:#fff !important;
+}
+body:has(#grps-new-header) {
+  padding-top:160px !important;
+}
+@media(max-width:900px) {
+  body:has(#grps-new-header) {
+    padding-top:130px !important;
+  }
+}
+@media(max-width:560px) {
+  body:has(#grps-new-header) {
+    padding-top:126px !important;
+  }
+}
+
+
+
+#grps-new-header .gnh-nav {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+</style>
 </head><body><header id="grps-new-header">
   <div class="gnh-top">
     <a class="gnh-brand" href="../index.html"
