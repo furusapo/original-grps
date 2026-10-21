@@ -951,6 +951,28 @@
 }
 
 
+
+/* GRPS MOBILE JPG 20261022 */
+.grps-artwork-wrap > img.grps-mobile-top-image {
+  display: none;
+}
+@media screen and (max-width:600px) {
+  .grps-artwork-wrap > img:not(.grps-mobile-top-image) {
+    display: none !important;
+  }
+  .grps-artwork-wrap > img.grps-mobile-top-image {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+  .grps-artwork-wrap > .grps-photo-overlay,
+  .grps-artwork-wrap > .grps-svg-overlay,
+  .grps-artwork-wrap > .grps-motion-overlay,
+  .grps-artwork-wrap > .grps-artwork-link {
+    display: none !important;
+  }
+}
+
 /* GRPS PHOTO REVEAL */
 .grps-artwork-wrap > img.grps-photo-overlay {
   position: absolute;
@@ -1419,6 +1441,7 @@ body:has(#grps-new-header) {
 <main class="grps-artwork-main" id="top" aria-label="グローパス トップページ">
   <div class="grps-artwork-wrap">
     <img src="./grps_images/original_top.jpg" alt="グローパス。イベント成功を支える。社名に込めた想い、サービス内容、実績、お問い合わせのご案内" width="1440" height="4231" decoding="async" fetchpriority="high" />
+    <img class="grps-mobile-top-image" src="./grps_images/mobile_top.jpg" alt="グローパス スマートフォン版トップページ" decoding="async" />
     <object class="grps-photo-overlay"
         type="image/svg+xml"
         data="./grps_images/original_top_4.svg"
