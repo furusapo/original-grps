@@ -1697,29 +1697,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const lines = [...svg.querySelectorAll('line.grps-draw')];
   if (lines.length !== 5) return;
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const index = Number(entry.target.dataset.lineIndex);
-      lines[index]?.classList.add('is-visible');
-      observer.unobserve(entry.target);
+  const reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  let pending = false;
+
+  function checkVisibleLines() {
+    pending = false;
+
+    const viewportHeight = window.innerHeight;
+    const revealLimit = viewportHeight * 0.9;
+
+    lines.forEach(line => {
+      if (line.classList.contains('is-visible')) return;
+
+      const rect = line.getBoundingClientRect();
+
+      if (rect.top <= revealLimit && rect.bottom >= 0) {
+        line.classList.add('is-visible');
+
+        if (reducedMotion) {
+          line.style.strokeDashoffset = '0';
+        }
+      }
     });
-  }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+  }
 
-  lines.forEach((line, index) => {
-    const x = (Number(line.getAttribute('x1')) +
-               Number(line.getAttribute('x2'))) / 2;
-    const y = (Number(line.getAttribute('y1')) +
-               Number(line.getAttribute('y2'))) / 2;
+  function scheduleCheck() {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(checkVisibleLines);
+  }
 
-    const trigger = document.createElement('span');
-    trigger.className = 'grps-scroll-trigger';
-    trigger.dataset.lineIndex = String(index);
-    trigger.style.left = (x / 1440 * 100) + '%';
-    trigger.style.top = (y / 4230 * 100) + '%';
-    wrap.appendChild(trigger);
-    observer.observe(trigger);
-  });
+  window.addEventListener('scroll', scheduleCheck, { passive: true });
+  window.addEventListener('resize', scheduleCheck, { passive: true });
+  window.addEventListener('load', scheduleCheck);
+
+  scheduleCheck();
 });
 </script>
 
