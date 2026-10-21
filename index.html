@@ -1404,6 +1404,65 @@ body:has(#grps-new-header) {
 }
 </style>
 
+<style id="grps-mobile-footer-design-20261022">
+.grps-mobile-footer {
+  display:none;
+}
+@media screen and (max-width:600px) {
+  footer.grps-site-footer {
+    padding:24px 20px 22px !important;
+    background:#fff !important;
+  }
+  footer.grps-site-footer > .grps-footer-logo {
+    display:none !important;
+  }
+  footer.grps-site-footer .grps-mobile-footer {
+    display:block !important;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .grps-mobile-footer-row {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .grps-mobile-footer-brand {
+    display:block;
+    width:110px;
+    max-width:45%;
+    height:auto;
+  }
+  .grps-mobile-footer-top {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:54px;
+    height:54px;
+    flex:0 0 54px;
+    border-radius:50%;
+    background:#07163e;
+    color:#fff;
+    text-decoration:none;
+  }
+  .grps-mobile-footer-top svg {
+    width:27px;
+    height:27px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2.3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .grps-mobile-footer-copy {
+    margin:24px 0 0;
+    text-align:center;
+    font-size:11px;
+    line-height:1.6;
+    color:#777;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -1708,6 +1767,20 @@ body:has(#grps-new-header) {
 <a aria-label="ページの先頭に戻る" class="grps-footer-logo" href="#top">
 <img alt="グローパス" src="./grps_images/glowpas-logo-vertical.png"/>
 </a>
+<div class="grps-mobile-footer">
+  <div class="grps-mobile-footer-row">
+    <img class="grps-mobile-footer-brand"
+         src="./grps_images/glowpas-logo-vertical.png"
+         alt="グローパス">
+    <a class="grps-mobile-footer-top" href="#top"
+       aria-label="ページの先頭に戻る">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 15l7-7 7 7"/>
+      </svg>
+    </a>
+  </div>
+  <p class="grps-mobile-footer-copy">© 2026 グローパス. All Rights Reserved.</p>
+</div>
 </footer>
 
 
