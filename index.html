@@ -2383,7 +2383,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  const lines=[...root.querySelectorAll('.grps-mobile-line>line')];
  if(reduced||!('IntersectionObserver' in window)){lines.forEach(l=>l.classList.add('is-visible'));return}
  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  if(entry.isIntersecting){entry.target._line.classList.add('is-visible');observer.unobserve(entry.target)}
+  entry.target._line.classList.toggle('is-visible',entry.isIntersecting);
  }),{threshold:0});
  lines.forEach(line=>{
   const y=Number(line.getAttribute('y1'));if(!Number.isFinite(y))return;
