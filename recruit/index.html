@@ -3566,6 +3566,219 @@ body:has(#grps-new-header) {
 ]
 </script>
 <!-- /GRPS-SEO-20261022 -->
+
+<style id="grps-mobile-drawer-20261023">
+.grps-mobile-toggle,.grps-mobile-drawer{display:none}
+
+@media(max-width:768px){
+  html.grps-drawer-open,
+  html.grps-drawer-open body{
+    overflow:hidden!important;
+  }
+
+  body:has(#grps-new-header){
+    padding-top:76px!important;
+  }
+
+  #grps-new-header .gnh-top{
+    width:100%!important;
+    height:76px!important;
+    min-height:76px!important;
+    padding:8px 18px!important;
+  }
+
+  #grps-new-header .gnh-brand img{
+    height:auto!important;
+    max-height:57px!important;
+    max-width:62vw!important;
+  }
+
+  #grps-new-header .gnh-links,
+  #grps-new-header .gnh-nav,
+  #grps-new-header .gnh-copy{
+    display:none!important;
+  }
+
+  #grps-new-header .grps-mobile-toggle{
+    display:flex!important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    width:64px;
+    height:64px;
+    flex:0 0 64px;
+    color:#071b52;
+    border:0;
+    background:transparent;
+    cursor:pointer;
+  }
+
+  .grps-mobile-toggle .bars{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .grps-mobile-toggle .bars i{
+    display:block;
+    width:27px;
+    height:3px;
+    border-radius:3px;
+    background:#071b52;
+  }
+
+  .grps-mobile-toggle .caption{
+    font-size:11px;
+    font-weight:700;
+  }
+
+  #grps-new-header .grps-mobile-drawer{
+    display:flex!important;
+    flex-direction:column;
+    position:fixed!important;
+    inset:0!important;
+    z-index:5000!important;
+    padding:24px 28px 28px;
+    height:100dvh;
+    overflow-y:auto;
+    background:linear-gradient(
+      165deg,#fff 65%,#effaff 84%,#dff9ee 100%
+    );
+    color:#071b52;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .2s,visibility .2s;
+  }
+
+  #grps-new-header .grps-mobile-drawer.open{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+
+  .grps-drawer-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:67px;
+    gap:12px;
+  }
+
+  .grps-drawer-head img{
+    width:auto;
+    height:auto;
+    max-height:58px;
+    max-width:65vw;
+  }
+
+  .grps-drawer-close{
+    width:48px;
+    height:48px;
+    flex:0 0 48px;
+    border:0;
+    background:transparent;
+    color:#071b52;
+    font-size:38px;
+    font-weight:300;
+    cursor:pointer;
+  }
+
+  .grps-drawer-links{
+    display:flex;
+    flex-direction:column;
+    margin:30px 0 20px;
+  }
+
+  #grps-new-header .grps-drawer-links a{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    min-height:69px;
+    color:#071b52!important;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+  }
+
+  .grps-drawer-icon{
+    width:30px;
+    flex:0 0 30px;
+    display:flex;
+  }
+
+  .grps-drawer-arrow{
+    margin-left:auto;
+    display:flex;
+  }
+
+  .grps-mobile-drawer svg{
+    width:25px;
+    height:25px;
+  }
+
+  .grps-drawer-actions{
+    display:grid;
+    gap:13px;
+    padding-top:26px;
+    border-top:1px solid #dcebf1;
+  }
+
+  #grps-new-header .grps-drawer-action{
+    display:flex;
+    align-items:center;
+    gap:19px;
+    min-height:65px;
+    padding:12px 20px;
+    border:2px solid #15a8de;
+    border-radius:999px;
+    background:#fff;
+    color:#071b52!important;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+  }
+
+  #grps-new-header .grps-drawer-action.primary{
+    color:#fff!important;
+    border:0;
+    background:linear-gradient(
+      100deg,#249bf0,#16b8cb 56%,#3cd59b
+    );
+  }
+
+  .grps-drawer-bottom{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:auto 0 0;
+    padding-top:40px;
+    font-size:11px;
+    color:#506376;
+  }
+
+  #grps-new-header .grps-drawer-bottom a{
+    color:inherit!important;
+    text-decoration:none;
+  }
+}
+
+@media(min-width:769px){
+  #grps-new-header .grps-mobile-toggle,
+  #grps-new-header .grps-mobile-drawer{
+    display:none!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .grps-mobile-drawer{
+    transition:none!important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -3598,6 +3811,64 @@ body:has(#grps-new-header) {
       <a href="../privacy/index.html">個人情報保護方針</a>
     </div>
   </nav>
+
+<button type="button" class="grps-mobile-toggle"
+        id="grpsDrawerOpen"
+        aria-label="メニューを開く"
+        aria-controls="grpsDrawer"
+        aria-expanded="false">
+  <span class="bars" aria-hidden="true">
+    <i></i><i></i><i></i>
+  </span>
+  <span class="caption">メニュー</span>
+</button>
+
+<div class="grps-mobile-drawer" id="grpsDrawer"
+     role="dialog" aria-modal="true"
+     aria-label="サイトメニュー"
+     aria-hidden="true" inert>
+
+  <div class="grps-drawer-head">
+    <a href="../index.html">
+      <img src="../grps_images/glowpas-logo-horizontal.png"
+           alt="グローパス">
+    </a>
+    <button id="grpsDrawerClose"
+            class="grps-drawer-close"
+            type="button"
+            aria-label="メニューを閉じる">×</button>
+  </div>
+
+  <nav class="grps-drawer-links"
+       aria-label="スマートフォン用メニュー">
+    <a href="../index.html"><span class="grps-drawer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 3l9 7v11h-6v-7H9v7H3z"/></svg></span><span>HOME</span><span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a><a href="../service/index.html"><span class="grps-drawer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="13" height="18" rx="2"/><path d="M9 8h7M9 12h7M9 16h5"/></svg></span><span>サービス内容</span><span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a><a href="../results/index.html"><span class="grps-drawer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V13h4v8M10 21V8h4v13M17 21V3h4v18M2 21h20"/></svg></span><span>実績</span><span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a><a href="../recruit/index.html"><span class="grps-drawer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="18" cy="9" r="2"/><path d="M2 21a7 7 0 0 1 14 0M16 16a5 5 0 0 1 6 5"/></svg></span><span>採用情報 ↗</span><span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a><a href="../company/index.html"><span class="grps-drawer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h2M14 7h2M9 11h2M14 11h2M11 21v-4h3v4"/></svg></span><span>会社概要</span><span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a>
+  </nav>
+
+  <div class="grps-drawer-actions">
+    <a class="grps-drawer-action primary"
+       href="../contact/index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg>
+      <span>お問い合わせ</span>
+      <span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+    </a>
+
+    <a class="grps-drawer-action"
+       href="../recruit/index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="18" cy="9" r="2"/><path d="M2 21a7 7 0 0 1 14 0M16 16a5 5 0 0 1 6 5"/></svg>
+      <span>採用情報 ↗</span>
+      <span class="grps-drawer-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+    </a>
+  </div>
+
+  <div class="grps-drawer-bottom">
+    <a href="../privacy/index.html">
+      プライバシーポリシー
+    </a>
+    <span>｜</span>
+    <a href="../sitemap.xml">サイトマップ</a>
+  </div>
+</div>
+
 </header>
 
 <section class="hero">
@@ -4043,6 +4314,78 @@ body:has(#grps-new-header) {
   }
 }
 </style>
+
+
+<script id="grps-mobile-drawer-script">
+(() => {
+  const button = document.getElementById("grpsDrawerOpen");
+  const drawer = document.getElementById("grpsDrawer");
+  const closeButton = document.getElementById("grpsDrawerClose");
+
+  if (!button || !drawer || !closeButton) return;
+
+  let previousFocus = null;
+
+  function openMenu() {
+    previousFocus = document.activeElement;
+    drawer.inert = false;
+    drawer.classList.add("open");
+    drawer.setAttribute("aria-hidden", "false");
+    button.setAttribute("aria-expanded", "true");
+    document.documentElement.classList.add("grps-drawer-open");
+    closeButton.focus();
+  }
+
+  function closeMenu() {
+    drawer.classList.remove("open");
+    drawer.setAttribute("aria-hidden", "true");
+    drawer.inert = true;
+    button.setAttribute("aria-expanded", "false");
+    document.documentElement.classList.remove("grps-drawer-open");
+
+    if (previousFocus && previousFocus.isConnected) {
+      previousFocus.focus();
+    }
+  }
+
+  button.addEventListener("click", openMenu);
+  closeButton.addEventListener("click", closeMenu);
+
+  drawer.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!drawer.classList.contains("open")) return;
+
+    if (event.key === "Escape") {
+      closeMenu();
+      return;
+    }
+
+    if (event.key === "Tab") {
+      const elements = [...drawer.querySelectorAll("a,button")];
+      const first = elements[0];
+      const last = elements[elements.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 &&
+        drawer.classList.contains("open")) {
+      closeMenu();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
