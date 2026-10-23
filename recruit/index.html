@@ -3633,7 +3633,7 @@ body:has(#grps-new-header) {
     font-weight:700;
   }
 
-  #grps-new-header .grps-mobile-drawer{
+  body > .grps-mobile-drawer{
     display:flex!important;
     flex-direction:column;
     position:fixed!important;
@@ -3652,7 +3652,7 @@ body:has(#grps-new-header) {
     transition:opacity .2s,visibility .2s;
   }
 
-  #grps-new-header .grps-mobile-drawer.open{
+  body > .grps-mobile-drawer.open{
     opacity:1;
     visibility:visible;
     pointer-events:auto;
@@ -3691,7 +3691,7 @@ body:has(#grps-new-header) {
     margin:30px 0 20px;
   }
 
-  #grps-new-header .grps-drawer-links a{
+  .grps-mobile-drawer .grps-drawer-links a{
     display:flex;
     align-items:center;
     gap:22px;
@@ -3725,7 +3725,7 @@ body:has(#grps-new-header) {
     border-top:1px solid #dcebf1;
   }
 
-  #grps-new-header .grps-drawer-action{
+  .grps-mobile-drawer .grps-drawer-action{
     display:flex;
     align-items:center;
     gap:19px;
@@ -3740,7 +3740,7 @@ body:has(#grps-new-header) {
     text-decoration:none;
   }
 
-  #grps-new-header .grps-drawer-action.primary{
+  .grps-mobile-drawer .grps-drawer-action.primary{
     color:#fff!important;
     border:0;
     background:linear-gradient(
@@ -3759,7 +3759,7 @@ body:has(#grps-new-header) {
     color:#506376;
   }
 
-  #grps-new-header .grps-drawer-bottom a{
+  .grps-mobile-drawer .grps-drawer-bottom a{
     color:inherit!important;
     text-decoration:none;
   }
@@ -3767,7 +3767,7 @@ body:has(#grps-new-header) {
 
 @media(min-width:769px){
   #grps-new-header .grps-mobile-toggle,
-  #grps-new-header .grps-mobile-drawer{
+  body > .grps-mobile-drawer{
     display:none!important;
   }
 }
@@ -3777,6 +3777,99 @@ body:has(#grps-new-header) {
     transition:none!important;
   }
 }
+
+/* スマホヘッダー配置修正 */
+@media screen and (max-width:768px) {
+  #grps-new-header {
+    position:fixed!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    height:76px!important;
+    z-index:1000!important;
+    background:#fff!important;
+  }
+
+  #grps-new-header .gnh-top {
+    position:relative!important;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    width:100%!important;
+    height:76px!important;
+    min-height:76px!important;
+    padding:8px 88px 8px 16px!important;
+    margin:0!important;
+  }
+
+  #grps-new-header .gnh-brand {
+    display:flex!important;
+    align-items:center!important;
+    min-width:0!important;
+    max-width:100%!important;
+  }
+
+  #grps-new-header .gnh-brand img {
+    display:block!important;
+    width:auto!important;
+    height:auto!important;
+    max-height:55px!important;
+    max-width:min(62vw,240px)!important;
+  }
+
+  #grps-new-header .gnh-links,
+  #grps-new-header .gnh-nav {
+    display:none!important;
+  }
+
+  #grps-new-header .grps-mobile-toggle {
+    position:absolute!important;
+    display:flex!important;
+    top:6px!important;
+    right:12px!important;
+    left:auto!important;
+    bottom:auto!important;
+    margin:0!important;
+    padding:0!important;
+    width:64px!important;
+    height:64px!important;
+    z-index:1100!important;
+  }
+
+  body > .grps-mobile-drawer {
+    position:fixed!important;
+    inset:0!important;
+    width:100%!important;
+    height:100dvh!important;
+    max-height:100dvh!important;
+    z-index:99999!important;
+  }
+
+  body > .grps-mobile-drawer.open {
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+
+  body > .menu-overlay,
+  body > .side-menu {
+    display:none!important;
+  }
+
+  body:has(#grps-new-header) {
+    padding-top:76px!important;
+  }
+}
+
+@media screen and (min-width:769px) {
+  body > .grps-mobile-drawer {
+    display:none!important;
+  }
+}
+
 </style>
 
 </head>
@@ -4323,6 +4416,7 @@ body:has(#grps-new-header) {
   const closeButton = document.getElementById("grpsDrawerClose");
 
   if (!button || !drawer || !closeButton) return;
+  document.body.appendChild(drawer);
 
   let previousFocus = null;
 
