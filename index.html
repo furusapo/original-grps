@@ -1529,6 +1529,22 @@ body:has(#grps-new-header) {
 .grps-artwork-wrap{position:relative}
 .grps-mobile-motion{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
 .grps-mobile-motion-svg{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+#grps-mobile-photo-reveal{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  border:0;
+  pointer-events:none;
+  z-index:1;
+}
+.grps-mobile-link,
+.grps-mobile-arrow,
+.grps-mobile-line{
+  z-index:2;
+}
+
 .grps-mobile-link .grps-mobile-button{transform-box:fill-box;transform-origin:center;transition:transform .28s ease}
 .grps-mobile-link.service-active .grps-mobile-button-service{transform:translateY(-3px)}
 .grps-mobile-link.contact-active .grps-mobile-button-contact{transform:translateY(-3px)}
@@ -1597,6 +1613,12 @@ body:has(#grps-new-header) {
     <img src="./grps_images/original_top.jpg" alt="グローパス。イベント成功を支える。社名に込めた想い、サービス内容、実績、お問い合わせのご案内" width="1440" height="4231" decoding="async" fetchpriority="high" />
     <img class="grps-mobile-top-image" src="./grps_images/mobile_top.jpg" alt="グローパス スマートフォン版トップページ" decoding="async" />
 <div class="grps-mobile-motion" id="grps-mobile-motion-20261023">
+<object id="grps-mobile-photo-reveal"
+        type="image/svg+xml"
+        data="./grps_images/mobile_top_top.svg"
+        aria-hidden="true"
+        tabindex="-1"></object>
+
 <svg class="grps-mobile-motion-svg grps-mobile-link" aria-hidden="true" focusable="false" id="link-_サービスを見る_お問合せ" data-name="サービスを見る/お問合せ" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
   <defs>
     <style>
@@ -2255,5 +2277,68 @@ document.addEventListener('DOMContentLoaded',()=>{
  });
 });
 </script>
+
+<script id="grps-mobile-photo-animation">
+document.addEventListener('DOMContentLoaded', function () {
+  const obj = document.getElementById('grps-mobile-photo-reveal');
+  if (!obj) return;
+
+  function initialize() {
+    const doc = obj.contentDocument;
+    if (!doc || doc.getElementById('grps-photo-animation-style')) return;
+
+    const root = doc.documentElement;
+    const groups = Array.from(root.children).filter(
+      el => el.localName === 'g'
+    );
+
+    if (groups.length !== 3) return;
+
+    const style = doc.createElementNS(
+      'http://www.w3.org/2000/svg', 'style'
+    );
+    style.id = 'grps-photo-animation-style';
+    style.textContent = `
+      .grps-photo-reveal-item {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 1.1s ease, transform 1.1s ease;
+      }
+      .grps-photo-reveal-item.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .grps-photo-reveal-item {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    `;
+    root.insertBefore(style, root.firstChild);
+
+    groups.forEach(group => {
+      group.classList.add('grps-photo-reveal-item');
+    });
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        groups.forEach((group, index) => {
+          setTimeout(() => {
+            group.classList.add('is-visible');
+          }, index * 280 + 100);
+        });
+      });
+    });
+  }
+
+  obj.addEventListener('load', initialize);
+  if (obj.contentDocument?.readyState === 'complete') {
+    initialize();
+  }
+});
+</script>
+
 </body>
 </html>
