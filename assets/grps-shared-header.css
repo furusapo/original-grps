@@ -574,3 +574,73 @@ body:has(#grps-new-header) {
     display:block!important;
   }
 }
+/* GRPS SHARED FOOTER DESIGN 20261023 */
+html body footer.grps-site-footer {
+  text-align:center!important;
+  background:#fff!important;
+  padding:34px 20px 30px!important;
+  border-top:0!important;
+}
+html body footer.grps-site-footer > .grps-footer-logo {
+  display:inline-flex!important;
+  width:125px!important;
+  max-width:none!important;
+  min-width:0!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+html body footer.grps-site-footer > .grps-footer-logo img {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+}
+.grps-mobile-footer {display:none!important;}
+@media screen and (max-width:600px) {
+  html body footer.grps-site-footer {padding:24px 20px 22px!important;}
+  html body footer.grps-site-footer > .grps-footer-logo {display:none!important;}
+  html body footer.grps-site-footer > .grps-mobile-footer {
+    display:block!important;
+    max-width:520px!important;
+    margin:0 auto!important;
+  }
+  .grps-mobile-footer-row {
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:20px!important;
+  }
+  .grps-mobile-footer-brand {
+    display:block!important;
+    width:110px!important;
+    max-width:45%!important;
+    height:auto!important;
+  }
+  .grps-mobile-footer-top {
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:54px!important;
+    height:54px!important;
+    flex:0 0 54px!important;
+    border-radius:50%!important;
+    background:#07163e!important;
+    color:#fff!important;
+    text-decoration:none!important;
+  }
+  .grps-mobile-footer-top svg {
+    width:27px!important;
+    height:27px!important;
+    fill:none!important;
+    stroke:currentColor!important;
+    stroke-width:2.3!important;
+    stroke-linecap:round!important;
+    stroke-linejoin:round!important;
+  }
+  .grps-mobile-footer-copy {
+    margin:24px 0 0!important;
+    text-align:center!important;
+    font-size:11px!important;
+    line-height:1.6!important;
+    color:#777!important;
+  }
+}
