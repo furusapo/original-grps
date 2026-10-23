@@ -873,58 +873,99 @@ body:has(#grps-new-header) {
 </script>
 <!-- /GRPS-SEO-20261022 -->
 
+
 <style id="grps-contact-mobile-balance-20261023">
-/* お問い合わせページのスマホ表示のみ調整 */
-@media (max-width: 768px) {
+/* CONTACT MOBILE LAYOUT V2 */
+@media screen and (max-width: 768px) {
+
   .contact-wrap {
-    width: 100%;
-    padding: 28px 28px 52px !important;
+    width: 100% !important;
+    padding: 28px 0 52px !important;
   }
 
   .contact-wrap .contact-inner {
-    width: 100% !important;
-    max-width: 520px !important;
-    margin-inline: auto !important;
+    width: 84% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
     padding: 0 !important;
   }
 
-  .contact-wrap .form-row {
-    min-width: 0;
+  .contact-inner .lead {
+    font-size: 13px !important;
+    line-height: 1.85 !important;
+    margin-bottom: 20px !important;
+    letter-spacing: 0 !important;
   }
 
-  .contact-wrap .form-row > div,
-  .contact-wrap input,
-  .contact-wrap textarea {
-    min-width: 0;
-    max-width: 100%;
+  .contact-inner .required-note {
+    font-size: 12px !important;
   }
 
-  #grps-new-header .gnh-brand img {
+  .contact-inner .form-row {
     display: block !important;
-    width: auto !important;
-    height: 43px !important;
-    max-width: 125px !important;
-    object-fit: contain !important;
+    padding: 15px 0 !important;
+    min-width: 0 !important;
+  }
+
+  .contact-inner .form-label {
+    display: block !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    padding: 0 0 8px !important;
+  }
+
+  .contact-inner .req {
+    font-size: 10px !important;
+  }
+
+  .contact-inner .radio-group {
+    gap: 20px !important;
+    padding-top: 4px !important;
+  }
+
+  .contact-inner .radio-group label {
+    font-size: 13px !important;
+  }
+
+  .contact-inner .form-row > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .contact-inner input[type="text"],
+  .contact-inner input[type="email"],
+  .contact-inner input[type="tel"],
+  .contact-inner textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: 16px !important;
+    padding: 11px 12px !important;
+  }
+
+  .contact-inner textarea {
+    min-height: 120px !important;
+  }
+
+  .contact-inner .submit-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: 14px !important;
+  }
+
+  .contact-inner .form-status {
+    font-size: 12px !important;
   }
 }
 
-@media (max-width: 430px) {
-  .contact-wrap {
-    padding: 26px 22px 48px !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .contact-wrap {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-
-  #grps-new-header .gnh-brand img {
-    max-width: 110px !important;
+@media screen and (max-width: 360px) {
+  .contact-wrap .contact-inner {
+    width: 88% !important;
   }
 }
 </style>
+
 
 </head>
 <body>
