@@ -537,3 +537,27 @@ body:has(#grps-new-header) {
     pointer-events:none !important;
   }
 }
+/* GRPS ALL-PAGE MOBILE HEADER NORMALIZER 20261023 */
+@media screen and (max-width:600px) {
+  html body #grps-new-header {
+    height:auto!important;
+    min-height:0!important;
+  }
+  html body #grps-new-header .gnh-top {
+    width:100%!important;
+    height:70px!important;
+    min-height:70px!important;
+    padding:0 18px!important;
+    margin:0!important;
+    gap:12px!important;
+  }
+  html body #grps-new-header .gnh-brand img {
+    width:auto!important;
+    max-width:145px!important;
+    height:40px!important;
+    max-height:40px!important;
+  }
+  html body:has(#grps-new-header) {
+    padding-top:132px!important;
+  }
+}
