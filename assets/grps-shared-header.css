@@ -561,3 +561,16 @@ body:has(#grps-new-header) {
     padding-top:132px!important;
   }
 }
+/* GRPS MOBILE COMMON MENU CONTROL 20261023 */
+@media screen and (max-width:600px) {
+  html body #grps-new-header .grps-mobile-toggle {
+    display:none!important;
+  }
+  html body #grps-new-header .gnh-mobile-menu-toggle {
+    display:flex!important;
+  }
+  html body:has(#grps-new-header) > .menu-overlay,
+  html body:has(#grps-new-header) > .side-menu {
+    display:block!important;
+  }
+}
