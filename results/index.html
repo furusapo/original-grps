@@ -362,6 +362,72 @@ body:has(#grps-new-header) {
 ]
 </script>
 <!-- /GRPS-SEO-20261022 -->
+
+<style id="grps-vertical-year-design-20261023">
+/* 参考HTMLに合わせた縦型YEARデザイン */
+.results .year-block {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  padding-left: 180px !important;
+}
+
+.results .year-heading {
+  position: static !important;
+  display: block !important;
+}
+
+.results .year-number {
+  display: block !important;
+  position: absolute !important;
+  top: 45px !important;
+  left: 12px !important;
+  right: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+  transform: none !important;
+  font-size: 150px !important;
+  line-height: .8 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.08em !important;
+  color: rgba(13,144,178,.12) !important;
+  opacity: 1 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.results .year-title,
+.results .result-list {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .results .year-block {
+    padding-left: 70px !important;
+  }
+
+  .results .year-number {
+    top: 35px !important;
+    left: 0 !important;
+    font-size: 72px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .results .year-block {
+    padding-left: 58px !important;
+  }
+
+  .results .year-number {
+    font-size: 62px !important;
+  }
+}
+</style>
+
 </head><body><header id="grps-new-header">
   <div class="gnh-top">
     <a class="gnh-brand" href="../index.html"
