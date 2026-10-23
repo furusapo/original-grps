@@ -1553,6 +1553,35 @@ body:has(#grps-new-header) {
 .grps-mobile-tap{position:absolute;left:5.1%;width:38.1%;height:1.75%;border-radius:999px;pointer-events:auto;z-index:6;touch-action:manipulation}
 .grps-mobile-tap-service{top:14.6%}.grps-mobile-tap-contact{top:16.9%}
 .grps-mobile-tap:focus-visible{outline:2px solid #249bf0;outline-offset:3px}
+/* GRPS MOBILE LINK AREAS 20261023 */
+.grps-mobile-hotspot{
+  position:absolute;
+  display:block;
+  pointer-events:auto;
+  z-index:8;
+  touch-action:manipulation;
+  background:transparent;
+  border-radius:12px;
+}
+.grps-mobile-hotspot:focus-visible{
+  outline:3px solid #168ed3;
+  outline-offset:2px;
+}
+.grps-mobile-hotspot-01{
+  left:82.5%;top:66.5%;width:13%;height:3.1%;
+  border-radius:999px;
+}
+.grps-mobile-hotspot-02{
+  left:20.5%;top:74.6%;width:13%;height:3.1%;
+  border-radius:999px;
+}
+.grps-mobile-hotspot-form{
+  left:0.5%;top:90%;width:48.5%;height:9.5%;
+}
+.grps-mobile-hotspot-line{
+  left:50.5%;top:90%;width:49%;height:9.5%;
+}
+
 .grps-mobile-arrow>g{transform-box:fill-box;transform-origin:center;animation:grps-mobile-float 2.8s ease-in-out infinite}
 .grps-mobile-arrow>g:nth-of-type(2){animation-delay:-1.4s}
 @keyframes grps-mobile-float{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
@@ -1859,6 +1888,20 @@ body:has(#grps-new-header) {
 <a class="grps-mobile-tap grps-mobile-tap-contact"
    href="./contact/index.html"
    aria-label="お問い合わせ"></a>
+<a class="grps-mobile-hotspot grps-mobile-hotspot-01"
+   href="./service/index.html"
+   aria-label="01 サービス内容へ"></a>
+<a class="grps-mobile-hotspot grps-mobile-hotspot-02"
+   href="./results/index.html"
+   aria-label="02 実績へ"></a>
+<a class="grps-mobile-hotspot grps-mobile-hotspot-form"
+   href="./contact/index.html"
+   aria-label="お問い合わせフォームへ"></a>
+<a class="grps-mobile-hotspot grps-mobile-hotspot-line"
+   href="https://lin.ee/WwHYCKs"
+   aria-label="LINEで相談する"
+   target="_blank"
+   rel="noopener noreferrer"></a>
 </div>
 
     <object class="grps-photo-overlay"
