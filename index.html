@@ -1518,145 +1518,31 @@ body:has(#grps-new-header) {
 </script>
 <!-- /GRPS-SEO-20261022 -->
 
-<style id="grps-mobile-svg-motion-style">
-.grps-mobile-motion { display:none; }
 
-@media screen and (max-width:600px) {
-  .grps-artwork-wrap {
-    position:relative;
-  }
 
-  .grps-mobile-motion {
-    display:block;
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    z-index:5;
-  }
 
-  .grps-mobile-motion-svg {
-    position:absolute;
-    inset:0;
-    display:block;
-    width:100%;
-    height:100%;
-    overflow:visible;
-    pointer-events:none;
-  }
 
-  .grps-mobile-tap {
-    position:absolute;
-    display:block;
-    left:5.1%;
-    width:38.1%;
-    height:1.75%;
-    border-radius:999px;
-    pointer-events:auto;
-    cursor:pointer;
-    z-index:6;
-    -webkit-tap-highlight-color:transparent;
-  }
 
-  .grps-mobile-tap-service { top:14.6%; }
-  .grps-mobile-tap-contact { top:16.9%; }
-
-  .grps-mobile-link {
-    transition:filter .3s ease, opacity .3s ease;
-  }
-
-  .grps-mobile-motion:has(.grps-mobile-tap:active)
-  .grps-mobile-link {
-    filter:brightness(1.08);
-    opacity:.85;
-  }
-
-  .grps-mobile-arrow > g {
-    transform-box:fill-box;
-    transform-origin:center;
-    animation:grpsMobileFloatX 2.8s ease-in-out infinite;
-  }
-
-  .grps-mobile-arrow > g:nth-of-type(2) {
-    animation-delay:-1.4s;
-  }
-
-  @keyframes grpsMobileFloatX {
-    0%,100% { transform:translateX(0); }
-    50% { transform:translateX(5px); }
-  }
-
-  .grps-mobile-line > line {
-    stroke-dasharray:34;
-    stroke-dashoffset:34;
-    transition:stroke-dashoffset 1.3s ease-out;
-  }
-
-  .grps-mobile-line > line.is-visible {
-    stroke-dashoffset:0;
-  }
+<style id="grps-mobile-animation">
+.grps-mobile-motion{display:none}
+@media(max-width:600px){
+.grps-artwork-wrap{position:relative}
+.grps-mobile-motion{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+.grps-mobile-motion-svg{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.grps-mobile-link>path,.grps-mobile-link>text,.grps-mobile-link>g{transform-box:fill-box;transform-origin:center;transition:transform .28s ease,opacity .28s ease}
+.grps-mobile-link.service-active>path,.grps-mobile-link.service-active>text:first-of-type{transform:translateY(-3px);opacity:.84}
+.grps-mobile-link.contact-active>g,.grps-mobile-link.contact-active>text:last-of-type{transform:translateY(-3px);opacity:.84}
+.grps-mobile-tap{position:absolute;left:5.1%;width:38.1%;height:1.75%;border-radius:999px;pointer-events:auto;z-index:6;touch-action:manipulation}
+.grps-mobile-tap-service{top:14.6%}.grps-mobile-tap-contact{top:16.9%}
+.grps-mobile-tap:focus-visible{outline:2px solid #249bf0;outline-offset:3px}
+.grps-mobile-arrow>g{transform-box:fill-box;transform-origin:center;animation:grps-mobile-float 2.8s ease-in-out infinite}
+.grps-mobile-arrow>g:nth-of-type(2){animation-delay:-1.4s}
+@keyframes grps-mobile-float{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.grps-mobile-line>line{stroke-dasharray:34;stroke-dashoffset:34;transition:stroke-dashoffset 1.3s ease-out}
+.grps-mobile-line>line.is-visible{stroke-dashoffset:0}
 }
-
-@media (prefers-reduced-motion:reduce) {
-  .grps-mobile-arrow > g {
-    animation:none!important;
-  }
-  .grps-mobile-line > line {
-    transition:none!important;
-    stroke-dashoffset:0!important;
-  }
-}
+@media(prefers-reduced-motion:reduce){.grps-mobile-arrow>g{animation:none!important}.grps-mobile-line>line{transition:none!important;stroke-dashoffset:0!important}.grps-mobile-link>path,.grps-mobile-link>text,.grps-mobile-link>g{transition:none!important}}
 </style>
-
-
-<style id="grps-mobile-link-fix-20261023">
-@media screen and (max-width:600px) {
-
-  .grps-mobile-motion .grps-mobile-link > path,
-  .grps-mobile-motion .grps-mobile-link > text,
-  .grps-mobile-motion .grps-mobile-link > g {
-    transform-box:fill-box;
-    transform-origin:center;
-    transition:
-      transform .28s cubic-bezier(.2,.8,.2,1),
-      filter .28s ease,
-      opacity .28s ease;
-  }
-
-  .grps-mobile-motion .grps-mobile-link.is-service-pressed > path,
-  .grps-mobile-motion .grps-mobile-link.is-service-pressed > text:first-of-type {
-    transform:translateY(-3px) scale(1.025);
-    filter:drop-shadow(0 4px 5px rgba(18,59,102,.18));
-    opacity:.92;
-  }
-
-  .grps-mobile-motion .grps-mobile-link.is-contact-pressed > g,
-  .grps-mobile-motion .grps-mobile-link.is-contact-pressed > text:last-of-type {
-    transform:translateY(-3px) scale(1.025);
-    filter:drop-shadow(0 4px 5px rgba(18,59,102,.18));
-    opacity:.92;
-  }
-
-  .grps-mobile-motion .grps-mobile-tap {
-    touch-action:manipulation;
-  }
-
-  .grps-mobile-motion .grps-mobile-tap:focus-visible {
-    outline:2px solid #249bf0;
-    outline-offset:3px;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .grps-mobile-motion .grps-mobile-link > path,
-  .grps-mobile-motion .grps-mobile-link > text,
-  .grps-mobile-motion .grps-mobile-link > g {
-    transition:none!important;
-  }
-}
-</style>
-
 </head>
 <body>
 <h1 class="grps-seo-heading">株式会社グローパス｜埼玉県さいたま市大宮区のイベント企画・運営</h1>
@@ -1714,26 +1600,26 @@ body:has(#grps-new-header) {
 <svg class="grps-mobile-motion-svg grps-mobile-link" aria-hidden="true" focusable="false" id="link-_サービスを見る_お問合せ" data-name="サービスを見る/お問合せ" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
   <defs>
     <style>
-      .cls-1 {
+      .grps-link-cls-1 {
         fill: #2ea7e0;
       }
 
-      .cls-1, .cls-2 {
+      .grps-link-cls-1, .grps-link-cls-2 {
         font-family: HiraKakuProN-W6-83pv-RKSJ-H, 'Hiragino Kaku Gothic ProN';
         font-size: 8.7px;
       }
 
-      .cls-3 {
+      .grps-link-cls-3 {
         fill: none;
         stroke: url(#link-_名称未設定グラデーション_24);
         stroke-miterlimit: 10;
       }
 
-      .cls-4, .cls-2 {
+      .grps-link-cls-4, .grps-link-cls-2 {
         fill: #fff;
       }
 
-      .cls-5 {
+      .grps-link-cls-5 {
         fill: url(#link-_名称未設定グラデーション_521);
       }
     </style>
@@ -1749,54 +1635,54 @@ body:has(#grps-new-header) {
       <stop offset="1" stop-color="#20bacc"/>
     </linearGradient>
   </defs>
-  <path class="cls-5" d="M163.095,249.048c0-7.732-5.545-14.001-12.384-14.001-.284,0-49.472.015-49.751.036H33.322c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h118.964c6.833-.009,12.37-6.274,12.37-14.001Z"/>
-  <text class="cls-2" transform="translate(61.387 252.788)"><tspan x="0" y="0">サービスを見る</tspan></text>
+  <path class="grps-link-cls-5" d="M163.095,249.048c0-7.732-5.545-14.001-12.384-14.001-.284,0-49.472.015-49.751.036H33.322c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h118.964c6.833-.009,12.37-6.274,12.37-14.001Z"/>
+  <text class="grps-link-cls-2" transform="translate(61.387 252.788)"><tspan x="0" y="0">サービスを見る</tspan></text>
   <g>
-    <path class="cls-4" d="M161.424,286.227c0-7.732-5.545-14.001-12.384-14.001-.284,0-48.474.015-48.753.036H32.649c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h117.967c6.833-.009,12.37-6.274,12.37-14.001Z"/>
-    <path class="cls-3" d="M161.424,286.227c0-7.732-5.545-14.001-12.384-14.001-.284,0-48.474.015-48.753.036H32.649c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h117.967c6.833-.009,12.37-6.274,12.37-14.001Z"/>
+    <path class="grps-link-cls-4" d="M161.424,286.227c0-7.732-5.545-14.001-12.384-14.001-.284,0-48.474.015-48.753.036H32.649c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h117.967c6.833-.009,12.37-6.274,12.37-14.001Z"/>
+    <path class="grps-link-cls-3" d="M161.424,286.227c0-7.732-5.545-14.001-12.384-14.001-.284,0-48.474.015-48.753.036H32.649c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h117.967c6.833-.009,12.37-6.274,12.37-14.001Z"/>
   </g>
-  <text class="cls-1" transform="translate(66.735 289.423)"><tspan x="0" y="0">お問い合わせ</tspan></text>
+  <text class="grps-link-cls-1" transform="translate(66.735 289.423)"><tspan x="0" y="0">お問い合わせ</tspan></text>
 </svg><svg class="grps-mobile-motion-svg grps-mobile-arrow" aria-hidden="true" focusable="false" id="arrow-_矢印" data-name="矢印" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
   <defs>
     <style>
-      .cls-1 {
+      .grps-arrow-cls-1 {
         stroke: url(#arrow-_名称未設定グラデーション_521);
       }
 
-      .cls-1, .cls-2 {
+      .grps-arrow-cls-1, .grps-arrow-cls-2 {
         fill: #fff;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-4 {
+      .grps-arrow-cls-1, .grps-arrow-cls-2, .grps-arrow-cls-3, .grps-arrow-cls-4 {
         stroke-miterlimit: 10;
       }
 
-      .cls-2 {
+      .grps-arrow-cls-2 {
         stroke: url(#arrow-_名称未設定グラデーション_521-4);
       }
 
-      .cls-5 {
+      .grps-arrow-cls-5 {
         stroke: url(#arrow-_名称未設定グラデーション_521-3);
       }
 
-      .cls-5, .cls-6 {
+      .grps-arrow-cls-5, .grps-arrow-cls-6 {
         stroke-linejoin: round;
       }
 
-      .cls-5, .cls-6, .cls-3, .cls-4 {
+      .grps-arrow-cls-5, .grps-arrow-cls-6, .grps-arrow-cls-3, .grps-arrow-cls-4 {
         fill: none;
         stroke-linecap: round;
       }
 
-      .cls-6 {
+      .grps-arrow-cls-6 {
         stroke: url(#arrow-_名称未設定グラデーション_521-6);
       }
 
-      .cls-3 {
+      .grps-arrow-cls-3 {
         stroke: url(#arrow-_名称未設定グラデーション_521-2);
       }
 
-      .cls-4 {
+      .grps-arrow-cls-4 {
         stroke: url(#arrow-_名称未設定グラデーション_521-5);
       }
     </style>
@@ -1813,42 +1699,42 @@ body:has(#grps-new-header) {
     <linearGradient id="arrow-_名称未設定グラデーション_521-6" data-name="名称未設定グラデーション 521" x1="100.848" y1="1229.173" x2="104.127" y2="1223.156" xlink:href="#arrow-_名称未設定グラデーション_521"/>
   </defs>
   <g>
-    <circle class="cls-1" cx="334.405" cy="1095.098" r="9.084"/>
+    <circle class="grps-arrow-cls-1" cx="334.405" cy="1095.098" r="9.084"/>
     <g>
-      <line class="cls-3" x1="329.464" y1="1094.892" x2="338.682" y2="1094.892"/>
-      <polyline class="cls-5" points="335.307 1091.57 338.61 1094.889 334.862 1097.993"/>
+      <line class="grps-arrow-cls-3" x1="329.464" y1="1094.892" x2="338.682" y2="1094.892"/>
+      <polyline class="grps-arrow-cls-5" points="335.307 1091.57 338.61 1094.889 334.862 1097.993"/>
     </g>
   </g>
   <g>
-    <circle class="cls-2" cx="101.016" cy="1226.048" r="9.084"/>
+    <circle class="grps-arrow-cls-2" cx="101.016" cy="1226.048" r="9.084"/>
     <g>
-      <line class="cls-4" x1="96.075" y1="1225.842" x2="105.292" y2="1225.842"/>
-      <polyline class="cls-6" points="101.917 1222.521 105.221 1225.84 101.472 1228.943"/>
+      <line class="grps-arrow-cls-4" x1="96.075" y1="1225.842" x2="105.292" y2="1225.842"/>
+      <polyline class="grps-arrow-cls-6" points="101.917 1222.521 105.221 1225.84 101.472 1228.943"/>
     </g>
   </g>
 </svg><svg class="grps-mobile-motion-svg grps-mobile-line" aria-hidden="true" focusable="false" id="line-_レイヤー_8" data-name="レイヤー 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
   <defs>
     <style>
-      .cls-1 {
+      .grps-line-cls-1 {
         stroke: url(#line-_名称未設定グラデーション_521-4);
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-4 {
+      .grps-line-cls-1, .grps-line-cls-2, .grps-line-cls-3, .grps-line-cls-4 {
         fill: none;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: .5px;
       }
 
-      .cls-2 {
+      .grps-line-cls-2 {
         stroke: url(#line-_名称未設定グラデーション_521-2);
       }
 
-      .cls-3 {
+      .grps-line-cls-3 {
         stroke: url(#line-_名称未設定グラデーション_521-3);
       }
 
-      .cls-4 {
+      .grps-line-cls-4 {
         stroke: url(#line-_名称未設定グラデーション_521);
       }
     </style>
@@ -1862,10 +1748,10 @@ body:has(#grps-new-header) {
     <linearGradient id="line-_名称未設定グラデーション_521-3" data-name="名称未設定グラデーション 521" x1="132.908" y1="959.719" x2="165.379" y2="959.719" xlink:href="#line-_名称未設定グラデーション_521"/>
     <linearGradient id="line-_名称未設定グラデーション_521-4" data-name="名称未設定グラデーション 521" x1="212.447" y1="1352.01" x2="244.918" y2="1352.01" xlink:href="#line-_名称未設定グラデーション_521"/>
   </defs>
-  <line class="cls-4" x1="104.269" y1="338.875" x2="136.24" y2="338.875"/>
-  <line class="cls-2" x1="196.003" y1="626.345" x2="227.975" y2="626.345"/>
-  <line class="cls-3" x1="133.158" y1="959.719" x2="165.129" y2="959.719"/>
-  <line class="cls-1" x1="212.697" y1="1352.01" x2="244.668" y2="1352.01"/>
+  <line class="grps-line-cls-4" x1="104.269" y1="338.875" x2="136.24" y2="338.875"/>
+  <line class="grps-line-cls-2" x1="196.003" y1="626.345" x2="227.975" y2="626.345"/>
+  <line class="grps-line-cls-3" x1="133.158" y1="959.719" x2="165.129" y2="959.719"/>
+  <line class="grps-line-cls-1" x1="212.697" y1="1352.01" x2="244.668" y2="1352.01"/>
 </svg>
 <a class="grps-mobile-tap grps-mobile-tap-service"
    href="./service/index.html"
@@ -2332,89 +2218,37 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-<script id="grps-mobile-svg-motion-script">
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("grps-mobile-motion-20261023");
-  if (!root) return;
 
-  const lines = [...root.querySelectorAll(".grps-mobile-line > line")];
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
 
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-    lines.forEach(line => line.classList.add("is-visible"));
-    return;
-  }
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const index = Number(entry.target.dataset.lineIndex);
-        lines[index].classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {threshold:0});
 
-  const positions = [338.875,626.345,959.719,1352.01];
-  const wrap = root.parentElement;
 
-  positions.forEach((y,index) => {
-    const trigger = document.createElement("span");
-    trigger.dataset.lineIndex = index;
-    trigger.style.cssText =
-      "position:absolute;left:50%;top:" +
-      (y / 1609.629 * 100) +
-      "%;width:1px;height:1px;pointer-events:none;";
-    wrap.appendChild(trigger);
-    observer.observe(trigger);
+<script id="grps-mobile-animation-script">
+document.addEventListener('DOMContentLoaded',()=>{
+ const root=document.getElementById('grps-mobile-motion-20261023');if(!root)return;
+ const svg=root.querySelector('.grps-mobile-link');
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let navigating=false;
+ [['.grps-mobile-tap-service','service-active'],['.grps-mobile-tap-contact','contact-active']].forEach(([selector,cls])=>{
+  const a=root.querySelector(selector);if(!a||!svg)return;
+  a.addEventListener('click',e=>{
+   if(e.defaultPrevented||e.button>0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+   e.preventDefault();if(navigating)return;navigating=true;svg.classList.add(cls);
+   setTimeout(()=>location.assign(a.href),reduced?0:320);
   });
+ });
+ const lines=[...root.querySelectorAll('.grps-mobile-line>line')];
+ if(reduced||!('IntersectionObserver' in window)){lines.forEach(l=>l.classList.add('is-visible'));return}
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){entry.target._line.classList.add('is-visible');observer.unobserve(entry.target)}
+ }),{threshold:0});
+ lines.forEach(line=>{
+  const y=Number(line.getAttribute('y1'));if(!Number.isFinite(y))return;
+  const trigger=document.createElement('span');trigger._line=line;
+  Object.assign(trigger.style,{position:'absolute',left:'50%',top:(y/1609.629*100)+'%',width:'1px',height:'1px',pointerEvents:'none'});
+  root.appendChild(trigger);observer.observe(trigger);
+ });
 });
 </script>
-
-
-<script id="grps-mobile-link-tap-20261023">
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("grps-mobile-motion-20261023");
-  if (!root) return;
-
-  const svg = root.querySelector(".grps-mobile-link");
-  const service = root.querySelector(".grps-mobile-tap-service");
-  const contact = root.querySelector(".grps-mobile-tap-contact");
-
-  if (!svg || !service || !contact) return;
-
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  let navigating = false;
-
-  [
-    [service, "is-service-pressed"],
-    [contact, "is-contact-pressed"]
-  ].forEach(([link, className]) => {
-    link.addEventListener("click", event => {
-      if (event.defaultPrevented || event.button > 0 ||
-          event.metaKey || event.ctrlKey ||
-          event.shiftKey || event.altKey) return;
-
-      event.preventDefault();
-      if (navigating) return;
-
-      navigating = true;
-      svg.classList.add(className);
-
-      const destination = link.href;
-
-      window.setTimeout(() => {
-        window.location.assign(destination);
-      }, reducedMotion ? 0 : 320);
-    });
-  });
-});
-</script>
-
 </body>
 </html>
