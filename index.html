@@ -1609,6 +1609,54 @@ body:has(#grps-new-header) {
 }
 </style>
 
+
+<style id="grps-mobile-link-fix-20261023">
+@media screen and (max-width:600px) {
+
+  .grps-mobile-motion .grps-mobile-link > path,
+  .grps-mobile-motion .grps-mobile-link > text,
+  .grps-mobile-motion .grps-mobile-link > g {
+    transform-box:fill-box;
+    transform-origin:center;
+    transition:
+      transform .28s cubic-bezier(.2,.8,.2,1),
+      filter .28s ease,
+      opacity .28s ease;
+  }
+
+  .grps-mobile-motion .grps-mobile-link.is-service-pressed > path,
+  .grps-mobile-motion .grps-mobile-link.is-service-pressed > text:first-of-type {
+    transform:translateY(-3px) scale(1.025);
+    filter:drop-shadow(0 4px 5px rgba(18,59,102,.18));
+    opacity:.92;
+  }
+
+  .grps-mobile-motion .grps-mobile-link.is-contact-pressed > g,
+  .grps-mobile-motion .grps-mobile-link.is-contact-pressed > text:last-of-type {
+    transform:translateY(-3px) scale(1.025);
+    filter:drop-shadow(0 4px 5px rgba(18,59,102,.18));
+    opacity:.92;
+  }
+
+  .grps-mobile-motion .grps-mobile-tap {
+    touch-action:manipulation;
+  }
+
+  .grps-mobile-motion .grps-mobile-tap:focus-visible {
+    outline:2px solid #249bf0;
+    outline-offset:3px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .grps-mobile-motion .grps-mobile-link > path,
+  .grps-mobile-motion .grps-mobile-link > text,
+  .grps-mobile-motion .grps-mobile-link > g {
+    transition:none!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <h1 class="grps-seo-heading">株式会社グローパス｜埼玉県さいたま市大宮区のイベント企画・運営</h1>
@@ -2321,6 +2369,49 @@ document.addEventListener("DOMContentLoaded", () => {
       "%;width:1px;height:1px;pointer-events:none;";
     wrap.appendChild(trigger);
     observer.observe(trigger);
+  });
+});
+</script>
+
+
+<script id="grps-mobile-link-tap-20261023">
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.getElementById("grps-mobile-motion-20261023");
+  if (!root) return;
+
+  const svg = root.querySelector(".grps-mobile-link");
+  const service = root.querySelector(".grps-mobile-tap-service");
+  const contact = root.querySelector(".grps-mobile-tap-contact");
+
+  if (!svg || !service || !contact) return;
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  let navigating = false;
+
+  [
+    [service, "is-service-pressed"],
+    [contact, "is-contact-pressed"]
+  ].forEach(([link, className]) => {
+    link.addEventListener("click", event => {
+      if (event.defaultPrevented || event.button > 0 ||
+          event.metaKey || event.ctrlKey ||
+          event.shiftKey || event.altKey) return;
+
+      event.preventDefault();
+      if (navigating) return;
+
+      navigating = true;
+      svg.classList.add(className);
+
+      const destination = link.href;
+
+      window.setTimeout(() => {
+        window.location.assign(destination);
+      }, reducedMotion ? 0 : 320);
+    });
   });
 });
 </script>
