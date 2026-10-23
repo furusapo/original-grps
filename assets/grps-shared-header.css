@@ -327,8 +327,8 @@ body:has(#grps-new-header) {
   }
   #grps-new-header .gnh-brand img {
     width:auto !important;
-    max-width:160px !important;
-    height:44px !important;
+    max-width:145px !important;
+    height:40px !important;
   }
   #grps-new-header .gnh-links,
   #grps-new-header .gnh-nav {
