@@ -136,4 +136,27 @@
     if (headerLogo?.src) footerLogo.src = headerLogo.src;
     pageFooter.appendChild(mobileFooter);
   }
+  /* GRPS MOBILE COMMON FOOTER 20261023 */
+  document.querySelectorAll("footer.grps-site-footer").forEach((pageFooter) => {
+    if (pageFooter.querySelector(".grps-mobile-footer")) return;
+
+    const mobileFooter = document.createElement("div");
+    mobileFooter.className = "grps-mobile-footer";
+    mobileFooter.innerHTML = `
+      <div class="grps-mobile-footer-row">
+        <img class="grps-mobile-footer-brand" alt="グローパス">
+        <a class="grps-mobile-footer-top" href="#" aria-label="ページの先頭に戻る">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 15l7-7 7 7"/>
+          </svg>
+        </a>
+      </div>
+      <p class="grps-mobile-footer-copy">© 2026 グローパス. All Rights Reserved.</p>`;
+
+    const footerLogo = mobileFooter.querySelector(".grps-mobile-footer-brand");
+    const headerLogo = document.querySelector("#grps-new-header .gnh-brand img");
+    if (headerLogo?.src) footerLogo.src = headerLogo.src;
+    pageFooter.appendChild(mobileFooter);
+  });
+
 })();
