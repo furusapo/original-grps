@@ -647,7 +647,7 @@ footer.grps-site-footer .grps-mobile-footer {
 <div class="grps-canvas grps-mobile" data-design-height="1609.6295" data-design-width="375">
 <img class="grps-background" src="./grps_images/mobile_top.jpg" alt="グローパス トップページ" width="375" height="1609.6295" decoding="async">
 <object class="grps-layer grps-layer-photo" type="image/svg+xml" data="./grps_images/mobile_top_photo.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-line" type="image/svg+xml" data="./grps_images/mobile_top_line.svg?v=draw-20261029" aria-hidden="true" tabindex="-1"></object>
+<object class="grps-layer grps-layer-line" type="image/svg+xml" data="./grps_images/mobile_top_line.svg?v=repeat-20261029" aria-hidden="true" tabindex="-1"></object>
 <object class="grps-layer grps-layer-arrow" type="image/svg+xml" data="./grps_images/mobile_top_arrow.svg" aria-hidden="true" tabindex="-1"></object>
 <object class="grps-layer grps-layer-link" type="image/svg+xml" data="./grps_images/mobile_top_link.svg" aria-hidden="true" tabindex="-1"></object>
 <a class="grps-hotspot" data-action="service-top" href="./service/index.html" aria-label="サービスを見る" style="left:5.1%;top:14.6%;width:38.1%;height:1.75%"></a>
@@ -699,49 +699,58 @@ footer.grps-site-footer .grps-mobile-footer {
   if(canvas.classList.contains('grps-mobile')){
    load('line',doc=>{
     const lines=[...doc.querySelectorAll('line.grps-line-draw')];
-    lines.forEach(line=>{
-     const length=line.getTotalLength();
-     line.style.strokeDasharray=String(length);
-     line.style.strokeDashoffset=reduced?'0':String(length);
-    });
+
     lines.forEach(line=>{
      const y=Number(line.getAttribute('y1'));
      if(!Number.isFinite(y))return;
+
+     if(reduced || !('IntersectionObserver' in window)){
+      line.classList.add('is-drawing');
+      return;
+     }
+
      const marker=document.createElement('span');
      Object.assign(marker.style,{
       position:'absolute',
       left:'50%',
       top:(y/h*100)+'%',
-      width:'1px',
-      height:'1px',
-      opacity:'0',
+      width:'2px',
+      height:'2px',
       pointerEvents:'none'
      });
      canvas.appendChild(marker);
-     const draw=()=>{
-      if(!reduced){
-       line.getBoundingClientRect();
-       requestAnimationFrame(()=>{
-        requestAnimationFrame(()=>{
-         line.style.strokeDashoffset='0';
-        });
-       });
-      }else{
-       line.style.strokeDashoffset='0';
-      }
-      marker.remove();
+
+     let frame1=0;
+     let frame2=0;
+     let active=false;
+
+     const reset=()=>{
+      cancelAnimationFrame(frame1);
+      cancelAnimationFrame(frame2);
+      line.classList.remove('is-drawing');
      };
-     if(reduced||!('IntersectionObserver' in window)){
-      draw();
-     }else{
-      const observer=new IntersectionObserver(entries=>{
-       if(entries.some(e=>e.isIntersecting)&&visible()){
-        draw();
-        observer.disconnect();
+
+     const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries){
+       const inside=entry.isIntersecting && visible();
+
+       if(inside===active)continue;
+       active=inside;
+
+       if(inside){
+        reset();
+        frame1=requestAnimationFrame(()=>{
+         frame2=requestAnimationFrame(()=>{
+          if(active)line.classList.add('is-drawing');
+         });
+        });
+       }else{
+        reset();
        }
-      },{rootMargin:'0px 0px -12% 0px'});
-      observer.observe(marker);
-     }
+      }
+     },{rootMargin:'0px 0px -12% 0px'});
+
+     observer.observe(marker);
     });
    });
    load('photo',doc=>{
