@@ -1291,6 +1291,140 @@ body:has(#grps-new-header) {
 }
 </style>
 
+
+<style>
+/* GRPS CONTACT CARD DESIGN 20261028 */
+
+/* PC版は変更しない */
+.grps-contact-eyebrow,
+.grps-contact-subtitle,
+.grps-contact-intro {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .page-title {
+    border-bottom: 0 !important;
+    background: transparent !important;
+  }
+
+  .page-title-inner {
+    height: 195px !important;
+    width: calc(100% - 48px) !important;
+    display: block !important;
+    padding-top: 36px !important;
+  }
+
+  .page-title-inner::before,
+  .page-title-inner::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .grps-contact-eyebrow {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    color: #159fdb;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .28em;
+    line-height: 1.5;
+  }
+
+  .grps-contact-eyebrow i {
+    display: block;
+    width: 44px;
+    height: 1px;
+    background: #159fdb;
+  }
+
+  .page-title .page-title-inner h1 {
+    position: relative !important;
+    margin: 14px 0 0 !important;
+    padding: 0 !important;
+    font-size: clamp(28px, 8vw, 36px) !important;
+    line-height: 1.3 !important;
+    letter-spacing: -.04em !important;
+    color: #092b5b !important;
+  }
+
+  .page-title .page-title-inner h1::before,
+  .page-title .page-title-inner h1::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .grps-contact-subtitle {
+    display: block !important;
+    margin: 10px 0 0;
+    color: #637d91;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contact-wrap {
+    padding-top: 0 !important;
+    background: transparent !important;
+  }
+
+  .grps-contact-intro {
+    display: flex !important;
+    align-items: center;
+    gap: 16px;
+    width: calc(100% - 32px);
+    max-width: 440px;
+    margin: 0 auto 28px;
+    padding: 24px 17px;
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 18px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 8px 28px rgba(56,133,176,.07);
+  }
+
+  .grps-contact-icon {
+    display: flex;
+    flex: 0 0 68px;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(195,236,250,.65);
+  }
+
+  .grps-contact-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .grps-contact-intro-text {
+    flex: 1;
+    min-width: 0;
+    color: #61758b;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .grps-contact-intro-text p {
+    margin: 0;
+  }
+
+  .grps-contact-intro-text .grps-contact-intro-heading {
+    margin-bottom: 10px;
+    color: #102f60;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.65;
+  }
+
+  .contact-inner > .lead {
+    display: none !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header id="grps-new-header">
@@ -1383,10 +1517,26 @@ body:has(#grps-new-header) {
 </header>
 <section class="page-title">
 <div class="page-title-inner">
+<div class="grps-contact-eyebrow" aria-hidden="true">
+  <span>CONTACT</span><i></i>
+</div>
 <h1>お問い合わせ</h1>
+<p class="grps-contact-subtitle">お気軽にご相談ください</p>
 </div>
 </section>
 <main class="contact-wrap">
+<section class="grps-contact-intro" aria-label="お問い合わせのご案内">
+  <div class="grps-contact-icon" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="none">
+      <rect x="7" y="12" width="34" height="25" rx="4" fill="#079FE4"/>
+      <path d="M10 16L24 27L38 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="grps-contact-intro-text">
+    <p class="grps-contact-intro-heading">当ホームページをご覧いただき、<br>ありがとうございます。</p>
+    <p>お問い合わせの方は、下記のフォームに<br class="grps-contact-break">必要事項をご入力ください。<br>通常、数日以内にご返信いたします。</p>
+  </div>
+</section>
 <div class="contact-inner">
 <p class="lead">
       当ホームページをご覧いただき、ありがとうございます。<br/>
