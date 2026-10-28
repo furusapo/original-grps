@@ -696,15 +696,76 @@ footer.grps-site-footer .grps-mobile-footer {
    const observer=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting&&visible()){fn();observer.disconnect();trigger.remove()}}},{rootMargin:'0px 0px -8% 0px'});
    observer.observe(trigger);
   };
-  load('line',doc=>{
-   const lines=[...doc.querySelectorAll('line')];
-   lines.forEach(line=>{const length=line.getTotalLength();line.style.strokeDasharray=String(length);line.style.strokeDashoffset=reduced?'0':String(length)});
-   lines.forEach(line=>{const y=Number(line.getAttribute('y1')||line.getAttribute('y2'));if(Number.isFinite(y))watch(w/2,y,()=>{line.style.strokeDashoffset='0'})});
-  });
-  load('photo',doc=>{
-   const groups=[...doc.querySelectorAll('svg > g')];
-   groups.forEach(group=>{const b=group.getBBox();watch(b.x+b.width/2,b.y+b.height/2,()=>group.classList.add('is-visible'))});
-  });
+  if(canvas.classList.contains('grps-mobile')){
+   load('line',doc=>{
+    const lines=[...doc.querySelectorAll('line.grps-line-draw')];
+    lines.forEach(line=>{
+     const length=line.getTotalLength();
+     line.style.strokeDasharray=String(length);
+     line.style.strokeDashoffset=reduced?'0':String(length);
+    });
+    lines.forEach(line=>{
+     const y=Number(line.getAttribute('y1'));
+     if(!Number.isFinite(y))return;
+     const marker=document.createElement('span');
+     Object.assign(marker.style,{
+      position:'absolute',
+      left:'50%',
+      top:(y/h*100)+'%',
+      width:'1px',
+      height:'1px',
+      opacity:'0',
+      pointerEvents:'none'
+     });
+     canvas.appendChild(marker);
+     const draw=()=>{
+      line.style.strokeDashoffset='0';
+      marker.remove();
+     };
+     if(reduced||!('IntersectionObserver' in window)){
+      draw();
+     }else{
+      const observer=new IntersectionObserver(entries=>{
+       if(entries.some(e=>e.isIntersecting)&&visible()){
+        draw();
+        observer.disconnect();
+       }
+      },{rootMargin:'0px 0px -12% 0px'});
+      observer.observe(marker);
+     }
+    });
+   });
+   load('photo',doc=>{
+    const groups=[...doc.querySelectorAll('svg > g.grps-photo-piece')];
+    const show=()=>{
+     groups.forEach((group,index)=>{
+      setTimeout(()=>group.classList.add('is-visible'),
+       reduced?0:index*650);
+     });
+    };
+    if(reduced||!('IntersectionObserver' in window)){
+     show();
+    }else{
+     const observer=new IntersectionObserver(entries=>{
+      if(entries.some(e=>e.isIntersecting)&&visible()){
+       show();
+       observer.disconnect();
+      }
+     },{threshold:0.01});
+     observer.observe(canvas);
+    }
+   });
+  }else{
+   load('line',doc=>{
+    const lines=[...doc.querySelectorAll('line')];
+    lines.forEach(line=>{const length=line.getTotalLength();line.style.strokeDasharray=String(length);line.style.strokeDashoffset=reduced?'0':String(length)});
+    lines.forEach(line=>{const y=Number(line.getAttribute('y1')||line.getAttribute('y2'));if(Number.isFinite(y))watch(w/2,y,()=>{line.style.strokeDashoffset='0'})});
+   });
+   load('photo',doc=>{
+    const groups=[...doc.querySelectorAll('svg > g')];
+    groups.forEach(group=>{const b=group.getBBox();watch(b.x+b.width/2,b.y+b.height/2,()=>group.classList.add('is-visible'))});
+   });
+  }
   const button=canvas.querySelector('.grps-layer-button, .grps-layer-link');
   canvas.querySelectorAll('.grps-hotspot').forEach(link=>{
    const key=link.dataset.action;
