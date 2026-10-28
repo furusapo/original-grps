@@ -1633,6 +1633,41 @@ body:has(#grps-new-header) {
 }
 </style>
   <link rel="stylesheet" href="./assets/grps-shared-header.css">
+
+<style>
+/* GRPS MOBILE ARROW ANIMATION 20261028 */
+@media screen and (max-width:600px) {
+  #grps-mobile-motion-20261023 > svg.grps-mobile-arrow {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 4 !important;
+    pointer-events: none !important;
+  }
+
+  #grps-mobile-motion-20261023 > svg.grps-mobile-arrow > g {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: grpsArrowSlide20261028 2.4s ease-in-out infinite;
+  }
+
+  #grps-mobile-motion-20261023 > svg.grps-mobile-arrow > g:nth-of-type(2) {
+    animation-delay: -1.2s;
+  }
+
+  @keyframes grpsArrowSlide20261028 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #grps-mobile-motion-20261023 > svg.grps-mobile-arrow > g {
+    animation: none !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <h1 class="grps-seo-heading">株式会社グローパス｜埼玉県さいたま市大宮区のイベント企画・運営</h1>
@@ -1788,99 +1823,74 @@ body:has(#grps-new-header) {
   </g>
   <text class="grps-link-cls-1" transform="translate(66.735 289.423)"><tspan x="0" y="0">お問い合わせ</tspan></text>
   </g>
-</svg><svg class="grps-mobile-motion-svg grps-mobile-arrow" aria-hidden="true" focusable="false" id="arrow-_矢印" data-name="矢印" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
+</svg><svg class="grps-mobile-motion-svg grps-mobile-arrow" aria-hidden="true" focusable="false" id="grps-mobile-arrow-_矢印" data-name="矢印" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
   <defs>
     <style>
-      .grps-arrow-cls-1 {
-        stroke: url(#arrow-_名称未設定グラデーション_521);
+      .cls-1 {
+        stroke: url(#grps-mobile-arrow-_名称未設定グラデーション_521);
       }
 
-      .grps-arrow-cls-1, .grps-arrow-cls-2 {
+      .cls-1, .cls-2 {
         fill: #fff;
       }
 
-      .grps-arrow-cls-1, .grps-arrow-cls-2, .grps-arrow-cls-3, .grps-arrow-cls-4 {
+      .cls-1, .cls-2, .cls-3, .cls-4 {
         stroke-miterlimit: 10;
       }
 
-      .grps-arrow-cls-2 {
-        stroke: url(#arrow-_名称未設定グラデーション_521-4);
+      .cls-2 {
+        stroke: url(#grps-mobile-arrow-_名称未設定グラデーション_521-4);
       }
 
-      .grps-arrow-cls-5 {
-        stroke: url(#arrow-_名称未設定グラデーション_521-3);
+      .cls-5 {
+        stroke: url(#grps-mobile-arrow-_名称未設定グラデーション_521-3);
       }
 
-      .grps-arrow-cls-5, .grps-arrow-cls-6 {
+      .cls-5, .cls-6 {
         stroke-linejoin: round;
       }
 
-      .grps-arrow-cls-5, .grps-arrow-cls-6, .grps-arrow-cls-3, .grps-arrow-cls-4 {
+      .cls-5, .cls-6, .cls-3, .cls-4 {
         fill: none;
         stroke-linecap: round;
       }
 
-      .grps-arrow-cls-6 {
-        stroke: url(#arrow-_名称未設定グラデーション_521-6);
+      .cls-6 {
+        stroke: url(#grps-mobile-arrow-_名称未設定グラデーション_521-6);
       }
 
-      .grps-arrow-cls-3 {
-        stroke: url(#arrow-_名称未設定グラデーション_521-2);
+      .cls-3 {
+        stroke: url(#grps-mobile-arrow-_名称未設定グラデーション_521-2);
       }
 
-      .grps-arrow-cls-4 {
-        stroke: url(#arrow-_名称未設定グラデーション_521-5);
+      .cls-4 {
+        stroke: url(#grps-mobile-arrow-_名称未設定グラデーション_521-5);
       }
     </style>
-    <linearGradient id="arrow-_名称未設定グラデーション_521" data-name="名称未設定グラデーション 521" x1="324.821" y1="1095.098" x2="343.989" y2="1095.098" gradientUnits="userSpaceOnUse">
+    <linearGradient id="grps-mobile-arrow-_名称未設定グラデーション_521" data-name="名称未設定グラデーション 521" x1="324.821" y1="1095.098" x2="343.989" y2="1095.098" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#249bf0"/>
       <stop offset=".339" stop-color="#1aadd8"/>
       <stop offset=".501" stop-color="#16b8cb"/>
       <stop offset=".999" stop-color="#3cea9b"/>
     </linearGradient>
-    <linearGradient id="arrow-_名称未設定グラデーション_521-2" data-name="名称未設定グラデーション 521" x1="328.964" y1="1094.892" x2="339.182" y2="1094.892">
-      <stop offset="0" stop-color="#249bf0"/>
-      <stop offset=".339" stop-color="#1aadd8"/>
-      <stop offset=".501" stop-color="#16b8cb"/>
-      <stop offset=".999" stop-color="#3cea9b"/>
-    </linearGradient>
-    <linearGradient id="arrow-_名称未設定グラデーション_521-3" data-name="名称未設定グラデーション 521" x1="334.238" y1="1098.222" x2="337.517" y2="1092.205">
-      <stop offset="0" stop-color="#249bf0"/>
-      <stop offset=".339" stop-color="#1aadd8"/>
-      <stop offset=".501" stop-color="#16b8cb"/>
-      <stop offset=".999" stop-color="#3cea9b"/>
-    </linearGradient>
-    <linearGradient id="arrow-_名称未設定グラデーション_521-4" data-name="名称未設定グラデーション 521" x1="91.432" y1="1226.048" x2="110.599" y2="1226.048">
-      <stop offset="0" stop-color="#249bf0"/>
-      <stop offset=".339" stop-color="#1aadd8"/>
-      <stop offset=".501" stop-color="#16b8cb"/>
-      <stop offset=".999" stop-color="#3cea9b"/>
-    </linearGradient>
-    <linearGradient id="arrow-_名称未設定グラデーション_521-5" data-name="名称未設定グラデーション 521" x1="95.575" y1="1225.842" x2="105.792" y2="1225.842">
-      <stop offset="0" stop-color="#249bf0"/>
-      <stop offset=".339" stop-color="#1aadd8"/>
-      <stop offset=".501" stop-color="#16b8cb"/>
-      <stop offset=".999" stop-color="#3cea9b"/>
-    </linearGradient>
-    <linearGradient id="arrow-_名称未設定グラデーション_521-6" data-name="名称未設定グラデーション 521" x1="100.848" y1="1229.173" x2="104.127" y2="1223.156">
-      <stop offset="0" stop-color="#249bf0"/>
-      <stop offset=".339" stop-color="#1aadd8"/>
-      <stop offset=".501" stop-color="#16b8cb"/>
-      <stop offset=".999" stop-color="#3cea9b"/>
-    </linearGradient>
+    <linearGradient id="grps-mobile-arrow-_名称未設定グラデーション_521-2" data-name="名称未設定グラデーション 521" x1="328.964" y1="1094.892" x2="339.182" y2="1094.892" xlink:href="#grps-mobile-arrow-_名称未設定グラデーション_521"/>
+    <linearGradient id="grps-mobile-arrow-_名称未設定グラデーション_521-3" data-name="名称未設定グラデーション 521" x1="334.238" y1="1098.222" x2="337.517" y2="1092.205" xlink:href="#grps-mobile-arrow-_名称未設定グラデーション_521"/>
+    <linearGradient id="grps-mobile-arrow-_名称未設定グラデーション_521-4" data-name="名称未設定グラデーション 521" x1="91.432" y1="1226.048" x2="110.599" y2="1226.048" xlink:href="#grps-mobile-arrow-_名称未設定グラデーション_521"/>
+    <linearGradient id="grps-mobile-arrow-_名称未設定グラデーション_521-5" data-name="名称未設定グラデーション 521" x1="95.575" y1="1225.842" x2="105.792" y2="1225.842" xlink:href="#grps-mobile-arrow-_名称未設定グラデーション_521"/>
+    <linearGradient id="grps-mobile-arrow-_名称未設定グラデーション_521-6" data-name="名称未設定グラデーション 521" x1="100.848" y1="1229.173" x2="104.127" y2="1223.156" xlink:href="#grps-mobile-arrow-_名称未設定グラデーション_521"/>
   </defs>
   <g>
-    <circle class="grps-arrow-cls-1" cx="334.405" cy="1095.098" r="9.084"/>
+    <circle class="cls-1" cx="334.405" cy="1095.098" r="9.084"/>
     <g>
-      <line class="grps-arrow-cls-3" x1="329.464" y1="1094.892" x2="338.682" y2="1094.892"/>
-      <polyline class="grps-arrow-cls-5" points="335.307 1091.57 338.61 1094.889 334.862 1097.993"/>
+      <line class="cls-3" x1="329.464" y1="1094.892" x2="338.682" y2="1094.892"/>
+      <polyline class="cls-5" points="335.307 1091.57 338.61 1094.889 334.862 1097.993"/>
     </g>
   </g>
   <g>
-    <circle class="grps-arrow-cls-2" cx="101.016" cy="1226.048" r="9.084"/>
+    <circle class="cls-2" cx="101.016" cy="1226.048" r="9.084"/>
     <g>
-      <line class="grps-arrow-cls-4" x1="96.075" y1="1225.842" x2="105.292" y2="1225.842"/>
-      <polyline class="grps-arrow-cls-6" points="101.917 1222.521 105.221 1225.84 101.472 1228.943"/>
+      <line class="cls-4" x1="96.075" y1="1225.842" x2="105.292" y2="1225.842"/>
+      <polyline class="cls-6" points="101.917 1222.521 105.221 1225.84 101.472 1228.943"/>
     </g>
   </g>
 </svg><svg class="grps-mobile-motion-svg grps-mobile-line" aria-hidden="true" focusable="false" id="line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 1609.629">
