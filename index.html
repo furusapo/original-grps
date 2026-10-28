@@ -1587,6 +1587,22 @@ body:has(#grps-new-header) {
 @keyframes grps-mobile-float{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 .grps-mobile-line>line{stroke-dasharray:34;stroke-dashoffset:34;transition:stroke-dashoffset 1.3s ease-out}
 .grps-mobile-line>line.is-visible{stroke-dashoffset:0}
+
+/* Keep mobile SVG artwork above the JPG and legible on narrow screens. */
+#grps-mobile-motion-20261023{
+  z-index:20;
+  visibility:visible;
+}
+#grps-mobile-motion-20261023>.grps-mobile-motion-svg{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+#grps-mobile-motion-20261023>.grps-mobile-link{z-index:3!important}
+#grps-mobile-motion-20261023>.grps-mobile-arrow{z-index:4!important}
+#grps-mobile-motion-20261023>.grps-mobile-line{z-index:3!important}
+#grps-mobile-motion-20261023 .grps-mobile-line line{stroke-width:1px}
+
 }
 @media(prefers-reduced-motion:reduce){.grps-mobile-arrow>g{animation:none!important}.grps-mobile-line>line{transition:none!important;stroke-dashoffset:0!important}.grps-mobile-link .grps-mobile-button{transition:none!important}}
 
