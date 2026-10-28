@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="line" viewBox="0 0 375 1609.629">
-  <style>.grps-line-draw{transition:stroke-dashoffset 2.5s ease-out}@media(prefers-reduced-motion:reduce){.grps-line-draw{transition:none}}</style><defs>
+  <style>.grps-line-draw{transition:stroke-dashoffset 2.5s ease-in-out}@media(prefers-reduced-motion:reduce){.grps-line-draw{transition:none}}</style><defs>
     <style>
       .cls-1 {
         stroke: url(#_名称未設定グラデーション_521-4);

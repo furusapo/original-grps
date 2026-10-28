@@ -647,7 +647,7 @@ footer.grps-site-footer .grps-mobile-footer {
 <div class="grps-canvas grps-mobile" data-design-height="1609.6295" data-design-width="375">
 <img class="grps-background" src="./grps_images/mobile_top.jpg" alt="グローパス トップページ" width="375" height="1609.6295" decoding="async">
 <object class="grps-layer grps-layer-photo" type="image/svg+xml" data="./grps_images/mobile_top_photo.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-line" type="image/svg+xml" data="./grps_images/mobile_top_line.svg" aria-hidden="true" tabindex="-1"></object>
+<object class="grps-layer grps-layer-line" type="image/svg+xml" data="./grps_images/mobile_top_line.svg?v=draw-20261029" aria-hidden="true" tabindex="-1"></object>
 <object class="grps-layer grps-layer-arrow" type="image/svg+xml" data="./grps_images/mobile_top_arrow.svg" aria-hidden="true" tabindex="-1"></object>
 <object class="grps-layer grps-layer-link" type="image/svg+xml" data="./grps_images/mobile_top_link.svg" aria-hidden="true" tabindex="-1"></object>
 <a class="grps-hotspot" data-action="service-top" href="./service/index.html" aria-label="サービスを見る" style="left:5.1%;top:14.6%;width:38.1%;height:1.75%"></a>
@@ -719,7 +719,16 @@ footer.grps-site-footer .grps-mobile-footer {
      });
      canvas.appendChild(marker);
      const draw=()=>{
-      line.style.strokeDashoffset='0';
+      if(!reduced){
+       line.getBoundingClientRect();
+       requestAnimationFrame(()=>{
+        requestAnimationFrame(()=>{
+         line.style.strokeDashoffset='0';
+        });
+       });
+      }else{
+       line.style.strokeDashoffset='0';
+      }
       marker.remove();
      };
      if(reduced||!('IntersectionObserver' in window)){
