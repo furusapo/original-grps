@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_サービスを見る_お問合せ" data-name="サービスを見る/お問合せ" viewBox="0 0 375 1609.629">
+  <style>svg&gt;g{transition:transform .28s ease,filter .28s ease;transform-box:fill-box;transform-origin:center}svg&gt;g.is-active{transform:translateY(-4px);filter:brightness(1.07)}@media(prefers-reduced-motion:reduce){svg&gt;g{transition:none}}</style><defs>
+    <style>
+      .cls-1 {
+        fill: #2ea7e0;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: HiraKakuProN-W6-83pv-RKSJ-H, 'Hiragino Kaku Gothic ProN';
+        font-size: 8.7px;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: url(#_名称未設定グラデーション_24);
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: url(#_名称未設定グラデーション_521);
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_521" data-name="名称未設定グラデーション 521" x1="20.094" y1="249.048" x2="163.095" y2="249.048" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#249bf0"/>
+      <stop offset=".339" stop-color="#1aadd8"/>
+      <stop offset=".501" stop-color="#16b8cb"/>
+      <stop offset=".999" stop-color="#3cea9b"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_24" data-name="名称未設定グラデーション 24" x1="18.921" y1="286.227" x2="161.924" y2="286.227" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#077dc9"/>
+      <stop offset=".434" stop-color="#1094ca"/>
+      <stop offset="1" stop-color="#20bacc"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-5" d="M163.095,249.048c0-7.732-5.545-14.001-12.384-14.001-.284,0-49.472.015-49.751.036H33.322c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h118.964c6.833-.009,12.37-6.274,12.37-14.001Z"/>
+  <text class="cls-2" transform="translate(61.387 252.788)"><tspan x="0" y="0">サービスを見る</tspan></text>
+  <g>
+    <path class="cls-4" d="M161.424,286.227c0-7.732-5.545-14.001-12.384-14.001-.284,0-48.474.015-48.753.036H32.649c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h117.967c6.833-.009,12.37-6.274,12.37-14.001Z"/>
+    <path class="cls-3" d="M161.424,286.227c0-7.732-5.545-14.001-12.384-14.001-.284,0-48.474.015-48.753.036H32.649c-.279-.021-.56-.036-.844-.036-6.84,0-12.384,6.268-12.384,14.001,0,7.46,5.161,13.555,11.667,13.975v.025h117.967c6.833-.009,12.37-6.274,12.37-14.001Z"/>
+  </g>
+  <text class="cls-1" transform="translate(66.735 289.423)"><tspan x="0" y="0">お問い合わせ</tspan></text>
+</svg>
