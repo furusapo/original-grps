@@ -597,292 +597,31 @@ footer.grps-site-footer .grps-mobile-footer {
     color:#777;
   }}
 </style>
-<!-- GRPS-LIQUID-INTRO-20261029: cinematic Three.js symbol reveal -->
+<!-- GRPS-HOME-LOADING: lightweight first-visit intro -->
 <style>
-#grps-liquid-intro{position:fixed;inset:0;z-index:2147483000;display:none;place-items:center;overflow:hidden;background:#fff;opacity:1;transition:opacity .8s cubic-bezier(.22,.61,.36,1),visibility .8s;isolation:isolate}
-html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
-#grps-liquid-intro::before{content:"";position:absolute;inset:-20%;z-index:-1;background:radial-gradient(ellipse at 50% 48%,rgba(235,249,252,.54),rgba(255,255,255,0) 52%);pointer-events:none}
-#grps-liquid-intro.is-done{opacity:0;visibility:hidden;pointer-events:none}
-#grps-liquid-intro .grps-liquid-stage{position:relative;width:min(100vw,900px);height:min(100svh,760px);min-height:340px;display:grid;place-items:center}
-#grps-liquid-intro canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
-#grps-liquid-intro .grps-shield-window{z-index:2}
-#grps-liquid-intro .grps-construction{position:absolute;z-index:3;width:clamp(190px,29vw,330px);aspect-ratio:1.29;overflow:visible;pointer-events:none}
-#grps-liquid-intro .grps-construction .grps-guides{fill:none;stroke:#c4cdd1;stroke-width:1;vector-effect:non-scaling-stroke}
-#grps-liquid-intro .grps-construction .grps-guides path{stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:grps-guide-draw .95s .12s ease-out forwards,grps-guide-fade .35s 1.45s ease-in forwards}
-#grps-liquid-intro .grps-construction .grps-outline-path{fill:none;stroke:#aab7bd;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:grps-outline-draw 1.38s var(--draw-delay) cubic-bezier(.25,.75,.2,1) forwards,grps-outline-fade .55s 2.35s ease-out forwards}
-@keyframes grps-guide-draw{12%{opacity:.62}100%{stroke-dashoffset:0;opacity:.48}}
-@keyframes grps-guide-fade{to{opacity:0}}
-@keyframes grps-outline-draw{8%{opacity:.78}100%{stroke-dashoffset:0;opacity:.72}}
-@keyframes grps-outline-fade{to{opacity:0}}
-#grps-liquid-intro .grps-shield-window{position:relative;width:clamp(190px,29vw,330px);aspect-ratio:1.29;overflow:hidden;opacity:0;transform:scale(.94);filter:drop-shadow(0 16px 24px rgba(22,71,103,.12));animation:grps-symbol-in 1.15s 1.18s cubic-bezier(.2,.8,.2,1) forwards}
-#grps-liquid-intro .grps-shield-window .grps-shield-base{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;object-fit:contain;filter:grayscale(1) contrast(.92) brightness(1.58)}
-#grps-liquid-intro .grps-shield-sheen{position:absolute;inset:0;overflow:hidden;pointer-events:none;clip-path:polygon(-35% 0,-15% 0,-5% 100%,-25% 100%);animation:grps-metal-sweep 2.8s .25s ease-in-out infinite}
-#grps-liquid-intro .grps-shield-sheen img{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;filter:grayscale(1) brightness(2.8) contrast(1.25);mix-blend-mode:screen;opacity:.96}
-@keyframes grps-metal-sweep{0%,10%{clip-path:polygon(-35% 0,-15% 0,-5% 100%,-25% 100%)}48%,60%{clip-path:polygon(42% 0,62% 0,72% 100%,52% 100%)}100%{clip-path:polygon(135% 0,155% 0,165% 100%,145% 100%)}}
-#grps-liquid-intro.is-webgl .grps-shield-window{opacity:0!important;animation:none}
-#grps-liquid-intro .grps-liquid-caption{position:absolute;left:0;right:0;bottom:clamp(42px,10vh,92px);text-align:center;color:#708898;font:500 10px/1.4 system-ui,sans-serif;letter-spacing:.38em;opacity:0;animation:grps-caption-in .8s 1.55s ease forwards}
-#grps-liquid-intro .grps-liquid-rule{position:absolute;top:calc(50% + clamp(105px,17vw,175px));left:50%;width:min(38vw,250px);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(133,181,197,.44),transparent);transform-origin:center;opacity:0;animation:grps-rule-in 1s 1.55s ease forwards}
-@keyframes grps-symbol-in{0%{opacity:0;transform:scale(.94);filter:blur(8px) drop-shadow(0 16px 24px rgba(22,71,103,.12))}65%{opacity:1;filter:blur(0) drop-shadow(0 16px 24px rgba(22,71,103,.12))}100%{opacity:1;transform:scale(1);filter:drop-shadow(0 16px 24px rgba(22,71,103,.12))}}
-@keyframes grps-caption-in{to{opacity:.68}}
-@keyframes grps-rule-in{0%{opacity:0;transform:translateX(-50%) scaleX(.2)}100%{opacity:1;transform:translateX(-50%) scaleX(1)}}
-@media(max-width:600px){#grps-liquid-intro .grps-liquid-stage{height:100svh;min-height:320px}#grps-liquid-intro .grps-shield-window,#grps-liquid-intro .grps-construction{width:min(68vw,280px)}#grps-liquid-intro .grps-liquid-rule{top:calc(50% + 21vw);width:42vw}}
-@media(prefers-reduced-motion:reduce){#grps-liquid-intro{display:none!important}}
+#grps-home-loading{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:#fff;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility .55s ease}
+html.grps-home-loading #grps-home-loading{opacity:1;visibility:visible;pointer-events:auto}
+#grps-home-loading .grps-loading-inner{display:grid;justify-items:center;gap:20px}
+#grps-home-loading .grps-loading-ring{width:42px;height:42px;border:1px solid #e3edf0;border-top-color:#20b6ca;border-right-color:#45d5a2;border-radius:50%;animation:grps-loading-spin .9s linear infinite}
+#grps-home-loading .grps-loading-label{color:#91a6ae;font:500 9px/1 system-ui,sans-serif;letter-spacing:.32em}
+#grps-home-loading .grps-loading-line{width:112px;height:1px;background:#edf2f3;overflow:hidden}
+#grps-home-loading .grps-loading-line:after{content:"";display:block;width:38%;height:100%;background:linear-gradient(90deg,#249bf0,#16b8cb,#3cd59b);animation:grps-loading-progress 1.15s ease-in-out infinite}
+@keyframes grps-loading-spin{to{transform:rotate(360deg)}}
+@keyframes grps-loading-progress{0%{transform:translateX(-110%)}100%{transform:translateX(290%)}}
+@media(prefers-reduced-motion:reduce){#grps-home-loading{display:none!important}}
 </style>
 <script>
-(function(){try{const preview=new URLSearchParams(location.search).get('intro')==='preview';if((!preview&&localStorage.getItem('grps-home-liquid-intro-v3')==='seen')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;window.__GRPS_INTRO_PREVIEW__=preview;if(!preview)setTimeout(()=>{try{if(document.documentElement.classList.contains('grps-show-liquid-intro'))localStorage.setItem('grps-home-liquid-intro-v3','seen')}catch(e){}},3200);document.documentElement.classList.add('grps-show-liquid-intro')}catch(e){}})();
+(function(){try{var home=location.pathname==='/'||location.pathname.endsWith('/index.html');var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(home&&!reduced&&localStorage.getItem('grps-home-loading-v1')!=='seen'){document.documentElement.classList.add('grps-home-loading');localStorage.setItem('grps-home-loading-v1','seen');window.__GRPS_HOME_LOADING_STARTED__=Date.now()}}catch(e){}})();
 </script>
-</head>
-<body>
-<h1 class="grps-seo-heading">株式会社グローパス｜イベント企画・運営</h1>
-<header id="grps-new-header">
-  <div class="gnh-top">
-    <a class="gnh-brand" href="./index.html"
-       aria-label="グローパス ホーム">
-      <img
-        src="./grps_images/glowpas-logo-horizontal.png"
-        alt="グローパス">
-</a>
-
-    <div class="gnh-links">
-      <a href="./company/index.html">会社概要</a>
-      <a href="./company/index.html#access">アクセス</a>
-      <a class="gnh-contact" href="./contact/index.html">
-        お問い合わせ
-      </a>
-    </div>
-  </div>
-
-  <nav class="gnh-nav" aria-label="メインナビゲーション">
-    <div class="gnh-nav-inner">
-      <a href="./index.html" aria-current="page">HOME</a>
-      <a href="./service/index.html">サービス内容</a>
-      <a href="./results/index.html">実績</a>
-      <a class="gnh-recruit" href="./recruit/index.html"><span class="gnh-recruit-label">RECRUIT</span><span class="gnh-recruit-text">採用情報</span></a>
-      <a class="gnh-mobile-only" href="./company/index.html">会社概要</a>
-      <a class="gnh-mobile-only" href="./company/index.html#access">アクセス</a>
-      <a href="./privacy/index.html">個人情報保護方針</a>
-    </div>
-  </nav>
-</header>
-<main id="top" aria-label="グローパス トップページ">
-<div class="grps-canvas grps-desktop" data-design-height="4230" data-design-width="1440">
-<img class="grps-background" src="./grps_images/original_top.jpg" alt="グローパス トップページ" width="1440" height="4230" decoding="async">
-<object class="grps-layer grps-layer-photo" type="image/svg+xml" data="./grps_images/top_photo.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-line" type="image/svg+xml" data="./grps_images/top_line.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-arrow" type="image/svg+xml" data="./grps_images/top_arrow.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-button" type="image/svg+xml" data="./grps_images/top_button.svg" aria-hidden="true" tabindex="-1"></object>
-<a class="grps-hotspot" data-action="service-top" href="./service/index.html" aria-label="サービスを見る" style="left:3.1%;top:16.88%;width:22.3%;height:2.6%"></a>
-<a class="grps-hotspot" data-action="contact-top" href="./contact/index.html" aria-label="お問い合わせ" style="left:26.1%;top:16.88%;width:22.2%;height:2.6%"></a>
-<a class="grps-hotspot" data-action="service-arrow" href="./service/index.html" aria-label="サービス内容" style="left:83%;top:65%;width:14%;height:5%"></a>
-<a class="grps-hotspot" data-action="results-arrow" href="./results/index.html" aria-label="実績" style="left:7.5%;top:72.5%;width:29%;height:7.6%"></a>
-<a class="grps-hotspot" data-action="form" href="./contact/index.html" aria-label="お問い合わせフォーム" style="left:23.05%;top:94.3%;width:19.3%;height:1.8%"></a>
-<a class="grps-hotspot" data-action="line" href="https://lin.ee/WwHYCKs" aria-label="LINEで相談する" style="left:68%;top:94.3%;width:19.3%;height:1.8%" target="_blank" rel="noopener noreferrer"></a>
-</div>
-<div class="grps-canvas grps-mobile" data-design-height="1609.6295" data-design-width="375">
-<img class="grps-background" src="./grps_images/mobile_top.jpg" alt="グローパス トップページ" width="375" height="1609.6295" decoding="async">
-<object class="grps-layer grps-layer-photo" type="image/svg+xml" data="./grps_images/mobile_top_photo.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-line" type="image/svg+xml" data="./grps_images/mobile_top_line.svg?v=repeat-20261029" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-arrow" type="image/svg+xml" data="./grps_images/mobile_top_arrow.svg" aria-hidden="true" tabindex="-1"></object>
-<object class="grps-layer grps-layer-link" type="image/svg+xml" data="./grps_images/mobile_top_link.svg" aria-hidden="true" tabindex="-1"></object>
-<a class="grps-hotspot" data-action="service-top" href="./service/index.html" aria-label="サービスを見る" style="left:5.1%;top:14.6%;width:38.1%;height:1.75%"></a>
-<a class="grps-hotspot" data-action="contact-top" href="./contact/index.html" aria-label="お問い合わせ" style="left:5.1%;top:16.9%;width:38.1%;height:1.75%"></a>
-<a class="grps-hotspot" data-action="service-arrow" href="./service/index.html" aria-label="サービス内容" style="left:82.5%;top:66.5%;width:13%;height:3.1%"></a>
-<a class="grps-hotspot" data-action="results-arrow" href="./results/index.html" aria-label="実績" style="left:20.5%;top:74.6%;width:13%;height:3.1%"></a>
-<a class="grps-hotspot" data-action="form" href="./contact/index.html" aria-label="お問い合わせフォーム" style="left:0.5%;top:90%;width:48.5%;height:9.5%"></a>
-<a class="grps-hotspot" data-action="line" href="https://lin.ee/WwHYCKs" aria-label="LINEで相談する" style="left:50.5%;top:90%;width:49%;height:9.5%" target="_blank" rel="noopener noreferrer"></a>
-</div>
-</main>
-<footer aria-label="サイトフッター" class="grps-site-footer">
-<a aria-label="ページの先頭に戻る" class="grps-footer-logo" href="#top">
-<img alt="グローパス" src="./grps_images/glowpas-logo-vertical.png"/>
-</a>
-<div class="grps-mobile-footer">
-  <div class="grps-mobile-footer-row">
-    <img class="grps-mobile-footer-brand"
-         src="./grps_images/glowpas-logo-horizontal.png"
-         alt="グローパス">
-    <a class="grps-mobile-footer-top" href="#top"
-       aria-label="ページの先頭に戻る">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M5 15l7-7 7 7"/>
-      </svg>
-    </a>
-  </div>
-  <p class="grps-mobile-footer-copy">© 2026 グローパス. All Rights Reserved.</p>
-</div>
-</footer>
-
-<script>
-(() => {
- const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
- document.querySelectorAll('.grps-canvas').forEach(canvas=>{
-  const w=Number(canvas.dataset.designWidth),h=Number(canvas.dataset.designHeight);
-  const load=(kind,callback)=>{
-   const obj=canvas.querySelector('.grps-layer-'+kind);
-   if(!obj)return;
-   const run=()=>{try{const doc=obj.contentDocument;if(doc?.documentElement)callback(doc)}catch(e){console.warn('SVG layer unavailable',kind,e)}};
-   obj.addEventListener('load',run);if(obj.contentDocument?.documentElement)run();
-  };
-  const visible=()=>getComputedStyle(canvas).display!=='none';
-  const watch=(x,y,fn)=>{
-   const trigger=document.createElement('span');Object.assign(trigger.style,{position:'absolute',left:(x/w*100)+'%',top:(y/h*100)+'%',width:'1px',height:'1px',pointerEvents:'none',visibility:'hidden'});canvas.appendChild(trigger);
-   if(reduced||!('IntersectionObserver'in window)){fn();trigger.remove();return}
-   const observer=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting&&visible()){fn();observer.disconnect();trigger.remove()}}},{rootMargin:'0px 0px -8% 0px'});
-   observer.observe(trigger);
-  };
-  if(canvas.classList.contains('grps-mobile')){
-   load('line',doc=>{
-    const lines=[...doc.querySelectorAll('line.grps-line-draw')];
-
-    lines.forEach(line=>{
-     const y=Number(line.getAttribute('y1'));
-     if(!Number.isFinite(y))return;
-
-     if(reduced || !('IntersectionObserver' in window)){
-      line.classList.add('is-drawing');
-      return;
-     }
-
-     const marker=document.createElement('span');
-     Object.assign(marker.style,{
-      position:'absolute',
-      left:'50%',
-      top:(y/h*100)+'%',
-      width:'2px',
-      height:'2px',
-      pointerEvents:'none'
-     });
-     canvas.appendChild(marker);
-
-     let frame1=0;
-     let frame2=0;
-     let active=false;
-
-     const reset=()=>{
-      cancelAnimationFrame(frame1);
-      cancelAnimationFrame(frame2);
-      line.classList.remove('is-drawing');
-     };
-
-     const observer=new IntersectionObserver(entries=>{
-      for(const entry of entries){
-       const inside=entry.isIntersecting && visible();
-
-       if(inside===active)continue;
-       active=inside;
-
-       if(inside){
-        reset();
-        frame1=requestAnimationFrame(()=>{
-         frame2=requestAnimationFrame(()=>{
-          if(active)line.classList.add('is-drawing');
-         });
-        });
-       }else{
-        reset();
-       }
-      }
-     },{rootMargin:'0px 0px -12% 0px'});
-
-     observer.observe(marker);
-    });
-   });
-   load('photo',doc=>{
-    const groups=[...doc.querySelectorAll('svg > g.grps-photo-piece')];
-    const show=()=>{
-     groups.forEach((group,index)=>{
-      setTimeout(()=>group.classList.add('is-visible'),
-       reduced?0:index*650);
-     });
-    };
-    if(reduced||!('IntersectionObserver' in window)){
-     show();
-    }else{
-     const observer=new IntersectionObserver(entries=>{
-      if(entries.some(e=>e.isIntersecting)&&visible()){
-       show();
-       observer.disconnect();
-      }
-     },{threshold:0.01});
-     observer.observe(canvas);
-    }
-   });
-  }else{
-   load('line',doc=>{
-    const lines=[...doc.querySelectorAll('line')];
-    lines.forEach(line=>{const length=line.getTotalLength();line.style.strokeDasharray=String(length);line.style.strokeDashoffset=reduced?'0':String(length)});
-    lines.forEach(line=>{const y=Number(line.getAttribute('y1')||line.getAttribute('y2'));if(Number.isFinite(y))watch(w/2,y,()=>{line.style.strokeDashoffset='0'})});
-   });
-   load('photo',doc=>{
-    const groups=[...doc.querySelectorAll('svg > g')];
-    groups.forEach(group=>{const b=group.getBBox();watch(b.x+b.width/2,b.y+b.height/2,()=>group.classList.add('is-visible'))});
-   });
-  }
-  const button=canvas.querySelector('.grps-layer-button, .grps-layer-link');
-  canvas.querySelectorAll('.grps-hotspot').forEach(link=>{
-   const key=link.dataset.action;
-   if(!['service-top','contact-top','form','line'].includes(key))return;
-   const index=['service-top','contact-top','form','line'].indexOf(key);
-   const groupIndex=canvas.classList.contains('grps-mobile')?(index<2?0:-1):(index>=2?index-2:-1);
-   if(groupIndex<0)return;
-   const active=on=>{try{const groups=button?.contentDocument?.querySelectorAll('svg > g');groups?.[groupIndex]?.classList.toggle('is-active',on)}catch(e){}};
-   link.addEventListener('pointerenter',()=>active(true));link.addEventListener('pointerleave',()=>active(false));link.addEventListener('focus',()=>active(true));link.addEventListener('blur',()=>active(false));
-  });
- });
-})();
-</script>
-
-<script src="./assets/grps-shared-header.js" defer></script><div id="grps-liquid-intro" role="status" aria-label="グローパスのシンボルを表示しています">
- <div class="grps-liquid-stage">
-  <canvas id="grps-liquid-three" aria-hidden="true"></canvas>
-  <div class="grps-shield-window" aria-hidden="true"><img class="grps-shield-base" src="./grps_images/glowpas-logo-vertical.png" alt=""><span class="grps-shield-sheen" aria-hidden="true"><img src="./grps_images/glowpas-logo-vertical.png" alt=""></span></div>
-  <svg class="grps-construction" viewBox="0 0 1026 795" aria-hidden="true">
-   <g class="grps-guides">
-    <path pathLength="1" d="M82 397H944 M513 44V751 M238 646L824 149 M199 397H215 M929 397H945 M513 61V78 M513 718V735"/>
-   </g>
-   <g class="grps-trace">
-    <path class="grps-outline-path" pathLength="1" style="--draw-delay:0.12s" d="M871 649 L855 671 L829 698 L771 743 L711 773 L660 788 L601 795 L551 793 L511 786 L425 762 L365 753 L326 753 L281 760 L254 768 L209 788 L232 749 L264 707 L321 649 L352 625 L391 601 L430 584 L461 575 L492 570 L526 569 L591 578 L623 578 L652 572 L681 561 L698 564 L704 570 L708 581 L704 604 L687 624 L671 633 L636 642 L560 641 L538 645 L513 654 L539 666 L579 677 L600 680 L644 679 L696 664 L744 636 L773 613 L800 586 L867 502 L884 491 L907 488 L919 493 L926 502 L929 514 L927 535 L905 596 Z"/>
-    <path class="grps-outline-path" pathLength="1" style="--draw-delay:0.38s" d="M340 320 L327 348 L314 396 L310 434 L311 466 L317 503 L326 534 L353 589 L321 614 L273 665 L245 624 L229 592 L214 551 L200 478 L200 412 L212 345 L235 284 L255 247 L277 215 L321 166 L376 123 L430 94 L504 70 L567 62 L629 64 L704 80 L762 104 L792 121 L825 145 L768 179 L724 212 L668 184 L608 170 L546 171 L490 185 L458 199 L406 235 L365 279 Z"/>
-    <path class="grps-outline-path" pathLength="1" style="--draw-delay:0.64s" d="M643 449 L679 432 L726 403 L768 371 L808 334 L728 292 L985 204 L961 367 L940 479 L897 411 L872 433 L832 461 L761 496 L722 508 L670 517 L592 516 L536 504 L502 490 L575 475 L612 463 Z"/>
-   </g>
-  </svg>
-  <div class="grps-liquid-rule" aria-hidden="true"></div>
+<div id="grps-home-loading" role="status" aria-label="読み込み中">
+ <div class="grps-loading-inner" aria-hidden="true">
+  <span class="grps-loading-ring"></span>
+  <span class="grps-loading-label">LOADING</span>
+  <span class="grps-loading-line"></span>
  </div>
 </div>
-<script type="module">
-(async function(){
- const root=document.getElementById('grps-liquid-intro');
- if(!root||!document.documentElement.classList.contains('grps-show-liquid-intro')){root?.remove();return}
- let closed=false,renderer=null,raf=0;
- const finish=()=>{if(closed)return;closed=true;cancelAnimationFrame(raf);root.classList.add('is-done');document.documentElement.classList.remove('grps-show-liquid-intro');setTimeout(()=>{renderer?.dispose();root.remove()},850)};
- const failSafe=setTimeout(finish,window.__GRPS_INTRO_PREVIEW__?15000:6500);
- window.addEventListener('pageshow',e=>{if(e.persisted&&!window.__GRPS_INTRO_PREVIEW__){clearTimeout(failSafe);finish()}},{once:true});
- try{
-  const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js');
-  if(closed)return;
-  const stage=root.querySelector('.grps-liquid-stage'),canvas=root.querySelector('canvas'),w=stage.clientWidth,h=stage.clientHeight;
-  renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:false});
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.6));renderer.setSize(w,h,false);renderer.outputColorSpace=THREE.SRGBColorSpace;
-  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(34,w/h,.1,40);camera.position.z=8;
-  scene.add(new THREE.AmbientLight(0xffffff,1.6));
-  const key=new THREE.DirectionalLight(0xffffff,4.5);key.position.set(-3,4,6);scene.add(key);
-  const rim=new THREE.PointLight(0x8ce4f3,8);rim.position.set(3,1,4);scene.add(rim);
-  const cool=new THREE.PointLight(0x99bfff,5);cool.position.set(-4,-2,3);scene.add(cool);
-  const logo=new Image();logo.crossOrigin='anonymous';logo.src='./grps_images/glowpas-logo-vertical.png';await new Promise((resolve,reject)=>{logo.onload=resolve;logo.onerror=reject});
-  if(closed)return;
-  const maskCanvas=document.createElement('canvas');maskCanvas.width=1024;maskCanvas.height=794;
-  const ctx=maskCanvas.getContext('2d',{willReadFrequently:true});ctx.clearRect(0,0,1024,730);
-  ctx.drawImage(logo,128,45,1026,795,0,0,1024,794);
-  const texture=new THREE.CanvasTexture(maskCanvas);texture.colorSpace=THREE.SRGBColorSpace;texture.needsUpdate=true;
-  const uniforms={uMask:{value:texture},uTime:{value:0},uReveal:{value:0}};
-  const material=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms,vertexShader:`varying vec2 vUv;varying vec3 vNormal;varying vec3 vView;void main(){vUv=uv;vec4 mv=modelViewMatrix*vec4(position,1.);vNormal=normalize(normalMatrix*normal);vView=normalize(-mv.xyz);gl_Position=projectionMatrix*mv;}`,fragmentShader:`uniform sampler2D uMask;uniform float uTime;uniform float uReveal;varying vec2 vUv;varying vec3 vNormal;varying vec3 vView;void main(){float a=texture2D(uMask,vUv).a;if(a<.025)discard;vec3 N=normalize(vNormal);vec3 V=normalize(vView);float rim=pow(1.-max(dot(N,V),0.),2.4);float sweep=exp(-pow((vUv.x-(uTime*.34-.18))*15.,2.));float wave=.5+.5*sin(vUv.x*23.+vUv.y*8.-uTime*3.2);float band=smoothstep(.74,.98,wave);vec3 silver=mix(vec3(.54,.67,.74),vec3(.94,.98,1.),band);silver=mix(silver,vec3(.70,.91,.96),rim*.72);silver+=vec3(.55,.78,.9)*sweep*.42;float edge=smoothstep(0.,.12,vUv.x)*smoothstep(0.,.12,1.-vUv.x)*smoothstep(0.,.10,vUv.y)*smoothstep(0.,.10,1.-vUv.y);gl_FragColor=vec4(silver,a*edge*uReveal);}`});
-  const logoMesh=new THREE.Mesh(new THREE.PlaneGeometry(4.25,3.29),material);scene.add(logoMesh);
-  root.classList.add('is-webgl');
-  const start=performance.now();
-  function animate(now){if(closed)return;const t=(now-start)/1000;uniforms.uTime.value=t;uniforms.uReveal.value=THREE.MathUtils.smoothstep(t,.35,1.65);renderer.render(scene,camera);raf=requestAnimationFrame(animate)}
-  raf=requestAnimationFrame(animate);
- }catch(e){/* CSS metal reveal remains available when WebGL is unavailable. */}
-})();
+<script>
+(function(){var root=document.documentElement;if(!root.classList.contains('grps-home-loading'))return;var done=false;function finish(){if(done)return;done=true;var wait=Math.max(0,850-(Date.now()-(window.__GRPS_HOME_LOADING_STARTED__||Date.now())));setTimeout(function(){root.classList.remove('grps-home-loading')},wait)}window.addEventListener('load',finish,{once:true});setTimeout(finish,5200);if(document.readyState==='complete')finish()})();
 </script>
 </body>
 </html>
