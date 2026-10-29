@@ -606,10 +606,10 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
 #grps-liquid-intro .grps-liquid-stage{position:relative;width:min(100vw,900px);height:min(100svh,760px);min-height:340px;display:grid;place-items:center}
 #grps-liquid-intro canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 #grps-liquid-intro .grps-shield-window{position:relative;width:clamp(190px,29vw,330px);aspect-ratio:1.29;overflow:hidden;opacity:0;transform:scale(.94);filter:drop-shadow(0 16px 24px rgba(22,71,103,.12));animation:grps-symbol-in 1.15s 1.18s cubic-bezier(.2,.8,.2,1) forwards}
-#grps-liquid-intro .grps-shield-window .grps-shield-base{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;object-fit:contain;filter:grayscale(1) contrast(1.12) brightness(1.18)}
-#grps-liquid-intro .grps-shield-sheen{position:absolute;inset:0;overflow:hidden;pointer-events:none;clip-path:polygon(-45% 0,-34% 0,-24% 100%,-35% 100%);animation:grps-metal-sweep 3.6s .55s ease-in-out infinite}
-#grps-liquid-intro .grps-shield-sheen img{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;filter:grayscale(1) brightness(2.2) contrast(1.15);mix-blend-mode:screen}
-@keyframes grps-metal-sweep{0%,14%{clip-path:polygon(-45% 0,-34% 0,-24% 100%,-35% 100%)}65%,78%{clip-path:polygon(125% 0,136% 0,146% 100%,136% 100%)}100%{clip-path:polygon(125% 0,136% 0,146% 100%,136% 100%)}}
+#grps-liquid-intro .grps-shield-window .grps-shield-base{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;object-fit:contain;filter:grayscale(1) contrast(.92) brightness(1.58)}
+#grps-liquid-intro .grps-shield-sheen{position:absolute;inset:0;overflow:hidden;pointer-events:none;clip-path:polygon(-35% 0,-15% 0,-5% 100%,-25% 100%);animation:grps-metal-sweep 2.8s .25s ease-in-out infinite}
+#grps-liquid-intro .grps-shield-sheen img{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;filter:grayscale(1) brightness(2.8) contrast(1.25);mix-blend-mode:screen;opacity:.96}
+@keyframes grps-metal-sweep{0%,10%{clip-path:polygon(-35% 0,-15% 0,-5% 100%,-25% 100%)}48%,60%{clip-path:polygon(42% 0,62% 0,72% 100%,52% 100%)}100%{clip-path:polygon(135% 0,155% 0,165% 100%,145% 100%)}}
 #grps-liquid-intro.is-webgl .grps-shield-window{opacity:0!important;animation:none}
 #grps-liquid-intro .grps-liquid-caption{position:absolute;left:0;right:0;bottom:clamp(42px,10vh,92px);text-align:center;color:#708898;font:500 10px/1.4 system-ui,sans-serif;letter-spacing:.38em;opacity:0;animation:grps-caption-in .8s 1.55s ease forwards}
 #grps-liquid-intro .grps-liquid-rule{position:absolute;top:calc(50% + clamp(105px,17vw,175px));left:50%;width:min(38vw,250px);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(133,181,197,.44),transparent);transform-origin:center;opacity:0;animation:grps-rule-in 1s 1.55s ease forwards}
@@ -869,7 +869,7 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
   const start=performance.now();
   function animate(now){if(closed)return;const t=(now-start)/1000;uniforms.uTime.value=t;uniforms.uReveal.value=THREE.MathUtils.smoothstep(t,.55,1.8);arcs.rotation.z=Math.sin(t*.45)*.035;arcs.scale.setScalar(1+.025*Math.sin(t*1.2));seeds.forEach((s,i)=>{const k=i*3,tw=.65+.35*Math.sin(t*3.4+s.p);pos[k]=s.x+Math.sin(t*.65+s.p)*.018;pos[k+1]=s.y+Math.cos(t*.8+s.p)*.02;pos[k+2]=Math.sin(t*1.4+s.p)*.035;});pg.attributes.position.needsUpdate=true;pts.material.opacity=.35+.3*(.5+.5*Math.sin(t*2.2));renderer.render(scene,camera);raf=requestAnimationFrame(animate)}
   raf=requestAnimationFrame(animate);
- }catch(e){root.dataset.webglError=String(e&&e.message||e||'unknown').slice(0,240);}
+ }catch(e){/* CSS metal reveal remains available when WebGL is unavailable. */}
 })();
 </script>
 </body>
