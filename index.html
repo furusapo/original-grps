@@ -838,7 +838,7 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
  let closed=false,renderer=null,raf=0;
  const finish=()=>{if(closed)return;closed=true;cancelAnimationFrame(raf);root.classList.add('is-done');document.documentElement.classList.remove('grps-show-liquid-intro');setTimeout(()=>{renderer?.dispose();root.remove()},850)};
  const failSafe=setTimeout(finish,window.__GRPS_INTRO_PREVIEW__?11000:5800);
- window.addEventListener('pageshow',e=>{if(e.persisted){clearTimeout(failSafe);finish()}},{once:true});
+ window.addEventListener('pageshow',e=>{if(e.persisted&&!window.__GRPS_INTRO_PREVIEW__){clearTimeout(failSafe);finish()}},{once:true});
  try{
   const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js');
   if(closed)return;
