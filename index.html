@@ -617,7 +617,7 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
 @media(prefers-reduced-motion:reduce){#grps-liquid-intro{display:none!important}}
 </style>
 <script>
-(function(){try{const preview=new URLSearchParams(location.search).get('intro')==='preview';if((!preview&&localStorage.getItem('grps-home-liquid-intro-v3')==='seen')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(!preview)localStorage.setItem('grps-home-liquid-intro-v3','seen');document.documentElement.classList.add('grps-show-liquid-intro')}catch(e){}})();
+(function(){try{const preview=new URLSearchParams(location.search).get('intro')==='preview';if((!preview&&localStorage.getItem('grps-home-liquid-intro-v3')==='seen')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;window.__GRPS_INTRO_PREVIEW__=preview;if(!preview)localStorage.setItem('grps-home-liquid-intro-v3','seen');document.documentElement.classList.add('grps-show-liquid-intro')}catch(e){}})();
 </script>
 </head>
 <body>
@@ -834,7 +834,7 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
  if(!root||!document.documentElement.classList.contains('grps-show-liquid-intro')){root?.remove();return}
  let closed=false,renderer=null,raf=0;
  const finish=()=>{if(closed)return;closed=true;cancelAnimationFrame(raf);root.classList.add('is-done');document.documentElement.classList.remove('grps-show-liquid-intro');setTimeout(()=>{renderer?.dispose();root.remove()},850)};
- const failSafe=setTimeout(finish,4200);
+ const failSafe=setTimeout(finish,window.__GRPS_INTRO_PREVIEW__?11000:5800);
  window.addEventListener('pageshow',e=>{if(e.persisted){clearTimeout(failSafe);finish()}},{once:true});
  try{
   const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js');
