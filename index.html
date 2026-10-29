@@ -869,7 +869,7 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
   const start=performance.now();
   function animate(now){if(closed)return;const t=(now-start)/1000;uniforms.uTime.value=t;uniforms.uReveal.value=THREE.MathUtils.smoothstep(t,.55,1.8);arcs.rotation.z=Math.sin(t*.45)*.035;arcs.scale.setScalar(1+.025*Math.sin(t*1.2));seeds.forEach((s,i)=>{const k=i*3,tw=.65+.35*Math.sin(t*3.4+s.p);pos[k]=s.x+Math.sin(t*.65+s.p)*.018;pos[k+1]=s.y+Math.cos(t*.8+s.p)*.02;pos[k+2]=Math.sin(t*1.4+s.p)*.035;});pg.attributes.position.needsUpdate=true;pts.material.opacity=.35+.3*(.5+.5*Math.sin(t*2.2));renderer.render(scene,camera);raf=requestAnimationFrame(animate)}
   raf=requestAnimationFrame(animate);
- }catch(e){/* CSS symbol reveal remains as a dependable fallback. */}
+ }catch(e){root.dataset.webglError=String(e&&e.message||e||'unknown').slice(0,240);}
 })();
 </script>
 </body>
