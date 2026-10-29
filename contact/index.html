@@ -1522,22 +1522,39 @@ body:has(#grps-new-header) {
 </style>
 
 <style>
-/* Desktop CONTACT heading: match the actual WORKS h1 pseudo-element geometry. */
+/* PC CONTACT heading: reproduce the WORKS hero geometry (h1 + watermark). */
 @media screen and (min-width: 769px) {
   .page-title .page-title-inner {
-    height: 245px;
-    align-items: flex-start;
+    width: min(1100px, calc(100% - 80px));
+    height: 165px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: block;
   }
-  .page-title .page-title-inner h1 {
-    margin-top: 58px;
+  .page-title .page-title-inner > h1 {
     position: relative;
     z-index: 2;
+    margin: 0;
+    padding: 0 0 0 90px;
+    color: #12385f;
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .page-title .page-title-inner > h1::before {
+    left: 0;
+    top: 50%;
+    width: 65px;
+    height: 3px;
+    transform: translateY(-50%);
   }
   .page-title .page-title-inner::after {
     content: none !important;
     display: none !important;
   }
-  .page-title .page-title-inner h1::after {
+  .page-title .page-title-inner > h1::after {
     content: "CONTACT";
     position: absolute;
     left: 20px;
