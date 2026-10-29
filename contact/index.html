@@ -1333,12 +1333,20 @@ body:has(#grps-new-header) {
     line-height: 1.85;
   }
   .contact-wrap .grps-contact-intro-text p { margin: 0; }
+  .contact-wrap .grps-contact-intro-text br.grps-contact-break { display: none; }
   .contact-wrap .grps-contact-intro-text .grps-contact-intro-heading {
     margin-bottom: 10px;
     color: #102f60;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.65;
+  }
+  .contact-wrap .grps-contact-intro-text .grps-contact-intro-heading br {
+    display: none;
+  }
+  .contact-wrap .grps-contact-intro-text {
+    width: 100%;
+    max-width: none;
   }
   .contact-wrap .contact-inner > .lead { display: none !important; }
 }
