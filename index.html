@@ -617,7 +617,7 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
 @media(prefers-reduced-motion:reduce){#grps-liquid-intro{display:none!important}}
 </style>
 <script>
-(function(){try{if(localStorage.getItem('grps-home-liquid-intro-v3')==='seen'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;localStorage.setItem('grps-home-liquid-intro-v3','seen');document.documentElement.classList.add('grps-show-liquid-intro')}catch(e){}})();
+(function(){try{const preview=new URLSearchParams(location.search).get('intro')==='preview';if((!preview&&localStorage.getItem('grps-home-liquid-intro-v3')==='seen')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(!preview)localStorage.setItem('grps-home-liquid-intro-v3','seen');document.documentElement.classList.add('grps-show-liquid-intro')}catch(e){}})();
 </script>
 </head>
 <body>
