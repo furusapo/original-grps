@@ -611,7 +611,7 @@ html.grps-home-loading #grps-home-loading{opacity:1;visibility:visible;pointer-e
 @media(prefers-reduced-motion:reduce){#grps-home-loading{display:none!important}}
 </style>
 <script>
-(function(){try{var home=location.pathname==='/'||location.pathname.endsWith('/index.html');var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(home&&!reduced&&localStorage.getItem('grps-home-loading-v1')!=='seen'){document.documentElement.classList.add('grps-home-loading');localStorage.setItem('grps-home-loading-v1','seen');window.__GRPS_HOME_LOADING_STARTED__=Date.now()}}catch(e){}})();
+(function(){try{var home=location.pathname==='/'||location.pathname==='/index.html';var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(home&&!reduced&&localStorage.getItem('grps-home-loading-v1')!=='seen'){document.documentElement.classList.add('grps-home-loading');localStorage.setItem('grps-home-loading-v1','seen');window.__GRPS_HOME_LOADING_STARTED__=Date.now()}}catch(e){}})();
 </script>
 </head>
 <body>
