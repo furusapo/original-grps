@@ -1522,7 +1522,7 @@ body:has(#grps-new-header) {
 </style>
 
 <style>
-/* PC contact heading: place watermark below the Japanese title, as on Recruit. */
+/* Desktop CONTACT heading: match the actual WORKS h1 pseudo-element geometry. */
 @media screen and (min-width: 769px) {
   .page-title .page-title-inner {
     height: 245px;
@@ -1530,12 +1530,25 @@ body:has(#grps-new-header) {
   }
   .page-title .page-title-inner h1 {
     margin-top: 58px;
+    position: relative;
+    z-index: 2;
   }
   .page-title .page-title-inner::after {
-    left: 12px;
-    top: 100px;
-    font-size: 92px;
+    content: none !important;
+    display: none !important;
+  }
+  .page-title .page-title-inner h1::after {
+    content: "CONTACT";
+    position: absolute;
+    left: 20px;
+    top: 45px;
+    z-index: -1;
+    color: rgba(100, 165, 200, .15);
+    font-size: 95px;
     line-height: 1;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    white-space: nowrap;
     pointer-events: none;
   }
 }
