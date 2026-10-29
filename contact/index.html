@@ -1293,6 +1293,57 @@ body:has(#grps-new-header) {
 
 
 <style>
+/* Desktop contact introduction: use the same icon card as mobile. */
+@media screen and (min-width: 769px) {
+  .contact-wrap {
+    padding-top: 38px !important;
+  }
+  .contact-wrap .grps-contact-intro {
+    display: flex !important;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+    width: min(820px, calc(100% - 48px));
+    margin: 0 auto 28px;
+    padding: 26px 32px;
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 22px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 8px 28px rgba(56,133,176,.07);
+  }
+  .contact-wrap .grps-contact-icon {
+    display: flex;
+    flex: 0 0 76px;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: rgba(195,236,250,.65);
+  }
+  .contact-wrap .grps-contact-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+  .contact-wrap .grps-contact-intro-text {
+    flex: 1;
+    min-width: 0;
+    color: #61758b;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .contact-wrap .grps-contact-intro-text p { margin: 0; }
+  .contact-wrap .grps-contact-intro-text .grps-contact-intro-heading {
+    margin-bottom: 10px;
+    color: #102f60;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.65;
+  }
+  .contact-wrap .contact-inner > .lead { display: none !important; }
+}
+</style>
+<style>
 /* GRPS CONTACT CARD DESIGN 20261028 */
 
 /* PC版は変更しない */
