@@ -1461,6 +1461,65 @@ body:has(#grps-new-header) {
 }
 </style>
 
+<style>
+/* Contact type selector: desktop and mobile */
+.contact-inner .radio-group.grps-type-toggle {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px !important;
+  padding: 4px !important;
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid #d8e7f1;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(19, 71, 116, .07);
+}
+.contact-inner .grps-type-toggle label {
+  position: relative;
+  display: block !important;
+  min-width: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: inherit !important;
+}
+.contact-inner .grps-type-toggle input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+.contact-inner .grps-type-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: #123963;
+  font-size: clamp(14px, 3.5vw, 16px);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.contact-inner .grps-type-option svg { width: 22px; height: 22px; flex: none; }
+.contact-inner .grps-type-toggle input:checked + .grps-type-option {
+  background: linear-gradient(90deg, #0788ff, #16a5f5);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 139, 245, .2);
+}
+.contact-inner .grps-type-toggle input:focus-visible + .grps-type-option {
+  outline: 3px solid #073b78;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .contact-inner .radio-group.grps-type-toggle { max-width: none; }
+  .contact-inner .grps-type-option { min-height: 48px; gap: 8px; }
+}
+</style>
 </head>
 <body>
 <header id="grps-new-header">
@@ -1583,9 +1642,9 @@ body:has(#grps-new-header) {
 <form id="growpas-contact-form" onsubmit="return false;">
 <div class="form-row">
 <div class="form-label">法人・個人</div>
-<div class="radio-group">
-<label><input checked="" name="type" type="radio" value="法人"/> 法人</label>
-<label><input name="type" type="radio" value="個人"/> 個人</label>
+<div class="radio-group grps-type-toggle" role="group" aria-label="法人・個人の選択">
+<label><input checked="" name="type" type="radio" value="法人"/><span class="grps-type-option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4h10v17M10 8h1m3 0h1m-5 4h1m3 0h1m-5 4h1m3 0h1"/></svg><span>法人</span></span></label>
+<label><input name="type" type="radio" value="個人"/><span class="grps-type-option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2H4Z"/></svg><span>個人</span></span></label>
 </div>
 </div>
 <div class="form-row">
