@@ -597,6 +597,33 @@ footer.grps-site-footer .grps-mobile-footer {
     color:#777;
   }}
 </style>
+<!-- GRPS-LIQUID-INTRO-20261029: homepage only, once per tab session -->
+<style>
+#grps-liquid-intro{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:hidden;background:#f7fbff;opacity:1;transition:opacity .65s ease,visibility .65s ease}
+#grps-liquid-intro.is-done{opacity:0;visibility:hidden;pointer-events:none}
+#grps-liquid-intro .grps-liquid-stage{position:relative;width:min(72vw,440px);height:280px;display:grid;place-items:center}
+#grps-liquid-intro .grps-liquid-orb{position:absolute;width:82px;height:82px;border-radius:50%;background:radial-gradient(circle at 29% 23%,#fff 0%,#eaf5ff 13%,#8aa4ba 32%,#f7ffff 46%,#455d78 68%,#c9f3f5 88%);box-shadow:inset -10px -12px 24px #46617c55,0 20px 45px #0e6c9d24;filter:drop-shadow(0 4px 5px #385b7b22);animation:grps-liquid-form 1.85s cubic-bezier(.18,.8,.2,1) both}
+#grps-liquid-intro .grps-liquid-orb:before,#grps-liquid-intro .grps-liquid-orb:after{content:"";position:absolute;border-radius:50%;background:inherit;box-shadow:inherit}
+#grps-liquid-intro .grps-liquid-orb:before{width:33px;height:33px;left:-72px;top:9px;animation:grps-liquid-merge 1.25s .2s ease-in forwards}
+#grps-liquid-intro .grps-liquid-orb:after{width:22px;height:22px;right:-90px;bottom:4px;animation:grps-liquid-merge 1.2s .3s ease-in forwards}
+#grps-liquid-intro .grps-liquid-logo{position:relative;width:min(68vw,340px);height:auto;opacity:0;transform:scale(.82);filter:brightness(1.7) saturate(.3) drop-shadow(0 0 0 transparent);animation:grps-logo-reveal 1.45s 1.05s cubic-bezier(.2,.75,.2,1) forwards}
+#grps-liquid-intro .grps-liquid-flash{position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#e7ffffdd 0%,#b0f5f877 24%,transparent 68%);opacity:0;pointer-events:none;animation:grps-liquid-flare .7s 1.85s ease-out forwards}
+#grps-liquid-intro .grps-liquid-caption{position:absolute;bottom:14px;color:#5b87a3;font:600 10px/1.5 system-ui,sans-serif;letter-spacing:.36em;opacity:0;animation:grps-liquid-caption .7s 1.7s forwards}
+@keyframes grps-liquid-form{0%{transform:translateY(-155px) scale(.22,.65);opacity:0}26%{opacity:1}54%{transform:translateY(12px) scale(1.4,.48)}73%{transform:translateY(0) scale(.92,1.14)}100%{transform:scale(.2);opacity:0}}
+@keyframes grps-liquid-merge{to{transform:translate(70px,0) scale(.1);opacity:0}}
+@keyframes grps-logo-reveal{0%{opacity:0;transform:scale(.82);filter:brightness(1.7) saturate(.3) blur(6px)}45%{opacity:1;filter:brightness(1.5) saturate(.45) blur(0)}100%{opacity:1;transform:scale(1);filter:brightness(1) saturate(1) drop-shadow(0 4px 12px #218ac222)}}
+@keyframes grps-liquid-flare{0%{opacity:0;transform:scale(.4)}35%{opacity:.85}100%{opacity:0;transform:scale(2.4)}}
+@keyframes grps-liquid-caption{to{opacity:.7}}
+@media(max-width:600px){#grps-liquid-intro .grps-liquid-stage{height:220px}#grps-liquid-intro .grps-liquid-orb{width:62px;height:62px}#grps-liquid-intro .grps-liquid-logo{width:min(78vw,290px)}}
+@media(prefers-reduced-motion:reduce){#grps-liquid-intro{display:none!important}}
+</style>
+<script>
+(function(){try{if(sessionStorage.getItem('grps-home-liquid-intro-v1')==='seen'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('grps-home-liquid-intro-v1','seen');document.documentElement.classList.add('grps-show-liquid-intro')}catch(e){}})();
+</script>
+<style>
+#grps-liquid-intro{display:none}
+html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
+</style>
 </head>
 <body>
 <h1 class="grps-seo-heading">株式会社グローパス｜イベント企画・運営</h1>
@@ -799,5 +826,22 @@ footer.grps-site-footer .grps-mobile-footer {
 </script>
 
 <script src="./assets/grps-shared-header.js" defer></script>
+<div id="grps-liquid-intro" role="status" aria-label="グローパスのページを読み込み中">
+  <div class="grps-liquid-stage">
+    <div class="grps-liquid-orb" aria-hidden="true"></div>
+    <img class="grps-liquid-logo" src="./grps_images/glowpas-logo-horizontal.png" alt="グローパス" decoding="async">
+    <div class="grps-liquid-flash" aria-hidden="true"></div>
+    <div class="grps-liquid-caption" aria-hidden="true">GROWPASS</div>
+  </div>
+</div>
+<script>
+(function(){
+ const intro=document.getElementById('grps-liquid-intro');
+ if(!intro||!document.documentElement.classList.contains('grps-show-liquid-intro')){intro?.remove();return}
+ const finish=()=>{intro.classList.add('is-done');document.documentElement.classList.remove('grps-show-liquid-intro');setTimeout(()=>intro.remove(),750)};
+ setTimeout(finish,2850);
+ window.addEventListener('pageshow',e=>{if(e.persisted)finish()},{once:true});
+})();
+</script>
 </body>
 </html>
