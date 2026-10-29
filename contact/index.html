@@ -1525,14 +1525,21 @@ body:has(#grps-new-header) {
 /* PC CONTACT heading: reproduce the WORKS hero geometry (h1 + watermark). */
 @media screen and (min-width: 769px) {
   .page-title {
-    border-bottom: 0 !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    display: flex !important;
+    align-items: center !important;
   }
   .page-title .page-title-inner {
+    position: relative;
     width: min(1100px, calc(100% - 80px));
     max-width: none;
-    height: 260px;
+    height: auto !important;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
     padding: 40px 0;
     display: block;
   }
