@@ -597,22 +597,6 @@ footer.grps-site-footer .grps-mobile-footer {
     color:#777;
   }}
 </style>
-<!-- GRPS-HOME-LOADING: lightweight first-visit intro -->
-<style>
-#grps-home-loading{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:#fff;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility .55s ease}
-html.grps-home-loading #grps-home-loading{opacity:1;visibility:visible;pointer-events:auto}
-#grps-home-loading .grps-loading-inner{display:grid;justify-items:center;gap:20px}
-#grps-home-loading .grps-loading-ring{width:42px;height:42px;border:1px solid #e3edf0;border-top-color:#20b6ca;border-right-color:#45d5a2;border-radius:50%;animation:grps-loading-spin .9s linear infinite}
-#grps-home-loading .grps-loading-label{color:#91a6ae;font:500 9px/1 system-ui,sans-serif;letter-spacing:.32em}
-#grps-home-loading .grps-loading-line{width:112px;height:1px;background:#edf2f3;overflow:hidden}
-#grps-home-loading .grps-loading-line:after{content:"";display:block;width:38%;height:100%;background:linear-gradient(90deg,#249bf0,#16b8cb,#3cd59b);animation:grps-loading-progress 1.15s ease-in-out infinite}
-@keyframes grps-loading-spin{to{transform:rotate(360deg)}}
-@keyframes grps-loading-progress{0%{transform:translateX(-110%)}100%{transform:translateX(290%)}}
-@media(prefers-reduced-motion:reduce){#grps-home-loading{display:none!important}}
-</style>
-<script>
-(function(){try{var home=location.pathname==='/'||location.pathname==='/index.html';var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(home&&!reduced&&localStorage.getItem('grps-home-loading-v1')!=='seen'){document.documentElement.classList.add('grps-home-loading');localStorage.setItem('grps-home-loading-v1','seen');window.__GRPS_HOME_LOADING_STARTED__=Date.now()}}catch(e){}})();
-</script>
 </head>
 <body>
 <h1 class="grps-seo-heading">株式会社グローパス｜イベント企画・運営</h1>
@@ -814,14 +798,4 @@ html.grps-home-loading #grps-home-loading{opacity:1;visibility:visible;pointer-e
 })();
 </script>
 
-<script src="./assets/grps-shared-header.js" defer></script><div id="grps-home-loading" role="status" aria-label="読み込み中">
- <div class="grps-loading-inner" aria-hidden="true">
-  <span class="grps-loading-ring"></span>
-  <span class="grps-loading-label">LOADING</span>
-  <span class="grps-loading-line"></span>
- </div>
-</div>
-<script>
-(function(){var root=document.documentElement;if(!root.classList.contains('grps-home-loading'))return;var done=false;function finish(){if(done)return;done=true;var wait=Math.max(0,850-(Date.now()-(window.__GRPS_HOME_LOADING_STARTED__||Date.now())));setTimeout(function(){root.classList.remove('grps-home-loading')},wait)}window.addEventListener('load',finish,{once:true});setTimeout(finish,5200);if(document.readyState==='complete')finish()})();
-</script>
-</body>
+<script src="./assets/grps-shared-header.js" defer></script></body>

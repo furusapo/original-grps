@@ -1,4 +1,47 @@
 (()=> {
+  // Shared lightweight loading screen for every site page.
+  try {
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const style = document.createElement("style");
+      style.textContent = `
+        #grps-global-loading{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:#fff;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .5s ease,visibility .5s ease}
+        html.grps-global-loading #grps-global-loading{opacity:1;visibility:visible;pointer-events:auto}
+        #grps-global-loading .grps-loading-inner{display:grid;justify-items:center;gap:20px}
+        #grps-global-loading .grps-loading-ring{width:42px;height:42px;border:1px solid #e3edf0;border-top-color:#20b6ca;border-right-color:#45d5a2;border-radius:50%;animation:grps-global-spin .9s linear infinite}
+        #grps-global-loading .grps-loading-label{color:#91a6ae;font:500 9px/1 system-ui,sans-serif;letter-spacing:.32em}
+        #grps-global-loading .grps-loading-line{width:112px;height:1px;background:#edf2f3;overflow:hidden}
+        #grps-global-loading .grps-loading-line:after{content:"";display:block;width:38%;height:100%;background:linear-gradient(90deg,#249bf0,#16b8cb,#3cd59b);animation:grps-global-progress 1.15s ease-in-out infinite}
+        @keyframes grps-global-spin{to{transform:rotate(360deg)}}
+        @keyframes grps-global-progress{0%{transform:translateX(-110%)}100%{transform:translateX(290%)}}
+      `;
+      document.head.appendChild(style);
+      const loader = document.createElement("div");
+      loader.id = "grps-global-loading";
+      loader.setAttribute("role","status");
+      loader.setAttribute("aria-label","読み込み中");
+      loader.innerHTML = '<div class="grps-loading-inner" aria-hidden="true"><span class="grps-loading-ring"></span><span class="grps-loading-label">LOADING</span><span class="grps-loading-line"></span></div>';
+      document.documentElement.classList.add("grps-global-loading");
+      document.body.appendChild(loader);
+      const started = performance.now();
+      let finished = false;
+      const finish = () => {
+        if (finished) return;
+        finished = true;
+        const delay = Math.max(0, 750 - (performance.now() - started));
+        setTimeout(() => {
+          document.documentElement.classList.remove("grps-global-loading");
+          loader.remove();
+          style.remove();
+        }, delay);
+      };
+      window.addEventListener("load", finish, {once:true});
+      setTimeout(finish, 5200);
+      if (document.readyState === "complete") finish();
+    }
+  } catch (e) {
+    document.documentElement.classList.remove("grps-global-loading");
+  }
+
   const header = document.getElementById("grps-new-header");
   if (!header) return;
 
