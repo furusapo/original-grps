@@ -604,7 +604,16 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
 #grps-liquid-intro::before{content:"";position:absolute;inset:-20%;z-index:-1;background:radial-gradient(ellipse at 50% 48%,rgba(235,249,252,.54),rgba(255,255,255,0) 52%);pointer-events:none}
 #grps-liquid-intro.is-done{opacity:0;visibility:hidden;pointer-events:none}
 #grps-liquid-intro .grps-liquid-stage{position:relative;width:min(100vw,900px);height:min(100svh,760px);min-height:340px;display:grid;place-items:center}
-#grps-liquid-intro canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#grps-liquid-intro canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+#grps-liquid-intro .grps-shield-window{z-index:2}
+#grps-liquid-intro .grps-construction{position:absolute;z-index:3;width:clamp(190px,29vw,330px);aspect-ratio:1.29;overflow:visible;pointer-events:none}
+#grps-liquid-intro .grps-construction .grps-guides{fill:none;stroke:#c4cdd1;stroke-width:1;vector-effect:non-scaling-stroke}
+#grps-liquid-intro .grps-construction .grps-guides path{stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:grps-guide-draw .95s .12s ease-out forwards,grps-guide-fade .35s 1.45s ease-in forwards}
+#grps-liquid-intro .grps-construction .grps-outline-path{fill:none;stroke:#aab7bd;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:grps-outline-draw 1.38s var(--draw-delay) cubic-bezier(.25,.75,.2,1) forwards,grps-outline-fade .55s 2.35s ease-out forwards}
+@keyframes grps-guide-draw{12%{opacity:.62}100%{stroke-dashoffset:0;opacity:.48}}
+@keyframes grps-guide-fade{to{opacity:0}}
+@keyframes grps-outline-draw{8%{opacity:.78}100%{stroke-dashoffset:0;opacity:.72}}
+@keyframes grps-outline-fade{to{opacity:0}}
 #grps-liquid-intro .grps-shield-window{position:relative;width:clamp(190px,29vw,330px);aspect-ratio:1.29;overflow:hidden;opacity:0;transform:scale(.94);filter:drop-shadow(0 16px 24px rgba(22,71,103,.12));animation:grps-symbol-in 1.15s 1.18s cubic-bezier(.2,.8,.2,1) forwards}
 #grps-liquid-intro .grps-shield-window .grps-shield-base{position:absolute;left:-13%;top:-5.6%;width:134%;height:auto;max-width:none;object-fit:contain;filter:grayscale(1) contrast(.92) brightness(1.58)}
 #grps-liquid-intro .grps-shield-sheen{position:absolute;inset:0;overflow:hidden;pointer-events:none;clip-path:polygon(-35% 0,-15% 0,-5% 100%,-25% 100%);animation:grps-metal-sweep 2.8s .25s ease-in-out infinite}
@@ -827,8 +836,17 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
  <div class="grps-liquid-stage">
   <canvas id="grps-liquid-three" aria-hidden="true"></canvas>
   <div class="grps-shield-window" aria-hidden="true"><img class="grps-shield-base" src="./grps_images/glowpas-logo-vertical.png" alt=""><span class="grps-shield-sheen" aria-hidden="true"><img src="./grps_images/glowpas-logo-vertical.png" alt=""></span></div>
+  <svg class="grps-construction" viewBox="0 0 1026 795" aria-hidden="true">
+   <g class="grps-guides">
+    <path pathLength="1" d="M82 397H944 M513 44V751 M238 646L824 149 M199 397H215 M929 397H945 M513 61V78 M513 718V735"/>
+   </g>
+   <g class="grps-trace">
+    <path class="grps-outline-path" pathLength="1" style="--draw-delay:0.12s" d="M871 649 L855 671 L829 698 L771 743 L711 773 L660 788 L601 795 L551 793 L511 786 L425 762 L365 753 L326 753 L281 760 L254 768 L209 788 L232 749 L264 707 L321 649 L352 625 L391 601 L430 584 L461 575 L492 570 L526 569 L591 578 L623 578 L652 572 L681 561 L698 564 L704 570 L708 581 L704 604 L687 624 L671 633 L636 642 L560 641 L538 645 L513 654 L539 666 L579 677 L600 680 L644 679 L696 664 L744 636 L773 613 L800 586 L867 502 L884 491 L907 488 L919 493 L926 502 L929 514 L927 535 L905 596 Z"/>
+    <path class="grps-outline-path" pathLength="1" style="--draw-delay:0.38s" d="M340 320 L327 348 L314 396 L310 434 L311 466 L317 503 L326 534 L353 589 L321 614 L273 665 L245 624 L229 592 L214 551 L200 478 L200 412 L212 345 L235 284 L255 247 L277 215 L321 166 L376 123 L430 94 L504 70 L567 62 L629 64 L704 80 L762 104 L792 121 L825 145 L768 179 L724 212 L668 184 L608 170 L546 171 L490 185 L458 199 L406 235 L365 279 Z"/>
+    <path class="grps-outline-path" pathLength="1" style="--draw-delay:0.64s" d="M643 449 L679 432 L726 403 L768 371 L808 334 L728 292 L985 204 L961 367 L940 479 L897 411 L872 433 L832 461 L761 496 L722 508 L670 517 L592 516 L536 504 L502 490 L575 475 L612 463 Z"/>
+   </g>
+  </svg>
   <div class="grps-liquid-rule" aria-hidden="true"></div>
-  <div class="grps-liquid-caption" aria-hidden="true">GROWPASS</div>
  </div>
 </div>
 <script type="module">
@@ -859,15 +877,9 @@ html.grps-show-liquid-intro #grps-liquid-intro{display:grid}
   const uniforms={uMask:{value:texture},uTime:{value:0},uReveal:{value:0}};
   const material=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms,vertexShader:`varying vec2 vUv;varying vec3 vNormal;varying vec3 vView;void main(){vUv=uv;vec4 mv=modelViewMatrix*vec4(position,1.);vNormal=normalize(normalMatrix*normal);vView=normalize(-mv.xyz);gl_Position=projectionMatrix*mv;}`,fragmentShader:`uniform sampler2D uMask;uniform float uTime;uniform float uReveal;varying vec2 vUv;varying vec3 vNormal;varying vec3 vView;void main(){float a=texture2D(uMask,vUv).a;if(a<.025)discard;vec3 N=normalize(vNormal);vec3 V=normalize(vView);float rim=pow(1.-max(dot(N,V),0.),2.4);float sweep=exp(-pow((vUv.x-(uTime*.34-.18))*15.,2.));float wave=.5+.5*sin(vUv.x*23.+vUv.y*8.-uTime*3.2);float band=smoothstep(.74,.98,wave);vec3 silver=mix(vec3(.54,.67,.74),vec3(.94,.98,1.),band);silver=mix(silver,vec3(.70,.91,.96),rim*.72);silver+=vec3(.55,.78,.9)*sweep*.42;float edge=smoothstep(0.,.12,vUv.x)*smoothstep(0.,.12,1.-vUv.x)*smoothstep(0.,.10,vUv.y)*smoothstep(0.,.10,1.-vUv.y);gl_FragColor=vec4(silver,a*edge*uReveal);}`});
   const logoMesh=new THREE.Mesh(new THREE.PlaneGeometry(4.25,3.29),material);scene.add(logoMesh);
-  const arcs=new THREE.Group();scene.add(arcs);
-  for(let i=0;i<3;i++){const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(-3.2,-.55+i*.56,-.25+i*.08),new THREE.Vector3(-1.7,-.18+i*.28,.12),new THREE.Vector3(0,0,.34),new THREE.Vector3(1.8,.20-i*.25,.1),new THREE.Vector3(3.2,.58-i*.54,-.2)]);const tube=new THREE.Mesh(new THREE.TubeGeometry(curve,100,.008+i*.002,6,false),new THREE.MeshPhysicalMaterial({color:i===1?0xb9edf4:0xc8d6dc,metalness:.88,roughness:.17,clearcoat:1,transparent:true,opacity:.6,emissive:0x143543,emissiveIntensity:.12}));arcs.add(tube)}
-  const count=18,pos=new Float32Array(count*3),seeds=[];
-  for(let i=0;i<count;i++){const angle=i*2.399,rad=2.05+Math.random()*1.0;pos[i*3]=Math.cos(angle)*rad;pos[i*3+1]=Math.sin(angle)*rad*.68;pos[i*3+2]=(Math.random()-.5)*.25;seeds.push({x:pos[i*3],y:pos[i*3+1],p:Math.random()*6.28})}
-  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
-  const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xdffaff,size:.022,transparent:true,opacity:.66,depthWrite:false,blending:THREE.AdditiveBlending}));scene.add(pts);
   root.classList.add('is-webgl');
   const start=performance.now();
-  function animate(now){if(closed)return;const t=(now-start)/1000;uniforms.uTime.value=t;uniforms.uReveal.value=THREE.MathUtils.smoothstep(t,.55,1.8);arcs.rotation.z=Math.sin(t*.45)*.035;arcs.scale.setScalar(1+.025*Math.sin(t*1.2));seeds.forEach((s,i)=>{const k=i*3,tw=.65+.35*Math.sin(t*3.4+s.p);pos[k]=s.x+Math.sin(t*.65+s.p)*.018;pos[k+1]=s.y+Math.cos(t*.8+s.p)*.02;pos[k+2]=Math.sin(t*1.4+s.p)*.035;});pg.attributes.position.needsUpdate=true;pts.material.opacity=.35+.3*(.5+.5*Math.sin(t*2.2));renderer.render(scene,camera);raf=requestAnimationFrame(animate)}
+  function animate(now){if(closed)return;const t=(now-start)/1000;uniforms.uTime.value=t;uniforms.uReveal.value=THREE.MathUtils.smoothstep(t,.35,1.65);renderer.render(scene,camera);raf=requestAnimationFrame(animate)}
   raf=requestAnimationFrame(animate);
  }catch(e){/* CSS metal reveal remains available when WebGL is unavailable. */}
 })();
