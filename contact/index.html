@@ -1521,6 +1521,25 @@ body:has(#grps-new-header) {
 }
 </style>
 
+<style>
+/* PC contact heading: place watermark below the Japanese title, as on Recruit. */
+@media screen and (min-width: 769px) {
+  .page-title .page-title-inner {
+    height: 245px;
+    align-items: flex-start;
+  }
+  .page-title .page-title-inner h1 {
+    margin-top: 58px;
+  }
+  .page-title .page-title-inner::after {
+    left: 82px;
+    top: 126px;
+    font-size: 92px;
+    line-height: 1;
+    pointer-events: none;
+  }
+}
+</style>
 <!-- GRPS CONTACT PC BACKGROUND -->
 <style>
 @media screen and (min-width: 769px) {
