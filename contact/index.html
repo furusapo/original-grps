@@ -1524,9 +1524,13 @@ body:has(#grps-new-header) {
 <style>
 /* PC CONTACT heading: reproduce the WORKS hero geometry (h1 + watermark). */
 @media screen and (min-width: 769px) {
+  .page-title {
+    border-bottom: 0 !important;
+  }
   .page-title .page-title-inner {
     width: min(1100px, calc(100% - 80px));
-    height: 165px;
+    max-width: none;
+    height: 260px;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 40px 0;
