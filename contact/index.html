@@ -1348,9 +1348,17 @@ body:has(#grps-new-header) {
 
 /* PC版は変更しない */
 .grps-contact-eyebrow,
-.grps-contact-subtitle,
+.grps-contact-subtitle {
+  display: none;
+}
+/* The intro card is shared by desktop and mobile. */
 .grps-contact-intro {
   display: none;
+}
+@media screen and (min-width: 769px) {
+  .contact-wrap .grps-contact-intro {
+    display: flex !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
