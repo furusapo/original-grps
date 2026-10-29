@@ -1520,6 +1520,28 @@ body:has(#grps-new-header) {
   .contact-inner .grps-type-option { min-height: 48px; gap: 8px; }
 }
 </style>
+
+<!-- GRPS CONTACT PC BACKGROUND -->
+<style>
+@media screen and (min-width: 769px) {
+  body {
+    background-image: url("../grps_images/contact_base.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .page-title,
+  .contact-wrap {
+    background: transparent;
+  }
+
+  .page-title-inner::before {
+    display: none;
+  }
+}
+</style>
+
 </head>
 <body>
 <header id="grps-new-header">
