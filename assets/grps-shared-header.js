@@ -55,6 +55,7 @@
     company: href('.gnh-mobile-only[href*="company/"]:not([href*="#"])') || href('.gnh-links a[href*="company/"]'),
     access: href('.gnh-mobile-only[href*="#access"]'),
     privacy: href('.gnh-nav-inner a[href*="privacy/"]'),
+    sitemap: href('.gnh-nav-inner a[href*="sitemap/"]'),
     contact: href(".gnh-contact")
   };
   const current = selector => find(selector)?.getAttribute("aria-current") === "page";
@@ -138,6 +139,7 @@
       <div class="gnh-mobile-menu-legal">
         <a href="${esc(links.access)}">アクセス</a>
         <a href="${esc(links.privacy)}">個人情報保護方針</a>
+        <a href="${esc(links.sitemap)}">サイトマップ</a>
       </div>
     </div>`;
 
