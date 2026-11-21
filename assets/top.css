@@ -131,15 +131,9 @@
 .offering h3 { color: #060c21; }
 .tags { display: flex; color: var(--blue); font-weight: 700; white-space: nowrap; }
 .tags li { border-radius: 99em; background: #c2e5f4; }
-.arrow {
-  display: grid; place-items: center;
-  border: max(1px,calc(1.6 * var(--u))) solid transparent;
-  border-radius: 50%;
-  background: linear-gradient(white,white) padding-box,var(--spectrum) border-box;
-  color: #09bfc1;
-  font: 400 calc(31 * var(--u))/1 Arial,sans-serif;
-}
-.arrow:hover { background: linear-gradient(#e1f8fb,#e1f8fb) padding-box,var(--spectrum) border-box; }
+.arrow { display: grid; place-items: center; border-radius: 50%; }
+.top-page .arrow picture { position: static; width: 100%; }
+.arrow:hover { filter: brightness(.96); }
 .contact {
   background: radial-gradient(ellipse at 61% 15%,#fff 36%,transparent 63%),
               radial-gradient(ellipse at 90% 25%,#d2f5fa,transparent 61%),
@@ -187,15 +181,6 @@
   opacity: .68;
 }
 .tailored > p:last-child { margin-top: calc(18 * var(--u)); }
-.arrow span { width: 55%; height: max(1px,calc(1.8 * var(--u))); background: var(--spectrum); position: relative; }
-.arrow span::after {
-  content: "";
-  position: absolute; right: 0; top: 50%;
-  width: calc(10 * var(--u)); height: calc(10 * var(--u));
-  transform: translateY(-50%) rotate(45deg);
-  border-top: max(1px,calc(1.7 * var(--u))) solid #00bebf;
-  border-right: max(1px,calc(1.7 * var(--u))) solid #00bebf;
-}
 .contact::after {
   background:
     radial-gradient(ellipse 78% 170% at 54% -73%,transparent 96%,#70d3e9 97%,#dff7fa 100%),
@@ -213,15 +198,14 @@
     clip-path: shape(from 0 0, curve to 83% 44% with 22% 28% / 48% 48%, curve to 0 21% with 39% 45% / 13% 31%, close);
   }
   .tailored > p:last-child { margin-top: calc(26 * var(--u)); }
-  .arrow span::after { width: calc(9 * var(--u)); height: calc(9 * var(--u)); }
   .contact::after {
     background: linear-gradient(149deg,#a5eff4 49%,#85ddeb 77%,#9de8f0 90%);
     clip-path: inset(93% 0 0);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .arrow span { animation: arrow-drift 2.8s ease-in-out infinite; }
-  .works .arrow span { animation-delay: -1.4s; }
+  .arrow picture { animation: arrow-drift 2.8s ease-in-out infinite; }
+  .works .arrow picture { animation-delay: -1.4s; }
 }
 @keyframes arrow-drift {
   50% { transform: translateX(calc(3 * var(--u))); }
