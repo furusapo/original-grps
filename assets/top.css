@@ -290,6 +290,11 @@
 .form .contact-photo { position: absolute; left: 0; top: calc(104 * var(--u)); width: calc(211 * var(--u)); }
 .line .contact-photo { position: absolute; left: calc(240 * var(--u)); top: calc(-93 * var(--u)); width: calc(216 * var(--u)); }
 
+/* The desktop Illustrator export already contains the desk photograph. */
+@media (width > 600px) {
+  .top-page .desk-photo { display: none; }
+}
+
 @media (max-width: 600px) {
   .top-page { --u: calc(100cqw / 782); }
   .only-sp { display: inline; }
